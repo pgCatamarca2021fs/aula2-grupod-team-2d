@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color: #0B0E11;
+}
+/* ===== HEADER */
+.navbar {
+    height: 6rem;
+    background-color: #181A20;
+    color: white;
+}
+
+.logo-general {
+    width: 100px;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand{
+    margin-left: 100px;
+}
+
+.titulo-cripto-principales {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+
+}
+
+
+
+.div-border {
+    box-shadow: 1px 2px 9px 3px rgba(0,0,0,0.75);
+    background-color: #181A20;
+    border-radius: 15px;
+    height: auto;
+    width:auto;
+    padding: 2rem;
+}
+
+.div-movimientos h3 {
+    color: white;
+}
+
+.card {
+    margin: 0 4rem 0 0;
+    height: 350px;
+    box-shadow: 1px 2px 9px 3px rgba(0,0,0,0.75);
+    border: none;
+}
+
+.btn-login {
+    margin-top: 7rem;
+}
+
+.lista {
+    margin-top: 2rem;
+}
+
+.div-movimientos {
+    margin-top: 2rem;
+}
+
+.div-movimientos ul li {
+    background-color: transparent;
+    color: white;
+}
+
+.card-header, .card-footer {
+    background-color: #2B3139;
+    color: white;
+    border: none;
+}
+
+.card-footer {
+    color: white;
+}
+
+.card-body {
+    background-color:#181A20 ;
+    color: white;
+}
+
+.titulo-nuevas-cripto {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.carta-nueva {
+    width: 100%;
+    height:80px;
+}
+
+.boton-mas-principales {
+    margin: 1rem 0 0 52rem;
+}
+
+.boton-mas {
+    margin: 1rem 0 0 24rem;
+}
+
+.logocripto {
+    background-color: transparent;
+}
+/* ===== CALCULADORA ====== */
+
+.calculadora {
+    color: white;
+}
+
+.primerDivisa {
+    margin: 2rem 0;
+}
+
+.segundaDivisa {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.segundaDivisa p {
+    background-color: white;
+    color: black;
+    margin: 0 0 0 0.3rem;
+    padding: .2rem .2rem;
+}
+
+.btn-calculadora-flechas {
+    background-color: #0B5ED7;
+    border: none;
+    padding: .3rem .5rem;
+    border-radius: 3px;
+    margin: 0 0 0 1rem;
+}
+
+.btn-calculadora-flechas img {
+    filter: invert();
+}
+
+/* ====== FOOTER ==== */
+
+.footer {
+    margin-top: 4rem;
+    height: 30vh;
+    width: 100vw;
+    background-color: #181A20;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.footer1, .footer2, .footer3 {
+    width: 30%;
+    margin-top: 2rem;
+}
