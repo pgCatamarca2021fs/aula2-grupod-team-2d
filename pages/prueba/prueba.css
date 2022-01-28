@@ -1,0 +1,98 @@
+body {
+    background-color: #0D314A;
+}
+
+.fa-btc, .fa-money-check-alt, .fa-info-circle {
+    font-size: 30px;
+    color: #0566ac;
+}
+
+.navbar {
+    background-color: #071825;
+    color: white;
+}
+
+.nav-item a {
+    color: white;
+}
+
+.fondo-inicio {
+    background-image: url("../../media/fondo-cielo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.form-search {
+    margin: 1.7rem 0 0 0;
+}
+
+
+
+
+.calculadora {
+    width: 100%;
+    height: 60vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 0 0;
+}
+
+.contenedor-calculadora {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8rem 0 0 0;
+    font-size: 2rem;
+}
+
+.btn-calculadora-flechas {
+    background-color: #106DF6;
+    border: none;
+    
+    border-radius: 3px;
+    margin: 0 0 0 1rem;
+
+    
+}
+
+.flechas {
+    filter: invert();
+}
+
+footer {
+    border-top: 1px solid white;
+}
+
+.parrafos-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.segundo-parrafo-footer {
+    width: 50%;
+
+    
+}
+
+.segundo-parrafo-footer span {
+    font-weight: 700;
+}
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2rem;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color:#E1306C ;
+}
