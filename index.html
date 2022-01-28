@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/fa1ead6089.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -10,201 +11,220 @@
     <title>Cata Exchange</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand">Cata Exchange</a>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Busqueda</button>
-                </form>
+    
+
+
+
+
+
+
+
+    
+    <header class="py-3 mb-4 border-bottom">
+        <nav class="py-2 navbar text-light border-bottom">
+            <div class="container  d-flex flex-wrap">
+                <ul class="nav  me-auto">
+                    <li class="nav-item"><a href="#" class="nav-link  px-2 active" aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link  px-2">Tutoriales</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link  px-2">Criptomonedas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link  px-2">Wallet</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link  px-2">Sobre nosotros</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Inicia Sesión</a></li>
+        
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Registrate</a></li>
+                </ul>
             </div>
         </nav>
+
+        <div class="container  d-flex flex-wrap justify-content-center">
+            <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                <img src="media/1640751338893.png" width="90" height="80">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+                <span class="fs-4 text-light">CATA EXCHANGE</span>
+            </a>
+            <form class="col-12 form-search col-lg-auto mb-3 mb-lg-0">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+        </div>
     </header>
-    <section>
-
-    <!-- PARTE SUPERIOR (LOGIN/ULT MOV/PRINCIPALES CRIPTO) -->
-    
-        <div class="container-fluid mt-5">
-        <!-- PARTE LATERAL - LOGIN Y ULTIMOS MOV (SUJETO A CAMBIOS) -->
-
-            <div class="row">
-        <!-- LOGIN -->
-                <div class="col-sm-3 izq">
-                <div class="card carta text-center">
-                    <div class="card-header">
-                        Bienvenido
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title titulo-login">Cata Exchange</h5>
-                        <p class="card-text texto-login">Controla tus inversiones.</p>
 
 
 
-                        <a href="#" class="btn btn-login btn-primary">Inicia sesión</a>
-                        <a href="#" class="btn btn-login btn-primary">Registrate</a>
-                    </div>
-                    <div class="card-footer">
-                        ¿Olvidaste tu contraseña?
+
+
+        <main>
+            <h1 class="visually-hidden">Heroes examples</h1>
+        
+            <div class="px-4 py-5 text-light my-5 text-center ">
+                <img class="d-block mx-auto mb-4" src="media/1640751338893.png" alt="" width="290" height="250">
+                <h1 class="display-5 fw-bold">Cata Exchange</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">Cata exchange nace en la provincia de Catamarca, Argentina Lorem ipsum dolor sit, amet consectetur adipisicing elit. At dignissimos excepturi reiciendis ad atque, fugit inventore illum earum modi.</p>
+                    <p>¿Ya tenes tu cuenta?</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        
+                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Registrate</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Inicia Sesión</button>
                     </div>
                 </div>
-        <!-- ULTIMOS MOV -->
-                <div class="div-movimientos">
-                    <h3 class="titulo-movimientos">Ultimos movimientos</h3>
-                    <ul class="list-group lista list-group-flush">
-                        <li class="list-group-item">Primera</li>
-                        <li class="list-group-item">Segun</li>
-                        <li class="list-group-item">Terc</li>
-                        <li class="list-group-item">A fourth item</li>
-                        <li class="list-group-item">And a fifth one</li>
-                    </ul>
+            </div>
+        
+            
+
+
+
+
+            <div class="container-fluid text-light px-4 py-5 fondo-inicio" id="hanging-icons">
+                <h2 class="pb-2 border-bottom">En Cata exchange podes...</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="col d-flex align-items-start">
+                        <div class=" text-dark flex-shrink-0 me-3">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <div>
+                            <h2>Depositar pesos</h2>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                                and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                                Ver más
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square  text-dark flex-shrink-0 me-3">
+                            <i class="fab fa-btc"></i>
+                        </div>
+                        <div>
+                            <h2>Comprar cripto</h2>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                                and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                                Ver más
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div class="text-dark flex-shrink-0 me-3">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div>
+                            <h2>Informarte</h2>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                                and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                                Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculadora">
+                <h4>Calculadora/Convertidor</h4>
+                <div class="contenedor-calculadora">
+                    <div class="primerDivisa">
+                        <label>ARS</label>
+                        <input type="text" id="ars">
+                    </div>
+                    <div>
+                        <button type="button" class="btn boton-convertir btn-primary" onclick="monedaConver()">Convertir</button>
+                        <button type="button" class="btn boton-convertir btn-primary" onclick="monedaConver()"><i class="fas fa-exchange-alt"></i></button>
+                    </div>
+                    
+                    <div class="segundaDivisa">
+                        <label>Dolares</label>
+                        <p id="resultado"> </p>
+                    </div>
                 </div>
                 
-                </div>
-
-        <!-- PRINCIPALES CRIPTO -->
-                <div class="col-sm-9 der">
-                    
-                    <div class="div-border">
-                        <h3 class="titulo-cripto-principales">Las cripto principales del mercado</h3>
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="media/Bitcoin-Logo.png" class="card-img-top" alt="">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Bitcoin</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                            content. This content is a little bit longer.</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small>Last updated 3 mins ago</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="media/logo-eth.png"  alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Ethereum</h5>
-                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small>Last updated 3 mins ago</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="media/Bitcoin-Logo.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">USDT</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                            content. This card has even longer content than the first to show that equal height action.</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small>Last updated 3 mins ago</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn boton-mas-principales btn-primary">Ver más</button>
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <!-- PARTE "INFERIOR" DEBAJO DE  -->
-        <div class="container-fluid mt-5">
-            <div class="row">
-                <!-- DIV VACIO POR ESPACIO -->
-                <div class="col-sm-3">
-                    
-                </div>
 
-                <!-- DIV DE NUEVAS CRIPTO -->
+<!-- FOOTER ============================================ -->
 
-                <div class="col-sm-5">
-                    <div class="div-border">
-                        <h4 class="titulo-nuevas-cripto">Nuevas cripto</h4>
-                        <div class="row row-cols-1 row-cols-md-2 g-4">
-                            <div class="col">
-                                <div class="card carta-nueva h-100">
-                                    <img src="media/Bitcoin-Logo.png" class="card-img-top" alt="">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Bitcoin</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                            content. This content is a little bit longer.</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small>Last updated 3 mins ago</small>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="container text-light">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-2">
+                            <h5>Inicio</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Inicio</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Quienes somos</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Convertidor</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Que podemos hacer</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tutoriales</a></li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="col-2">
+                            <h5>Wallet</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Mi wallet</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Criptomonedas
+                                    </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ult. movimientos</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Swap</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Información</a></li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                        <div class="col-2">
+                            <h5>Atajos de útilidad</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Compra cripto</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terminos y condiciones</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Seguridad</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Noticias</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tu opinión</a></li>
+                                
+                            </ul>
+                        </div>
+            
                         
-                            <div class="col">
-                                <div class="card carta-nueva h-100">
-                                    <img src="media/Bitcoin-Logo.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">USDT</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                            content. This card has even longer content than the first to show that equal height action.</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small>Last updated 3 mins ago</small>
-                                    </div>
+            
+                        
+            
+                        <div class="col-4 offset-1">
+                            <form>
+                                <h5>Subscribe to our newsletter</h5>
+                                <p>Monthly digest of whats new and exciting from us.</p>
+                                <div class="d-flex w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                                    <button class="btn btn-primary" type="button">Subscribe</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                        <button type="button" class="btn boton-mas btn-primary">Ver más</button>
                     </div>
-                </div>
-
-                <!-- CALCULADORA -->
-                <div class="col-sm-4">
-                    <div class="div-border calculadora">
-                        <h4>Calculadora/Convertidor</h4>
-                        <div class="primerDivisa">
-                            <label>ARS</label>
-                            <input type="text" id="ars">
-                        </div>
-                        <button type="button" class="btn boton-convertir btn-primary" onclick="monedaConver()">Convertir</button>
-                        <button class="btn-calculadora-flechas"><img src="media/arrow-down-up.svg"></button>
-                        <div class="segundaDivisa">
-                            <label>Dolares</label>
-                            <p id="resultado"> </p>
+            
+                    <div class="d-flex justify-content-between py-4 my-4 border-top">
+                        <div class="parrafos-footer">
+                            <p class="primer-parrafo-footer">&copy; 2021 Cata Exchange, All rights reserved.</p>
+                            <p class="segundo-parrafo-footer"><span>Advertencia de riesgo.</span> Los productos financieros ofrecidos por la compañía conllevan un alto nivel de
+                                riesgo y pueden resultar en la pérdida de
+                                todos sus fondos. No debería nunca invertir dinero que no pueda permitirse perder.</p>
                         </div>
                         
-
-
+                        
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-facebook"></i></a></li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer1">
-            <h4>Quienes somos?</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fugit accusantium, temporibus eaque doloremque assumenda rerum nam quaerat eos libero, ullam non ipsam at dolores, facere adipisci earum error tempora.</p>
-        </div>
-        <div class="footer2">
-            <h4>Contacto</h4>
-            <ul>
-                <li>Tel: 3834XXXXX</li>
-                <li>Direccion: Sarmiento 540</li>
-                <li>Mail: cataexchange@gmail.com</li>
-            </ul>
-        </div>
-        <div class="footer3">
-            <h4>Redes</h4>
-            <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Twitter</li>
-            </ul>
-        </div>
-    </footer>
+                </footer>
+    
 </body>
-<script src="Js/main.js"></script>
+<script src="../../Js/bootstrap.bundle.min.js"></script>
+<script src="Js/js.js"></script>
 </html>
