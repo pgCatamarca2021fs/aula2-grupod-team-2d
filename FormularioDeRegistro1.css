@@ -14,9 +14,9 @@ h1{
 }
 
 .formRegistro{
-width: 95%;
-max-width: 500px;
-margin: auto;
+width: 70%; 
+max-width: 200px;
+/* margin: auto; */
 background: white;
 border-radius: 7px;
 }
@@ -62,13 +62,7 @@ input{
     margin: auto;
     padding: 10px 40px;
     cursor: pointer;
-    font-size: 20px
-    
-    
-    
-    
-    
-    ;
+    font-size: 20px;
 }
 
 .btnEnviar:active{

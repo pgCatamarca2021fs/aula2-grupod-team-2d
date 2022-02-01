@@ -31,7 +31,8 @@
                     <li class="nav-item"><a href="#" class="nav-link  px-2">Sobre nosotros</a></li>
                 </ul>
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Inicia Sesión</a></li>
+<!-- ================= BOTON DE INICIO DE SESION -->
+                    <li class="nav-item btnIniciaSesion" id="btnIniciaSesion"><a href="#" class="nav-link link-dark px-2" >Inicia Sesión</a></li>
         
                     <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Registrate</a></li>
                 </ul>
@@ -53,8 +54,39 @@
     </header>
 
 
+<!-- ========== DIV VENTANA POP UP DEL LOG IN -->
+
+<div class="divInicioSesion" id="divInicioSesion">
+    <div class="divInicioSesion1" id="divInicioSesion1">
+        <a href="#" id="btnCerrarVentana" class="btnCerrarVentana"><i class="fas fa-times"></i></a>
+        <main class="form-signin">
+            <form>
+                <img class="mb-4" src="media/1640751338893.png" alt="" width="72" height="57">
+                <h1 class="h3 mb-3 fw-normal">Inicia Sesión</h1>
+        
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+        
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recordar Contraseña
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
+                <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+            </form>
+        </main>
+    </div>
+</div>
 
 
+<!-- ========== HASTA AQUI EL DIV DEL LOG IN -->
 
         <main>
             <h1 class="visually-hidden">Heroes examples</h1>
@@ -66,10 +98,13 @@
                     <p class="lead mb-4">Cata exchange nace en la provincia de Catamarca, Argentina Lorem ipsum dolor sit, amet consectetur adipisicing elit. At dignissimos excepturi reiciendis ad atque, fugit inventore illum earum modi.</p>
                     <p>¿Ya tenes tu cuenta?</p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        
+
+
+<!-- BOTON DE INICIO DE SESION -->
+
                         <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Registrate</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Inicia Sesión</button>
-                    </div>
+                        <button type="button" action="" class="btnIniciaSesion btn btn-outline-secondary btn-lg px-4" id="btnIniciaSesion">Inicia Sesión</button>
+                    </div> 
                 </div>
             </div>
         
