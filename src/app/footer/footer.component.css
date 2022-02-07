@@ -1,0 +1,34 @@
+footer {
+    border-top: 1px solid white;
+}
+
+.parrafos-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.segundo-parrafo-footer {
+    width: 50%;
+
+    
+}
+
+.segundo-parrafo-footer span {
+    font-weight: 700;
+}
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2rem;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color:#E1306C ;
+}
