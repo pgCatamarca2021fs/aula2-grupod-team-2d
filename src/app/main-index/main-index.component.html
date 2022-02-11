@@ -1,70 +1,53 @@
-<main>
-            <h1 class="visually-hidden">Heroes examples</h1>
-        
-            <div class="px-4 py-5 text-light my-5 text-center ">
-                <img class="d-block mx-auto mb-4" src="../../assets/1640751338893.png" alt="" width="290" height="250">
-                <h1 class="display-5 fw-bold">Cata Exchange</h1>
-                <div class="col-lg-6 mx-auto">
-                    <p class="lead mb-4">Cata exchange nace en la provincia de Catamarca, Argentina Lorem ipsum dolor sit, amet consectetur adipisicing elit. At dignissimos excepturi reiciendis ad atque, fugit inventore illum earum modi.</p>
-                    <p>¿Ya tenes tu cuenta?</p>
-                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<div [class]="divInicioSesion" class="divInicioSesion" id="divInicioSesion">
+    <div [class]="divInicioSesion1" class="divInicioSesion1" id="divInicioSesion1">
+        <a href="#" id="btnCerrarVentana" class="btnCerrarVentana" (click)="cerrarPopup()"><i class="fas fa-times"></i></a>
+        <main class="form-signin">
+            <form>
+                <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
+                <h1 class="h3 mb-3 fw-normal">Inicia Sesión</h1>
 
-
-<!-- BOTON DE INICIO DE SESION -->
-
-                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Registrate</button>
-                        <button type="button" action="" class="btnIniciaSesion btn btn-outline-secondary btn-lg px-4" id="btnLoginMain">Inicia Sesión</button>
-                    </div> 
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
                 </div>
-            </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recordar Contraseña
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
+                <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+            </form>
         </main>
+    </div>
+</div>
 
-
-
-
-        <div class="container-fluid text-light px-4 py-5 fondo-inicio" id="hanging-icons">
-                <h2 class="pb-2 border-bottom">En Cata exchange podes...</h2>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    <div class="col d-flex align-items-start">
-                        <div class=" text-dark flex-shrink-0 me-3">
-                            <i class="fas fa-money-check-alt"></i>
-                        </div>
-                        <div>
-                            <h2>Depositar pesos</h2>
-                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
-                                and probably just keep going until we run out of words.</p>
-                            <a href="#" class="btn btn-primary">
-                                Ver más
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-start">
-                        <div class="icon-square  text-dark flex-shrink-0 me-3">
-                            <i class="fab fa-btc"></i>
-                        </div>
-                        <div>
-                            <h2>Comprar cripto</h2>
-                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
-                                and probably just keep going until we run out of words.</p>
-                            <a href="#" class="btn btn-primary">
-                                Ver más
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-start">
-                        <div class="text-dark flex-shrink-0 me-3">
-                            <i class="fas fa-info-circle"></i>
-                        </div>
-                        <div>
-                            <h2>Informarte</h2>
-                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
-                                and probably just keep going until we run out of words.</p>
-                            <a href="#" class="btn btn-primary">
-                                Ver más
-                            </a>
-                        </div>
-                    </div>
+<main class="main__index">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="../../assets/criptomomnedas.png" class="d-block btc-img-index mx-lg-auto img-fluid"
+                    alt="Bootstrap Themes" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Maneja tus cripto facilmente</h1>
+                <p class="lead">Comienza a manejar tus cripto con facilidad. Realiza compras, ventas, trade, todo en una
+                    sola aplicación!</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-inicar btn-lg px-4 me-md-2 btnIniciaSesion" id="btnIniciaSesion" 
+                    (click)="iniciaPopup()">Iniciar sesión</button>
+                    <button type="button" class="btn  btn-registrar btn-lg px-4">Registrarse</button>
                 </div>
             </div>
+        </div>
+    </div>
 
+    
+
+</main>
 

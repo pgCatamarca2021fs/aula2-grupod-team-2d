@@ -1,33 +1,23 @@
-<header class="py-3 mb-4 border-bottom">
-        <nav class="py-2 navbar text-light border-bottom">
-            <div class="container  d-flex flex-wrap">
-                <ul class="nav  me-auto">
-                    <li class="nav-item"><a href="#" class="nav-link  px-2 active" aria-current="page">Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link  px-2">Tutoriales</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link  px-2">Criptomonedas</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link  px-2">Wallet</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link  px-2">Sobre nosotros</a></li>
-                </ul>
-                <ul class="nav">
-<!-- ================= BOTON DE INICIO DE SESION -->
-                    <li class="nav-item btnIniciaSesion" id="btnIniciaSesion"><a href="#" class="nav-link link-dark px-2" >Inicia Sesión</a></li>
+<header>
+        <nav class="navbar">
+            <div class="nav__container">
+                <div class="titulo__img">
+                    <img src="../../assets/logo.png">
+                    <h1>CataExchange</h1>
         
-                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Registrate</a></li>
-                </ul>
+                </div>
+        
+                <div class="nav__menu">
+                    <a href="#" class="nav__item">Inicio</a>
+                    <a href="#" class="nav__item">Dashboard</a>
+                    <a href="#" class="nav__item">Criptomonedas</a>
+                    <a href="#" class="nav__item">Wallet</a>
+                    <a href="#" class="nav__item">Sobre nosotros</a>
+                </div>
             </div>
         </nav>
 
-        <div class="container  d-flex flex-wrap justify-content-center">
-            <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-                <img src="../../assets/1640751338893.png" width="90" height="80">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-                <span class="fs-4 text-light">CATA EXCHANGE</span>
-            </a>
-            <form class="col-12 form-search col-lg-auto mb-3 mb-lg-0">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
-        </div>
-    </header>
 
+        <app-main-index></app-main-index>
+        
+    </header>

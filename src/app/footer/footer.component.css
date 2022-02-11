@@ -1,5 +1,22 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#0091ff;
+    --darkblue: #ef5777;
+    --text-color: #d5e1ef;
+    --nuevo-fondo-body: #282A4C;
+    --nuevo-oscuro: #181C37;
+    --nuevo-claro: #26284E;
+    --nuevo-texto: #dfe2eb;
+    
+}
+
 footer {
-    border-top: 1px solid white;
+    background-color: var(--nuevo-oscuro);
+    padding: 2rem 5rem .5rem 5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .parrafos-footer {
@@ -8,9 +25,7 @@ footer {
 }
 
 .segundo-parrafo-footer {
-    width: 50%;
-
-    
+    width: 90%;
 }
 
 .segundo-parrafo-footer span {
@@ -31,4 +46,10 @@ footer {
 
 .fa-instagram {
     color:#E1306C ;
+}
+
+.container-footer {
+    background-color: var(--nuevo-fondo-body);
+    width: 100%;
+    height: auto;
 }
