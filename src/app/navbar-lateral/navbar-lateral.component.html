@@ -1,0 +1,96 @@
+<nav class="nav-dashboard">
+    <!-- DIV CON LOGO Y TITULO -->
+    <div class="div-nav-logo">
+        <img src="../../assets/logo.png" class="logo-nav-principal">
+        <h3 >CataExchange</h3>
+    </div>
+
+    <!-- LISTA CON OPCIONES -->
+    <ul class="list">
+
+
+        <li class="list__item">
+            <div class="list__button">
+                <i class="fas fa-th awesome"></i>
+                <a [routerLink]="['']" class="nav__link">Inicio</a>
+            </div>
+        </li>
+
+        <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+                <i class="fas fa-file-invoice-dollar awesome"></i>
+                <a [routerLink]="['dashboard']" class="nav__link ">Dashboard</a>
+                <img src="../../assets/arrow.svg" class="list__arrow">
+            </div>
+
+            <ul class="list__show">
+                <li class="list__inside">
+                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                </li>
+
+                <li class="list__inside">
+                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                </li>
+            </ul>
+
+        </li>
+
+
+        <li class="list__item">
+            <div class="list__button">
+                <i class="fas fa-exchange-alt awesome"></i>
+                <a href="#" class="nav__link">Swap/Trade</a>
+            </div>
+        </li>
+
+        <li class="list__item list__item--click">
+            <div class="list__button list__button--click">
+                <i class="fas fa-history awesome"></i>
+                <a href="#" class="nav__link">Historial</a>
+                <img src="../../assets/arrow.svg" class="list__arrow">
+            </div>
+
+            <ul class="list__show">
+                <li class="list__inside">
+                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                </li>
+
+                <li class="list__inside">
+                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                </li>
+
+                <li class="list__inside">
+                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                </li>
+            </ul>
+
+        </li>
+
+
+        <li class="list__item">
+            <div class="list__button">
+                <i class="fas fa-users awesome"></i>
+                <a href="#" class="nav__link">Sobre nosotros</a>
+            </div>
+        </li>
+
+    </ul>
+
+    <!-- BOTON LIGHT AND DARK MODE -->
+    <div class="div-boton-dark-light">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+    </div>
+
+    <!-- PERFIL Y CERRAR SESION -->
+    <ul class="lista-perfil-cerrar">
+        <li class="item-perfil-cerrar">
+            <i class="fas fa-user awesome"></i>
+            <a href="#" class="link-perfil-cerrar">Perfil</a>
+        </li>
+        <li>
+            <i class="fas fa-sign-out-alt awesome"></i>
+            <a href="#" class="link-perfil-cerrar">Cerrar sesión</a>
+        </li>
+    </ul>
+</nav>
