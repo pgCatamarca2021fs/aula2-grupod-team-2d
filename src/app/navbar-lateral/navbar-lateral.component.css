@@ -14,7 +14,7 @@
 
 .nav-dashboard {
     width: 250px;
-    background-image: var(--bg-shape-color);
+    background-color: var(--nuevo-oscuro);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -128,7 +128,7 @@ label {
 	display: flex;
 	width: 90px;
 	height: 45px;
-	border: 3px solid;
+	border: 3px solid #004F8A;
 	border-radius: 45em;
 	position: relative;
 	transition: transform .75s ease-in-out;
@@ -144,7 +144,7 @@ label:before {
 		position: absolute;
 		width: 27px;
 		height: 27px;
-		background-color: #000;
+		background-color:var(--nuevo-texto);
 		border-radius: 50%;
 		top: 6px;
 		left: 6px;
@@ -180,7 +180,7 @@ label:before {
 
     .awesome {
         font-size:1.2rem;
-        color:#0075CE;
+        color:var(--nuevo-texto);
     }
 
 

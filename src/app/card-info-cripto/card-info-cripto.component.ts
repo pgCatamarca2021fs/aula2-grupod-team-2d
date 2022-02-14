@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-info-cripto.component.css']
 })
 export class CardInfoCriptoComponent implements OnInit {
-
-  constructor() { }
+  
 
   ngOnInit(): void {
   }

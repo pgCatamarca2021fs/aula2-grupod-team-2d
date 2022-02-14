@@ -37,7 +37,7 @@
 .wrapper {
     width: 320px;
     border-radius: 40px;
-    background-image: var(--bg-shape-color);
+    background-color: var(--nuevo-oscuro);
     overflow: hidden;
     box-sizing: border-box;
     color: var(--nuevo-texto);
