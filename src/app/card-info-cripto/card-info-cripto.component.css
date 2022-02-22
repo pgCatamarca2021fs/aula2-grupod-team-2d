@@ -14,14 +14,14 @@
 
 
 .titulo-populares {
-    margin: 0.2rem 0 1rem 0.5rem;
+    margin: 0.2rem 0 0rem 1rem;
     font-size: 2rem;
     color: var(--nuevo-texto);
 }
 
 .div-contenedor {
     width: 100%;
-    height: 100vh;
+    height:auto;
     padding: 20px;
 }
 
@@ -43,6 +43,7 @@
     color: var(--nuevo-texto);
     font-family: "Roboto", sans-serif;
     margin: 2rem .5rem;
+    
 }
 
 
@@ -53,7 +54,7 @@
 }
 .overviewInfo {
     background-color: #004F8A;
-    height: 250px;
+    height: 200px;
 }
 .actions {
     display: flex;
@@ -78,8 +79,8 @@
 }
 .actions .backbutton,
 .actions .cartbutton {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 .neurobutton {
@@ -92,6 +93,15 @@
     -2px -2px 8px 2px rgba(255, 255, 255, 0.1),
     2px 2px 6px 3px rgba(0, 0, 0, 0.4);
 }
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-info-circle {
+    color: var(--nuevo-texto);
+}
+
 .productinfo {
     display: flex;
     flex-direction: column;
@@ -101,18 +111,18 @@
     position: absolute;
     width: 7rem;
     height: auto;
-    transform:  translate(200px, 100px);
+    transform:  translate(200px, 50px);
     transition: ease 2s all;
 }
 .productImage img {
-    width: 100%;
+    width: 80%;
 }
 
 
 .productImage:hover {
     transition: ease 2s all;
     animation: none;
-    transform: rotate(-70deg) translate(10px, 66px);
+    transform:scale(1.5) rotate(-70deg) translate(10px, 66px);
 }
 h1 {
     font-family: "Michroma", sans-serif;
@@ -176,6 +186,10 @@ h1 {
     justify-content: space-between;
     align-items: center;
 
+}
+
+.checkoutButton a {
+    text-decoration: none;
 }
 .priceTag {
     display: flex;

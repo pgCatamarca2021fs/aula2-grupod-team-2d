@@ -1,0 +1,154 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#0091ff;
+    --darkblue: #ef5777;
+    --text-color: #d5e1ef;
+    --nuevo-fondo-body: #282A4C;
+    --nuevo-oscuro: #181C37;
+    --nuevo-claro: #26284E;
+    --nuevo-texto: #dfe2eb;
+    
+}
+
+
+.contenedor-swap {
+    background-color: var(--nuevo-fondo-body);
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-column-no-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.grid-cripto-cotizaciones {
+    color: var(--nuevo-oscuro);
+    margin: 2rem 0 0 0;
+}
+
+.grid-cripto-cotizaciones img {
+    width: 30px;
+    margin: 0 .5rem 0 0;
+}
+
+.span-positivo {
+    color: green;
+}
+
+.span- {
+    color: red;
+}
+
+.contenedor-cripto-cotizacion {
+    background: var(--nuevo-texto);
+    backdrop-filter: blur( 4px );
+    width: 30%;
+    border-radius: 10px;
+    padding-top: 1rem;
+    margin:1rem 2rem;
+}
+
+.grid-cripto-cotizaciones h2 {
+    color: var(--nuevo-texto);
+}
+
+.visite-wallet {
+    color: var(--nuevo-texto);
+}
+
+.cards-cripto-cotizaciones {
+    width: 100%;
+}
+
+.contenedor-cards-swap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.swap {
+    width: 30rem;
+    height: auto;
+    background: rgba( 0, 0, 0, 0.5 );
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    margin: 3rem 3rem 0 0;
+    align-self:baseline;
+    
+}
+
+.swap h3 {
+    color:var(--nuevo-texto);
+    padding: 2rem 0 1rem 0;
+}
+
+.swap-moneda-arriba , .swap-moneda-abajo {
+    width: 90%;
+    height: 35%;
+    background: var(--nuevo-claro);
+    backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    overflow: hidden;
+    margin: 1rem 0;
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+    
+}
+
+.swap-moneda-arriba img, .swap-moneda-abajo img {
+    width: 40px;
+    margin: .5rem 0 0 .5rem;
+}
+
+.swap-moneda-arriba p, .swap-moneda-abajo p {
+    font-size: 1.5rem;
+    color: var(--nuevo-texto);
+    margin: 0 0 0 1rem;
+}
+
+.swap-moneda-arriba div, .swap-moneda-abajo div {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.swap-moneda-arriba input, .swap-moneda-abajo input {
+    background-color:#ffffff57;
+    height: 3rem;
+    border: none;
+}
+
+.btn-confirmar-swap {
+    width: 90%;
+    height: 3rem;
+    background: var(--lightblue);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 19px 4px rgba(0,0,0,0.75);
+}
+
+.awesome {
+    color: var(--nuevo-texto);
+    font-size: 2rem;
+    cursor: pointer;
+} 

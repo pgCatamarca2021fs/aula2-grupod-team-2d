@@ -6,11 +6,13 @@
     --darkblue: #ef5777;
     --text-color: #d5e1ef;
     --nuevo-fondo-body: #282A4C;
-    --nuevo-oscuro: #181C37;
+    --nuevo-oscuro: #c9d1ff;
     --nuevo-claro: #26284E;
     --nuevo-texto: #dfe2eb;
-    
+    --color-gris:#27262C;
 }
+
+
 
 .nav-dashboard {
     width: 250px;
@@ -20,7 +22,8 @@
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    border-radius: 0 16px 16px 0;
+    /* box-shadow: 2px 0 6px 0px rgba(0,0,0,0.75); */
+    
     position: sticky;
     top: 0;
     padding-right: 1rem;
