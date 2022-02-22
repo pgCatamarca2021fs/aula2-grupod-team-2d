@@ -18,6 +18,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { MercadoCryptoComponent } from './mercado-crypto/mercado-crypto.component';
 import { SwapComponent } from './swap/swap.component';
 import { FormRegistroComponent } from './form-registro/form-registro.component';
+import { PruebasComponent } from './pruebas/pruebas.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormRegistroComponent } from './form-registro/form-registro.component';
     WalletComponent,
     MercadoCryptoComponent,
     SwapComponent,
-    FormRegistroComponent
+    FormRegistroComponent,
+    PruebasComponent
   ],
   imports: [
     BrowserModule,
