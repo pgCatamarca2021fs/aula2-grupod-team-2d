@@ -7,13 +7,13 @@ import { MainIndexComponent } from './main-index/main-index.component';
 import { SectionIndexComponent } from './section-index/section-index.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
-//import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // RUTAS
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarLateralComponent } from './navbar-lateral/navbar-lateral.component';
 import { CardInfoCriptoComponent } from './card-info-cripto/card-info-cripto.component';
-//import { FormRegistroComponent } from './form-registro/form-registro.component';
+import { FormRegistroComponent } from './form-registro/form-registro.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +26,13 @@ import { CardInfoCriptoComponent } from './card-info-cripto/card-info-cripto.com
     HomeComponent,
     NavbarLateralComponent,
     CardInfoCriptoComponent,
-    //FormRegistroComponent
+    FormRegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AppRoutingModule,
-    //ReactiveFormsModule 
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,12 +10,12 @@ import {debounceTime} from 'rxjs/operators';
 })
 export class FormRegistroComponent implements OnInit {
 
-  form: FormGroup;
+  form!: FormGroup;
 
   constructor() {
     this.buildForm();
   }
-
+  
   ngOnInit() {
   }
 
