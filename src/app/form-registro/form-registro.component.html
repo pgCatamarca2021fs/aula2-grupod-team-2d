@@ -1,4 +1,4 @@
-<form class="form-group container" autocomplete="off" [formGroup]="form">
+<!--<form class="form-group container" autocomplete="off" [formGroup]="form">
     <div>
         <label for="nombres">Nombres</label>
         <input class="form-control" type="text" id="nombres" placeholder="Tus nombres">
@@ -46,4 +46,89 @@
      
     
 
-</form>
+</form>-->
+
+<form [formGroup]="form" (ngSubmit)="save($event)">
+    
+  <p>
+    Nombre: <br/>
+    <input type="text" formControlName="nombre"> <!---nombre del objeto en forcontrolname-->
+  </p>
+  <div *ngIf="form.get('nombre')?.errors && form.get('nombre')?.touched">
+    <p *ngIf="form.get('nombre')?.hasError('required')">
+        Campo obligatorio.
+    </p>
+    <p *ngIf="form.get('nombre')?.hasError('minlength')">
+      El nombre debe tener como mínimo 4 letras.
+    </p>
+    <p *ngIf="form.get('nombre')?.hasError('pattern')">
+        Nombre inválido (Sólo debe contener letras).
+    </p>
+</div>
+
+<p>
+  Apellido: <br/>
+  <input type="text" formControlName="apellido"> <!---nombre del objeto en forcontrolname-->
+</p>
+<div *ngIf="form.get('apellido')?.errors && form.get('apellido')?.touched">
+  <p *ngIf="form.get('apellido')?.hasError('required')">
+      Campo obligatorio.
+  </p>
+  <p *ngIf="form.get('apellido')?.hasError('minlength')">
+    El apellido debe tener como minimo tres letras.
+  </p>
+  <p *ngIf="form.get('apellido')?.hasError('pattern')">
+    Apellido inválido (Sólo debe contener letras).
+</p>
+</div>
+
+
+<p>
+  DNI: <br/>
+  <input type="text" formControlName="dni"> <!---nombre del objeto en forcontrolname-->
+</p>
+<div *ngIf="form.get('dni')?.errors && form.get('dni')?.touched">
+  <p *ngIf="form.get('dni')?.hasError('required')">
+      Campo obligatorio.
+  </p>
+  <p *ngIf="form.get('dni')?.hasError('minlength')">
+    El dni debe tener como minimo ocho números.
+  </p>
+
+</div>
+
+    <p>
+      Fecha: <br/>
+      <input type="date" formControlName="date">
+    </p>
+    <p>
+      Email: <br/>
+      <input type="email" formControlName="email">
+    </p>
+    <div *ngIf="form.get('email')?.errors && form.get('email')?.touched">
+        <p *ngIf="form.get('email')?.hasError('required')">
+            Es un campo requerido
+        </p>
+        <p *ngIf="form.get('email')?.hasError('email')">
+            No es un email.
+        </p>
+    </div>
+
+    <p>
+      Contraseña: <br/>
+      <input type="password" formControlName="contraseña" minlength="8" maxlength="16"> <!---nombre del objeto en forcontrolname-->
+    </p>
+    <div *ngIf="form.get('contraseña')?.errors && form.get('contraseña')?.touched">
+      <p *ngIf="form.get('contraseña')?.hasError('required')">
+          Campo obligatorio.
+      </p>
+      <p *ngIf="form.get('contraseña')?.hasError('minlength')">
+        La contraseña debe tener como minimo ocho caracteres.
+      </p>
+      <p *ngIf="form.get('contraseña')?.hasError('maxlength')">
+        La contraseña debe tener como máximo quince caracteres.
+    </p>
+    </div>
+    
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button> 
+  </form>
