@@ -19,6 +19,7 @@ import { MercadoCryptoComponent } from './mercado-crypto/mercado-crypto.componen
 import { SwapComponent } from './swap/swap.component';
 import { FormRegistroComponent } from './form-registro/form-registro.component';
 import { PruebasComponent } from './pruebas/pruebas.component';
+import { FormLoginComponent } from './form-login/form-login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PruebasComponent } from './pruebas/pruebas.component';
     MercadoCryptoComponent,
     SwapComponent,
     FormRegistroComponent,
-    PruebasComponent
+    PruebasComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,134 +1,129 @@
-<!--<form class="form-group container" autocomplete="off" [formGroup]="form">
-    <div>
-        <label for="nombres">Nombres</label>
-        <input class="form-control" type="text" id="nombres" placeholder="Tus nombres">
-    </div>
 
-    <div>
-        <label for="apellidos">Apellidos</label>
-        <input class="form-control" type="text" id="apellidos" placeholder="Tus apellidos">
-    </div>
-    
-    <div>
-        <label for="email">Email</label>
-        <input class="form-control" type="email" id="email" placeholder="correo@correo.com">
-    </div>
-    
-    <div>
-        <label for="contraseña">Contraseña</label>
-        <input class="form-control" type="password" id="contraseña" placeholder="Elige una contraseña">
-    </div>
-    
-    <div>
-        <label for="contraseñaRepita">Contraseña</label>
-        <input class="form-control" type="password" id="contraseñaRepita" placeholder="Repite tu contraseña">   
-    </div>
-    
-    <div>
-        <label for="dni">DNI</label>
-        <input class="form-control" type="text" id="dni" placeholder="Tu DNI">
-    </div>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="form-signin">
+  <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
+  <h1 class="text-center">Registrate</h1>
 
-    <div>
-        <label for="edad">Ingrese fecha de nacimiento</label>
-        <input class="form-control" type="date" id="edad" placeholder="Tu Edad">
-    </div>
-    
-    <div>
-    <label>
-        <input type="checkbox" value="remember-me" id="terminos"> Acepto todos los términos y condiciones
-      </label>
-    </div>
-
-    <div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Registrar</button>
-    </div>
-     
-    
-
-</form>-->
-
-<form [formGroup]="form" (ngSubmit)="save($event)">
-    
-  <p>
-    Nombre: <br/>
-    <input type="text" formControlName="nombre"> <!---nombre del objeto en forcontrolname-->
-  </p>
-  <div *ngIf="form.get('nombre')?.errors && form.get('nombre')?.touched">
-    <p *ngIf="form.get('nombre')?.hasError('required')">
+<div class="form-floating  mb-3 mt-3">
+  <input type="text" formControlName="nombre"  class="form-control" [class.border-danger]="NombreValid" id="floatingName" placeholder="">
+  <label for="floatingName">Nombre</label>
+  <div *ngIf="Nombre?.errors && Nombre?.touched">
+    <p *ngIf="Nombre?.hasError('required')" class="text-danger">
         Campo obligatorio.
     </p>
-    <p *ngIf="form.get('nombre')?.hasError('minlength')">
+    <p *ngIf="Nombre?.hasError('minlength')" class="text-danger">
       El nombre debe tener como mínimo 4 letras.
     </p>
-    <p *ngIf="form.get('nombre')?.hasError('pattern')">
+    <p *ngIf="Nombre?.hasError('pattern')" class="text-danger">
         Nombre inválido (Sólo debe contener letras).
     </p>
 </div>
+</div>
 
-<p>
-  Apellido: <br/>
-  <input type="text" formControlName="apellido"> <!---nombre del objeto en forcontrolname-->
-</p>
-<div *ngIf="form.get('apellido')?.errors && form.get('apellido')?.touched">
-  <p *ngIf="form.get('apellido')?.hasError('required')">
+
+
+<div class="form-floating  mb-3 mt-3">
+  <input type="text" formControlName="apellido" class="form-control" [class.border-danger]="ApellidoValid" id="floatingApellido" placeholder=""> <!---nombre del objeto en forcontrolname-->
+  <label for="floatingApellido">Apellido</label>
+  <div *ngIf="Apellido?.errors && Apellido?.touched">
+  <p *ngIf="Apellido?.hasError('required')" class="text-danger">
       Campo obligatorio.
   </p>
-  <p *ngIf="form.get('apellido')?.hasError('minlength')">
+  <p *ngIf="Apellido?.hasError('minlength')" class="text-danger">
     El apellido debe tener como minimo tres letras.
   </p>
-  <p *ngIf="form.get('apellido')?.hasError('pattern')">
+  <p *ngIf="Apellido?.hasError('pattern')" class="text-danger">
     Apellido inválido (Sólo debe contener letras).
 </p>
 </div>
-
-
-<p>
-  DNI: <br/>
-  <input type="text" formControlName="dni"> <!---nombre del objeto en forcontrolname-->
-</p>
-<div *ngIf="form.get('dni')?.errors && form.get('dni')?.touched">
-  <p *ngIf="form.get('dni')?.hasError('required')">
-      Campo obligatorio.
-  </p>
-  <p *ngIf="form.get('dni')?.hasError('minlength')">
-    El dni debe tener como minimo ocho números.
-  </p>
-
 </div>
 
-    <p>
-      Fecha: <br/>
-      <input type="date" formControlName="date">
-    </p>
-    <p>
-      Email: <br/>
-      <input type="email" formControlName="email">
-    </p>
-    <div *ngIf="form.get('email')?.errors && form.get('email')?.touched">
-        <p *ngIf="form.get('email')?.hasError('required')">
-            Es un campo requerido
+<div class="form-floating  mb-3 mt-3">
+  <input type="number" formControlName="dni" class="form-control" [class.border-danger]="DniValid" id="floatingDni" placeholder=""> <!---nombre del objeto en forcontrolname-->
+  <label for="floatingDni">DNI</label>
+<div *ngIf="Dni?.errors && Dni?.touched">
+  <p *ngIf="Dni?.hasError('required')" class="text-danger">
+      Campo obligatorio.
+  </p>
+  <p *ngIf="Dni?.hasError('pattern')" class="text-danger">
+    Sólo puede contener ocho números.
+</p>
+</div>
+</div>
+
+
+<div class="form-floating mb-3 mt-3">
+  <input type="date" formControlName="fecha" class="form-control" [class.border-danger]="FechaValid" id="floatingFecha" placeholder="">
+  <label for="floatingFecha">Fecha de Nacimiento</label>
+    <div *ngIf="Fecha?.errors && Fecha?.touched">
+      <p *ngIf="Fecha?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+      </div>
+      </div>
+
+      <div class="form-floating mb-3 mt-3">
+        <input type="number" formControlName="edad" [class.border-danger]="EdadValid" class="form-control" id="floatingEdad" placeholder=""> <!---nombre del objeto en forcontrolname-->
+          <label for="floatingEdad">Edad</label>
+      <div *ngIf="Edad?.errors && Edad?.touched">
+        <p *ngIf="Edad?.hasError('required')" class="text-danger">
+            Campo obligatorio.
         </p>
-        <p *ngIf="form.get('email')?.hasError('email')">
+        <p *ngIf="Edad?.hasError('min')" class="text-danger">
+          Debe ser mayor de edad para registrarse.
+      </p>
+      </div>
+  </div>
+
+      <div class="form-floating mb-3 mt-3">
+      <input type="email" formControlName="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="">
+        <label for="floatingEmail">Email</label>
+    <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+           Campo obligatorio.
+        </p>
+        <p *ngIf="Email?.hasError('pattern')" class="text-danger">
             No es un email.
         </p>
     </div>
+</div>
 
-    <p>
-      Contraseña: <br/>
-      <input type="password" formControlName="contraseña" minlength="8" maxlength="16"> <!---nombre del objeto en forcontrolname-->
-    </p>
-    <div *ngIf="form.get('contraseña')?.errors && form.get('contraseña')?.touched">
-      <p *ngIf="form.get('contraseña')?.hasError('required')">
+<div class="form-floating mb-3 mt-3">
+      <input type="password" formControlName="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control" id="floatingContraseña" placeholder=""> <!---nombre del objeto en forcontrolname-->
+        <label for="floatingContraseña">Contraseña</label>
+      <div *ngIf="Contrasenia?.errors && Contrasenia?.touched">
+      <p *ngIf="Contrasenia?.hasError('required')" class="text-danger">
           Campo obligatorio.
       </p>
-      <p *ngIf="form.get('contraseña')?.hasError('minlength')">
+      <p *ngIf="Contrasenia?.hasError('minlength')" class="text-danger">
         La contraseña debe tener como minimo ocho caracteres.
       </p>
-      <p *ngIf="form.get('contraseña')?.hasError('maxlength')">
+      <p *ngIf="Contrasenia?.hasError('maxlength')" class="text-danger">
         La contraseña debe tener como máximo quince caracteres.
-    </p>
+      </p>
+      <p *ngIf="Contrasenia?.hasError('pattern')" class="text-danger">
+        La contraseña puede contener letras, números, guión medio y guión bajo.
+      </p>
     </div>
-    
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button> 
+</div>
+
+<div class="form-floating mb-3 mt-3">
+      <input type="password" formControlName="contraseñaRepetida" [class.border-danger]="ContraseniaRepetidaValid" class="form-control" id="floatingContraseñaRepetida" placeholder=""> <!---nombre del objeto en forcontrolname-->
+        <label for="floatingContraseñaRepetida">Repetir contraseña</label>
+    <div *ngIf="ContraseniaRepetida?.errors && ContraseniaRepetida?.touched">
+      <p *ngIf="ContraseniaRepetida?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+    </div>
+</div>
+
+    <p>
+      <input type="checkbox" value="" formControlName="terminosCondiciones"> Acepto los términos y condiciones.
+    </p>
+    <div *ngIf="TerminosCondiciones?.errors && TerminosCondiciones?.touched">
+      <p *ngIf="TerminosCondiciones?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+      </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button> 
   </form>
