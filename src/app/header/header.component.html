@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
         <nav class="navbar">
             <div class="nav__container">
                 <div class="titulo__img">
@@ -16,5 +16,30 @@
                 </div>
             </div>
         </nav>
-</header>
+</header> -->
 
+<header class="header">
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="titulo__img">
+                <img src="../../assets/logo.png" class="nav-img">
+                <h1 class="nav-h1">CataExchange</h1>
+            </div>
+            <label for="menu" class="nav__label">
+                <img src="../../assets/menu.svg" alt="logo menu" class="nav__img__logo">
+            </label>
+            <input type="checkbox" id="menu" class="nav__input">
+            <div class="nav__menu">
+                <img src="../../assets/logo.png" class="nav-img1">
+                <div class="enlaces-menu">
+                    <a [routerLink]="['']" class="nav__item">Inicio</a>
+                    <a [routerLink]="['dashboard']" class="nav__item">Dashboard</a>
+                    <a [routerLink]="['wallet']" class="nav__item">Wallet</a>
+                    <a [routerLink]="['swap']" class="nav__item">Swap/Trade</a>
+                    <a [routerLink]="['dashboard']" class="nav__item">Sobre Nosotros</a>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+</header>
