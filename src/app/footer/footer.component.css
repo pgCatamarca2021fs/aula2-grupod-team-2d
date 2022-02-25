@@ -52,3 +52,205 @@ footer {
     width: 100%;
     height: auto;
 }
+
+.footer-abajo {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0 0 0;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+}
+
+.footer-arriba div {
+    margin: 0 2.5rem;
+}
+
+.container-listas {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+.container-listas {
+    display: flex;
+    flex-direction:column;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+}
+
+
+
+.segundo-parrafo-footer {
+    width: 100%;
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2.5rem;
+    margin:  0 1rem 1rem 0;
+}
+
+
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+.container-listas {
+    display: flex;
+    flex-direction:column;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+}
+
+
+
+.segundo-parrafo-footer {
+    width: 100%;
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2.5rem;
+    margin:  0 1rem 1rem 0;
+}
+
+
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+.container-listas {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba div h5 {
+    font-size: 1.8rem;
+}
+
+.segundo-parrafo-footer {
+    width: 100%;
+    
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 3rem;
+    margin:  0 1rem 1rem 0;
+}
+
+
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+.container-listas {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba div h5 {
+    font-size: 1.8rem;
+}
+
+.segundo-parrafo-footer {
+    width: 100%;
+    
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 3rem;
+    margin:  0 1rem 1rem 0;
+}
+
+}

@@ -1,0 +1,68 @@
+<!-- <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+    show = {{show}}
+    <br>
+    <div *ngIf="show">Text to show</div> -->
+
+<div [class]="body" class="body">
+    
+    
+    <div [class]="menu__side" id="menu_side" class="menu__side">
+        
+        <div class="name__page">
+            <img src="../../assets/menu.svg" (click)="openMenu()" alt="logo menu" class="nav__img__logo" id="btn_open">
+            <h4>CataExchange</h4>
+            
+            <i class="fas fa-window-close btnCerrarVentana" (click)="closeMenu()" ></i>
+        </div>
+    
+        <div class="options__menu">
+            
+            <a href="#" class="selected">
+                <div class="option">
+                <i class="fas fa-clipboard-list" title="dashboard"></i>
+                    <h4>Dashboard</h4>
+                </div>
+            </a>
+    
+            <a href="#">
+                <div class="option">
+                    <i class="fas fa-wallet" title="wallet"></i>
+                    <h4>Wallet</h4>
+                </div>
+            </a>
+    
+            <a href="#">
+                <div class="option">
+                <i class="fas fa-balance-scale" title="swap/trade"></i>
+                    <h4>Swap/trade</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="fas fa-chart-line" title="mercado crypto"></i>
+                    
+                    <h4>Mercado Crypto</h4>
+                </div>
+            </a>
+    
+            <a href="#">
+                <div class="option">
+                    <i class="fas fa-users" title="sobre nosotros"></i>
+                    <h4>Sobre Nosotros</h4>
+                </div>
+            </a>
+    
+            <a href="#">
+                <div class="option">
+                <i class="fas fa-user" title="perfil"></i>
+                    <h4>Perfil</h4>
+                </div>
+            </a>
+    
+        </div>
+    
+    </div>
+    
+    
+</div>

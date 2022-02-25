@@ -7,6 +7,7 @@
     height: 80vh;
     background-color: var(--nuevo-fondo-body);
     color: var(--nuevo-texto);
+	padding-top: 3rem;
 }
 
 .btn-inicar {
@@ -70,3 +71,112 @@
 }
 
  /* ========= HASTA AQUI LA VENTANA DEL LOG IN */
+
+
+
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+	.btc-img-index {
+    margin: 0 0 0 2rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+	.btc-img-index {
+    margin: 0 0 0 2rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+	.btc-img-index {
+    margin: 0 0 0 5rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+	.div-main-texto h1 {
+		font-size: 3rem;
+	}
+
+	.div-main-texto p {
+		font-size: 2rem;
+	}
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+	.div-botones {
+		justify-content: space-evenly;
+		align-items: center;
+		margin: 4rem 0 0 0;
+	}
+
+	.btn-inicar , .btn-registrar {
+		transform: scale(1.5);
+	}
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+	.btc-img-index {
+    margin: 0 0 0 5rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+	.div-main-texto h1 {
+		font-size: 3rem;
+		margin-bottom: 5rem;
+	}
+
+	.div-main-texto p {
+		font-size: 2rem;
+		margin-bottom: 5rem;
+		margin-top: 5rem;
+	}
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+	.div-botones {
+		flex-direction: column;
+	}
+
+	.btn-inicar , .btn-registrar {
+		margin-right: 2rem;
+		font-size: 2rem;
+	}
+}

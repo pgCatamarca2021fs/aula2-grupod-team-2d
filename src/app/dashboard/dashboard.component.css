@@ -1,12 +1,3 @@
-.contenedor-del-resto-menos-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.contenedor-del-resto-menos-nav section {
-    margin: auto 0 3rem 0;
-}
-
 :root {
     --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
     --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
@@ -92,9 +83,11 @@
     margin: .5rem 0 0 0;
     padding-bottom: 1rem;
 }
+
 .titulo-sup-izq h3{
     margin: 0 5rem 0 0;
 }
+
 .monedas-sup-izq {
     width: 40px;
     margin: 0 1rem;
@@ -183,7 +176,6 @@
     margin: 0 1rem;
 }
 
-
 .testbutton {
     font-size: 14px;
     padding: 10px 25px;
@@ -191,11 +183,11 @@
     border: 0px solid #3866A3;
     background:var(--texto-resalta);
 }
+
 .testbutton:hover {
     background: #434790;
     color: var(--nuevo-texto);
 }
-
 
 .div-botones {
     display: flex;
@@ -228,307 +220,748 @@
 }
 
 
-/* .main-dashboard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 4rem  0;
-    
-}
 
-.card-main-dashboard {
-    width: 14rem;
-    height: 10rem;
-    background-color:var(--nuevo-oscuro);
-    border-radius: 10px;
-    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
-    display: flex;
+
+
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+
+
+.dashboard-propio {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem;
-}
-
-
-
-.card-main-cuenta a {
-    color: var(--nuevo-texto);
-}
-
-.parrafo-arriba {
-    letter-spacing: .2rem;
-    font-size: .8rem;
-    color:  rgb(255, 255, 36);
-    word-spacing: .5rem;
-}
-
-.parrafo-abajo {
-    font-size: 1rem;
-    text-align: center;
-    color:  var(--nuevo-texto);
-
-}
-
-.parrafo-dinero {
-    font-size: 1.5rem;
-}
-
-
-.swapero {
-    width: 400px;
-    height: 550px;
-    background-image: var(--bg-shape-color);
-    border-radius: 40px;
-}
-
-.swap-arriba {
-    background-color: var(--lightblue);
-    width: 100%;
-    height: 45%;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.texto-swap-arriba {
-    text-align: center;
-}
-
-.select-swap-arriba {
-    margin: 0 0 0 1rem;
-}
-
-
-
-
-
-.checkoutButton1 {
-    display: flex;
-    width: 90%;
-    background-image: var(--bg-shape-color);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1),
-    2px 2px 3px 0px rgba(12, 12, 12, 0.3),
-    inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
-    margin-top: 6rem;
-    margin-left: 1rem;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: right;
-}
-.priceTag1 {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    color: var(--text-color);
-}
-.priceTag1 span {
-    color: #004F8A;
-    font-size: 20px;
-}
-button.preorder1 {
-    outline: 0;
-    border: 0;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background-image: linear-gradient(85deg, #007ad8, #004F8A);
-    color: white;
-}
-.preorder1 p {
-    padding: 8px 17px;
-    border-right: 1px solid rgba(0, 0, 0, 0.4);
-}
-.buttonaction1 {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 5px 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.7);
-    
-} */
-
-
-    /* ================================ */
-    /* SECTION TEXTO IMG */
-    /* ================================ */
-
-/* .contenedor-article-cripto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 95%;
-    border-radius: 16px;
-    height: 60vh;
-    
-    background: var(--nuevo-oscuro);
-    border-radius: 10px;
-    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
-}
-
-.article-cripto-img {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0 0 0;
-    
-}
-
-.div-article-cripto-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-
-}
-
-.png-criptos {
-    width: 400px;
-}
-
-.titulo-h3-maneja-cripto {
-    margin: 0 0 3rem 0;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--text-color);
-    padding: 0 1rem;
-}
-
-.parrafo-maneja-cripto {
-    width: 80%;
-    margin: 3rem 0 0 0;
-    font-size: 1.2rem;
-    color: var(--text-color);
-}
-
-
-.grid-cripto-cotizaciones {
-    color: var(--nuevo-oscuro);
-    margin: 2rem 0 0 0;
-}
-
-.grid-cripto-cotizaciones img {
-    width: 30px;
-    margin: 0 .5rem 0 0;
-}
-
-.span-positivo {
-    color: green;
-}
-
-.span- {
-    color: red;
-}
-
-.contenedor-cripto-cotizacion {
-    background: var(--nuevo-texto);
-    backdrop-filter: blur( 4px );
-    
-    border-radius: 10px;
-    padding-top: 1rem;
-    margin:1rem 2rem;
-}
-
-.grid-cripto-cotizaciones h2 {
-    color: var(--nuevo-texto);
-}
-
-.visite-wallet {
-    color: var(--nuevo-texto);
-}
-
-.cards-cripto-cotizaciones {
-    width: 100%;
-}
-
-.contenedor-cards-swap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.swap {
-    width: 30rem;
     height: auto;
-    background: rgba( 0, 0, 0, 0.5 );
-    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
-    backdrop-filter: blur( 6.5px );
-    -webkit-backdrop-filter: blur( 6.5px );
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
     border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    padding-bottom: 1.5rem;
-    margin: 3rem 3rem 0 0;
-    align-self:baseline;
 }
 
-.swap h3 {
-    color:var(--nuevo-texto);
-    padding: 2rem 0 1rem 0;
-}
 
-.swap-moneda-arriba , .swap-moneda-abajo {
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
     width: 90%;
-    height: 35%;
-    background: var(--nuevo-claro);
-    backdrop-filter: blur( 5.5px );
-    border-radius: 10px;
+    height:80%;
+    margin: 1rem;
+    display: none;
+}
+
+.table-movimientos {
+    width: 40%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: left;
-    overflow: hidden;
-    margin: 1rem 0;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
     box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
 }
 
-.swap-moneda-arriba img, .swap-moneda-abajo img {
-    width: 40px;
-    margin: .5rem 0 0 .5rem;
-}
-
-.swap-moneda-arriba p, .swap-moneda-abajo p {
+.div-market-hoy h3 { 
     font-size: 1.5rem;
-    color: var(--nuevo-texto);
-    margin: 0 0 0 1rem;
 }
 
-.swap-moneda-arriba div, .swap-moneda-abajo div {
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
     display: flex;
     flex-direction: row;
-    justify-content:left;
     align-items: center;
-    padding: 1rem 0;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
 }
 
-.swap-moneda-arriba input, .swap-moneda-abajo input {
-    background-color:#ffffff57;
-    height: 3rem;
-    border: none;
-}
 
-.btn-confirmar-swap {
-    width: 90%;
-    height: 3rem;
-    background: var(--lightblue);
-    border-radius: 5px;
-    border: none;
-    font-size: 1.3rem;
-    box-shadow: 0px 0px 19px 4px rgba(0,0,0,0.75);
-}
 
-.awesome {
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
     color: var(--nuevo-texto);
-    font-size: 2rem;
-    cursor: pointer;
-} */
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:80%;
+    margin: 1rem;
+    display: none;
+}
+
+.table-movimientos {
+    width: 40%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:auto;
+    margin: 1rem;
+    padding-bottom: .1rem;
+}
+
+.table-movimientos {
+    width: 90%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:auto;
+    margin: 1rem;
+    padding-bottom: .1rem;
+}
+
+.table-movimientos {
+    width: 90%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+}

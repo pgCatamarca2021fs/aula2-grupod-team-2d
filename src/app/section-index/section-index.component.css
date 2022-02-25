@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--nuevo-fondo-body);
+    padding: 2rem 0;
 }
 
 .article__section__index {
@@ -101,7 +102,6 @@
 .article__index__info {
     width: 100%;
     height: 80vh;
-    width: 80%;
     margin: 3rem 5rem 0 0;
     display: flex;
     flex-direction: row;
@@ -136,4 +136,250 @@
     color: var(--nuevo-texto);
     font-size: 1.2rem;
     padding-bottom: 1rem;
+}
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .section__index {
+        padding: 3rem 0;
+    }
+
+    .article__section__index {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .article__section__index a {
+        font-size: 1.5rem;
+    }
+
+    .div__article__titulos h2 {
+        font-size: 1.5rem;
+    }
+
+    .div__article__titulos h3 {
+        font-size: 2rem;
+    }
+
+    .div__img__article {
+        flex-direction: column;
+    }
+
+    .article__card__cripto {
+        margin: 1rem 0;
+    }
+
+    /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+    .article__index__info {
+        width: 100%;
+        height:auto;
+        margin: 3rem 0 0 0;
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    .article__index__info img {
+        width: 300px;
+    }
+
+    .div_article_info p{
+        text-align: left;
+    }
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+    .section__index {
+        padding: 3rem 0;
+    }
+
+    .titulo__principal__article {
+        padding: 0 1rem;
+    }
+
+    .article__section__index {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .article__section__index a {
+        font-size: 1.5rem;
+    }
+
+    .div__article__titulos h2 {
+        font-size: 1.5rem;
+    }
+
+    .div__article__titulos h3 {
+        font-size: 2rem;
+    }
+
+    .div__img__article {
+        flex-direction: column;
+    }
+
+    .article__card__cripto {
+        margin: 1rem 0;
+    }
+
+        /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+    .article__index__info {
+        width: 100%;
+        height:auto;
+        margin: 3rem 0 0 0;
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    .article__index__info img {
+        width: 300px;
+    }
+
+    .div_article_info p {
+        text-align: left;
+    }
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .section__index {
+        padding: 3rem 0;
+    }
+
+    .article__section__index {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .article__section__index a {
+        font-size: 1.5rem;
+    }
+
+    .div__article__titulos h2 {
+        font-size: 2rem;
+    }
+
+    .div__article__titulos h3 {
+        font-size: 3rem;
+    }
+
+    .div__img__article {
+        flex-direction: column;
+    }
+
+    .article__card__cripto {
+        margin: 1rem 0;
+    }
+
+    .article__card__cripto {
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .article__card__cripto h4 {
+        font-size: 3rem ;
+    }
+
+    .article__card__cripto img {
+        width:10rem;
+    }
+
+        /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+    .article__index__info {
+        width: 100%;
+        height:auto;
+        margin: 3rem 0 0 0;
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+
+    .article__index__info img {
+        width: 400px;
+    }
+
+    .div_article_info h2 {
+        font-size: 1.8rem;
+    }
+
+    .div_article_info h3 {
+        font-size: 2.5rem;
+    }
+
+    .div_article_info p{
+        text-align: left;
+        font-size: 1.7rem;
+    }
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section__index {
+        padding: 3rem 0;
+    }
+
+    .article__section__index {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .article__section__index a {
+        font-size: 1.5rem;
+    }
+
+    .div__article__titulos h2 {
+        font-size: 2rem;
+    }
+
+    .div__article__titulos h3 {
+        font-size: 3rem;
+    }
+
+    .div__img__article {
+        flex-direction: column;
+    }
+
+    .article__card__cripto {
+        margin: 1rem 0;
+    }
+
+    .article__card__cripto {
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .article__card__cripto h4 {
+        font-size: 3rem ;
+    }
+
+    .article__card__cripto img {
+        width:10rem;
+    }
+
+            /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+    .article__index__info {
+        width: 100%;
+        height:auto;
+        margin: 3rem 0 0 0;
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+
+    .article__index__info img {
+        width: 400px;
+    }
+
+    .div_article_info h2 {
+        font-size: 1.8rem;
+    }
+
+    .div_article_info h3 {
+        font-size: 2.5rem;
+    }
+
+    .div_article_info p{
+        text-align: left;
+        font-size: 1.7rem;
+    }
 }
