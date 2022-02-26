@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-main-index',
   templateUrl: './main-index.component.html',
@@ -20,6 +19,8 @@ export class MainIndexComponent implements OnInit {
     this.divInicioSesion = "divInicioSesion";
     this.divInicioSesion1 = "divInicioSesion1";
   }
+
+
 
   constructor() { }
 

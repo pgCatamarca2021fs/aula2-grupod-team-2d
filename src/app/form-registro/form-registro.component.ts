@@ -11,6 +11,21 @@ import {debounceTime} from 'rxjs/operators';
   styleUrls: ['./form-registro.component.css']
 })
 export class FormRegistroComponent implements OnInit {
+   // btnRegistro = "";
+  // popup = "";
+  divRegistro = "";
+  divRegistro1 = "";
+  
+  registroPopup() {
+    this.divRegistro = "active"
+    this.divRegistro1 = "active"
+  }
+
+  cerrarPopup() {
+    this.divRegistro = "divRegistro";
+    this.divRegistro1 = "divRegistro1";
+  }
+
 
   form!: FormGroup;
 
