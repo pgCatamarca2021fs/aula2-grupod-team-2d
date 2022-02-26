@@ -1,41 +1,47 @@
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="form-signin">
-    <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
-    <h1 class="text-center">Inicia Sesión</h1>
+<div [class]="divInicioSesion" class="divInicioSesion" id="divInicioSesion">
+  <div [class]="divInicioSesion1" class="divInicioSesion1" id="divInicioSesion1">
+      <a href="#" id="btnCerrarVentana" class="btnCerrarVentana" (click)="cerrarPopup()"><i class="fas fa-times"></i></a>
+      <main class="form-signin">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="form-signin">
+            <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
+            <h1 class="text-center">Inicia Sesión</h1>
 
-  
-        <div class="form-floating mb-3 mt-3">
-              <input type="email" formControlName="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="">
-              <label for="floatingEmail">Email</label>
-              <div *ngIf="Email?.errors && Email?.touched">
-                  <p *ngIf="Email?.hasError('required')" class="text-danger">
-                    Campo obligatorio.
+          
+                <div class="form-floating mb-3 mt-3">
+                      <input type="email" formControlName="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="">
+                      <label for="floatingEmail">Email</label>
+                      <div *ngIf="Email?.errors && Email?.touched">
+                          <p *ngIf="Email?.hasError('required')" class="text-danger">
+                            Campo obligatorio.
+                          </p>
+                          <p *ngIf="Email?.hasError('pattern')" class="text-danger">
+                              No es un email.
+                          </p>
+                      </div>
+                </div>
+          
+          <div class="form-floating mb-3 mt-3">
+                <input type="password" formControlName="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control" id="floatingContraseña" placeholder=""> <!---nombre del objeto en forcontrolname-->
+                <label for="floatingContraseña">Contraseña</label>
+                <div *ngIf="Contrasenia?.errors && Contrasenia?.touched">
+                  <p *ngIf="Contrasenia?.hasError('required')" class="text-danger">
+                      Campo obligatorio.
                   </p>
-                  <p *ngIf="Email?.hasError('pattern')" class="text-danger">
-                      No es un email.
+                  <p *ngIf="Contrasenia?.hasError('minlength')" class="text-danger">
+                    La contraseña debe tener como minimo ocho caracteres.
                   </p>
-              </div>
-        </div>
-  
-  <div class="form-floating mb-3 mt-3">
-        <input type="password" formControlName="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control" id="floatingContraseña" placeholder=""> <!---nombre del objeto en forcontrolname-->
-        <label for="floatingContraseña">Contraseña</label>
-        <div *ngIf="Contrasenia?.errors && Contrasenia?.touched">
-          <p *ngIf="Contrasenia?.hasError('required')" class="text-danger">
-              Campo obligatorio.
-          </p>
-          <p *ngIf="Contrasenia?.hasError('minlength')" class="text-danger">
-            La contraseña debe tener como minimo ocho caracteres.
-          </p>
-          <p *ngIf="Contrasenia?.hasError('maxlength')" class="text-danger">
-            La contraseña debe tener como máximo quince caracteres.
-          </p>
-          <p *ngIf="Contrasenia?.hasError('pattern')" class="text-danger">
-            La contraseña puede contener letras, números, guión medio y guión bajo.
-          </p>
-        </div>
+                  <p *ngIf="Contrasenia?.hasError('maxlength')" class="text-danger">
+                    La contraseña debe tener como máximo quince caracteres.
+                  </p>
+                  <p *ngIf="Contrasenia?.hasError('pattern')" class="text-danger">
+                    La contraseña puede contener letras, números, guión medio y guión bajo.
+                  </p>
+                </div>
+          </div>
+          
+          
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button> 
+        </form>
+      </main>
   </div>
-  
-  
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button> 
-</form>
-  
+</div>  
