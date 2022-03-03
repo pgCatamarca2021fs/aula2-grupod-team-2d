@@ -17,8 +17,6 @@
     padding-top: 3rem;
     background: rgba( 0, 0, 0, 0.5 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 6.5px );
-    -webkit-backdrop-filter: blur( 6.5px );
     border-radius: 10px;
 }
 
@@ -58,9 +56,7 @@
     justify-content: space-around;
     flex-direction: column;
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 5.5px );
-    -webkit-backdrop-filter: blur( 5.5px );
+    
     border-radius: 10px;
 }
 
@@ -91,13 +87,25 @@
     width: 140px;
 }
 
-
-.logo-cripto:hover {
-    transition: ease 2s all;
-    animation: none;
-    transform: rotate(-70deg) translate(10px, 66px);
-    filter: none;
+@keyframes floate {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
 }
+
+.logo-cripto {
+    animation: floate 6s ease-in-out infinite;
+}
+
 
 .article__index__info {
     width: 100%;

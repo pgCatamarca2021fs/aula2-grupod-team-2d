@@ -1,3 +1,135 @@
+<<<<<<< HEAD
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="form-signin">
+  <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
+  <h1 class="text-center">Registrate</h1>
+
+<div class="form-floating  mb-3 mt-3">
+  <input type="text" formControlName="nombre"  class="form-control" [class.border-danger]="NombreValid" id="floatingName" placeholder="">
+  <label for="floatingName">Nombre</label>
+  <div *ngIf="Nombre?.errors && Nombre?.touched">
+    <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+        Campo obligatorio.
+    </p>
+    <p *ngIf="Nombre?.hasError('minlength')" class="text-danger">
+      El nombre debe tener como mínimo 4 letras.
+    </p>
+    <p *ngIf="Nombre?.hasError('pattern')" class="text-danger">
+        Nombre inválido (Sólo debe contener letras).
+    </p>
+    
+</div>
+</div>
+
+
+
+<div class="form-floating  mb-3 mt-3">
+  <input type="text" formControlName="apellido" class="form-control" [class.border-danger]="ApellidoValid" id="floatingApellido" placeholder=""> <!---nombre del objeto en forcontrolname-->
+  <label for="floatingApellido">Apellido</label>
+  <div *ngIf="Apellido?.errors && Apellido?.touched">
+  <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+      Campo obligatorio.
+  </p>
+  <p *ngIf="Apellido?.hasError('minlength')" class="text-danger">
+    El apellido debe tener como minimo tres letras.
+  </p>
+  <p *ngIf="Apellido?.hasError('pattern')" class="text-danger">
+    Apellido inválido (Sólo debe contener letras).
+</p>
+</div>
+</div>
+
+<div class="form-floating  mb-3 mt-3">
+  <input type="number" formControlName="dni" class="form-control" [class.border-danger]="DniValid" id="floatingDni" placeholder=""> <!---nombre del objeto en forcontrolname-->
+  <label for="floatingDni">DNI</label>
+<div *ngIf="Dni?.errors && Dni?.touched">
+  <p *ngIf="Dni?.hasError('required')" class="text-danger">
+      Campo obligatorio.
+  </p>
+  <p *ngIf="Dni?.hasError('pattern')" class="text-danger">
+    Sólo puede contener ocho números.
+</p>
+</div>
+</div>
+
+
+<div class="form-floating mb-3 mt-3">
+  <input type="date" formControlName="fecha" class="form-control" [class.border-danger]="FechaValid" id="floatingFecha" placeholder="">
+  <label for="floatingFecha">Fecha de Nacimiento</label>
+    <div *ngIf="Fecha?.errors && Fecha?.touched">
+      <p *ngIf="Fecha?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+      </div>
+      </div>
+
+      <div class="form-floating mb-3 mt-3">
+        <input type="number" formControlName="edad" [class.border-danger]="EdadValid" class="form-control" id="floatingEdad" placeholder=""> <!---nombre del objeto en forcontrolname-->
+          <label for="floatingEdad">Edad</label>
+      <div *ngIf="Edad?.errors && Edad?.touched">
+        <p *ngIf="Edad?.hasError('required')" class="text-danger">
+            Campo obligatorio.
+        </p>
+        <p *ngIf="Edad?.hasError('valuesValSencilla')" class="text-danger">
+          Debe ser mayor de edad para registrarse.
+      </p>
+      </div>
+  </div>
+
+      <div class="form-floating mb-3 mt-3">
+      <input type="email" formControlName="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="">
+        <label for="floatingEmail">Email</label>
+    <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="text-danger">
+           Campo obligatorio.
+        </p>
+        <p *ngIf="Email?.hasError('pattern')" class="text-danger">
+            No es un email.
+        </p>
+    </div>
+</div>
+
+<div class="form-floating mb-3 mt-3">
+      <input type="password" formControlName="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control" id="floatingContraseña" placeholder=""> <!---nombre del objeto en forcontrolname-->
+        <label for="floatingContraseña">Contraseña</label>
+      <div *ngIf="Contrasenia?.errors && Contrasenia?.touched">
+      <p *ngIf="Contrasenia?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+      <p *ngIf="Contrasenia?.hasError('minlength')" class="text-danger">
+        La contraseña debe tener como minimo ocho caracteres.
+      </p>
+      <p *ngIf="Contrasenia?.hasError('maxlength')" class="text-danger">
+        La contraseña debe tener como máximo quince caracteres.
+      </p>
+      <p *ngIf="Contrasenia?.hasError('pattern')" class="text-danger">
+        La contraseña puede contener letras, números, guión medio y guión bajo.
+      </p>
+    </div>
+</div>
+
+<div class="form-floating mb-3 mt-3">
+      <input type="password" formControlName="contraseñaRepetida" [class.border-danger]="ContraseniaRepetidaValid" class="form-control" id="floatingContraseñaRepetida" placeholder=""> <!---nombre del objeto en forcontrolname-->
+        <label for="floatingContraseñaRepetida">Repetir contraseña</label>
+    <div *ngIf="ContraseniaRepetida?.errors && ContraseniaRepetida?.touched">
+      <p *ngIf="ContraseniaRepetida?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+    </div>
+</div>
+
+    <p>
+      <input type="checkbox" value="" formControlName="terminosCondiciones"> Acepto los términos y condiciones.
+    </p>
+    <div *ngIf="TerminosCondiciones?.errors && TerminosCondiciones?.touched">
+      <p *ngIf="TerminosCondiciones?.hasError('required')" class="text-danger">
+          Campo obligatorio.
+      </p>
+      </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button> 
+  </form>
+
+=======
 <div [class]="divRegistro" class="divRegistro" id="divRegistro">
     <div [class]="divRegistro1" class="divRegistro1" id="divRegistro1">
         <a href="#" id="btnCerrarVentana" class="btnCerrarVentana" (click)="cerrarPopup()"><i class="fas fa-times"></i></a>
@@ -134,3 +266,4 @@
         </main>
     </div>
 </div>
+>>>>>>> dd3f764a7c846e692da95f72ff3e5019072b993e

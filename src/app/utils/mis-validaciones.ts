@@ -1,33 +1,19 @@
-//import {AbstractControl} from '@angular/forms';
+import {AbstractControl} from '@angular/forms';
 
-//export class MisValidaciones{
-  //  static valTexto(control: AbstractControl ){ //hasta acá sería todo igual (?)
-      //  const value = control.value;
-    //    if(value.minLength>=5){
-        //    alert("rrjnr");
+//export class MyValidations {
+  //  static isYounger(control: AbstractControl){
+    //    const value=control.value;
+      //  if(value<18){
+        //    return {isYounger:true}
         //}
- //   }
-//}
+    //}
+    //}
 
-import {AbstractControl, ValidationErrors, ValidatorFn} from '@angular/forms';
-
-export function createPasswordStrengthValidator(): ValidatorFn {
-    return (control:AbstractControl) : ValidationErrors | null => {
-
-        const value = control.value;
-
-        if (!value) {
-            return null;
+    export class UserValidator{
+      static verificarEspacios(control: AbstractControl){
+        if(control.value.indeof(' ') >=0){
+          return {sinEspacios: true}
         }
-
-        const hasUpperCase = /[A-Z]+/.test(value);
-
-        const hasLowerCase = /[a-z]+/.test(value);
-
-        const hasNumeric = /[0-9]+/.test(value);
-
-        const passwordValid = hasUpperCase && hasLowerCase && hasNumeric;
-
-        return !passwordValid ? {passwordStrength:true}: null;
+        return null;
+      }
     }
-}

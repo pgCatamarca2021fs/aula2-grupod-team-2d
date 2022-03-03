@@ -2,8 +2,13 @@ import { registerLocaleData } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
+import { AbstractControl } from '@angular/forms';
+import { ValidationErrors, ValidatorFn } from '@angular/forms';
 
-//import {MisValidaciones} from '../utils/mis-validaciones';
+
+//import {UserValidator} from '../utils/mis-validaciones';
+
+//import {MyValidations} from '../utils/mis-validaciones';
 
 @Component({
   selector: 'app-form-registro',
@@ -43,9 +48,9 @@ export class FormRegistroComponent implements OnInit {
 
       nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-Z]+$/)]],
       apellido: ['',[Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-Z]+$/)]],
-      dni: ['',[Validators.required, Validators.pattern(/^\d[0-9]{18}$/)]], 
+      dni: ['',[Validators.required, Validators.pattern(/^\d[0-9]{8}$/)]], 
       fecha: ['', [Validators.required]],
-      edad: ['', [Validators.required, Validators.min(18)]],
+      edad: ['', [Validators.required, this.valSencilla]],
       email: ['', [Validators.required, Validators.pattern((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/))]],
       contraseña: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern(/^[a-zA-Z0-9\_\-]+$/)]],
       contraseñaRepetida: ['', [Validators.required]], 
@@ -54,7 +59,7 @@ export class FormRegistroComponent implements OnInit {
     
   }
 
-  get Edad (){
+get Edad (){
     return this.form.get('edad');
   }
 
@@ -132,6 +137,17 @@ get FechaValid(){
 get EdadValid(){
   return this.Edad?.touched && !this.Edad?.valid;
 }
+
+private valSencilla (): ValidatorFn{
+  return(): ValidationErrors | null => {
+  const edad:number= this.form.get('edad')?.value;
+  
+  if ( edad >= 18 ) {
+  return null; 
+  }
+  return { valuesValSencilla: true }
+  }
+  }
 }
 
 
