@@ -217,6 +217,7 @@
 
 .divRegistro.active {
 	visibility: visible;
+	z-index: 999;
 }
 
 .divRegistro1 {
