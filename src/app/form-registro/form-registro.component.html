@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<!--<form class="form-group container" autocomplete="off" [formGroup]="form">
-    <div>
-        <label for="nombres">Nombres</label>
-        <input class="form-control" type="text" id="nombres" placeholder="Tus nombres">
-    </div>
->>>>>>> 41b91d0d737aac68d5656d9cdab3c3b9d9b52b3b
-
 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="form-signin">
   <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
   <h1 class="text-center">Registrate</h1>
@@ -26,6 +15,7 @@
     <p *ngIf="Nombre?.hasError('pattern')" class="text-danger">
         Nombre inválido (Sólo debe contener letras).
     </p>
+    
 </div>
 </div>
 
@@ -78,7 +68,7 @@
         <p *ngIf="Edad?.hasError('required')" class="text-danger">
             Campo obligatorio.
         </p>
-        <p *ngIf="Edad?.hasError('min')" class="text-danger">
+        <p *ngIf="Edad?.hasError('valuesValSencilla')" class="text-danger">
           Debe ser mayor de edad para registrarse.
       </p>
       </div>
@@ -137,4 +127,4 @@
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button> 
   </form>
->>>>>>> a022445e1238007e607b9c3e3006eb0d2a268c0e
+
