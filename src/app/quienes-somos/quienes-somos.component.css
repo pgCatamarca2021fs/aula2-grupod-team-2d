@@ -1,0 +1,22 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#0091ff;
+    --darkblue: #ef5777;
+    --text-color: #d5e1ef;
+    --nuevo-fondo-body: #282A4C;
+    --nuevo-oscuro: #181C37;
+    --nuevo-claro: #26284E;
+    --nuevo-texto: #dfe2eb;
+}
+
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    background-color: var(--lightblue);
+}

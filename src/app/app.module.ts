@@ -20,6 +20,8 @@ import { SwapComponent } from './swap/swap.component';
 import { FormRegistroComponent } from './form-registro/form-registro.component';
 import { PruebasComponent } from './pruebas/pruebas.component';
 import { FormLoginComponent } from './form-login/form-login.component';
+import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { FormLoginComponent } from './form-login/form-login.component';
     SwapComponent,
     FormRegistroComponent,
     PruebasComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    SobreNosotrosComponent,
+    QuienesSomosComponent
   ],
   imports: [
     BrowserModule,
