@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { MercadoCryptoComponent } from './mercado-crypto/mercado-crypto.component';
 import { SwapComponent } from './swap/swap.component';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'swap', component: SwapComponent },
   { path: 'billetera', component: WalletComponent },
   { path: 'criptos', component: MercadoCryptoComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  { path: '**', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'quienes-somos', component: QuienesSomosComponent }
+
 ];
 
 @NgModule({
