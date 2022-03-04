@@ -22,6 +22,7 @@ import { PruebasComponent } from './pruebas/pruebas.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { BitcoinComponent } from './bitcoin/bitcoin.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     PruebasComponent,
     FormLoginComponent,
     SobreNosotrosComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    BitcoinComponent
   ],
   imports: [
     BrowserModule,

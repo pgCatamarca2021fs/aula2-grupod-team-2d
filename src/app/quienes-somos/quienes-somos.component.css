@@ -10,21 +10,29 @@
     --nuevo-claro: #26284E;
     --nuevo-texto: #dfe2eb;
 }
+section {
+    background-color: var(--nuevo-fondo-body);
+    padding: 2rem 0 ;
+}
 
 .quienes-somos {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     width: 100%;
-    height: auto;
+    height:auto;
     padding: 2rem 2rem 4rem 2rem;
     background-color: var(--lightblue);
     color: var(--nuevo-texto);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    padding: 6rem 0;
 
 }
 
+
 .quienes-somos h1{
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
 }
 .quienes-somos p, h3  {
     text-align: translatey;
