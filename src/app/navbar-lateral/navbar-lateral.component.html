@@ -17,28 +17,28 @@
 
         <div class="options__menu">
 
-            <a href="#" class="selected">
+            <a [routerLink]="['../dashboard']" class="selected">
                 <div class="option">
                     <i class="fas fa-clipboard-list" title="dashboard"></i>
                     <h4>Dashboard</h4>
                 </div>
             </a>
 
-            <a href="#">
+            <a [routerLink]="['../billetera']">
                 <div class="option">
                     <i class="fas fa-wallet" title="wallet"></i>
                     <h4>Wallet</h4>
                 </div>
             </a>
 
-            <a href="#">
+            <a [routerLink]="['../swap']">
                 <div class="option">
                     <i class="fas fa-balance-scale" title="swap/trade"></i>
                     <h4>Swap/trade</h4>
                 </div>
             </a>
 
-            <a href="#">
+            <a [routerLink]="['../criptos']">
                 <div class="option">
                     <i class="fas fa-chart-line" title="mercado crypto"></i>
 
@@ -46,7 +46,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a [routerLink]="['../sobre-nosotros']">
                 <div class="option">
                     <i class="fas fa-users" title="sobre nosotros"></i>
                     <h4>Sobre Nosotros</h4>

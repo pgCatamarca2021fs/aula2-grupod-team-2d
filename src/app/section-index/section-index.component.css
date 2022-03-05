@@ -146,6 +146,14 @@
     padding-bottom: 1rem;
 }
 
+.div-go-dashboard {
+    width: 100%;
+    background: purple;
+    color: white;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    padding: 10rem 20%;
+}
+
 /* Phone landscape + portrait (iphone x) */
 @media (min-width: 321px) and (max-width: 480px) {
     .section__index {

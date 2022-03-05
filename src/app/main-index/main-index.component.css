@@ -63,6 +63,7 @@
 	justify-content: center;
 	display: flex;
 	visibility: hidden;
+	z-index: 9;
 }
 
 .divInicioSesion.active {
@@ -213,6 +214,7 @@
 	justify-content: center;
 	display: flex;
 	visibility: hidden;
+	z-index: 9;
 }
 
 .divRegistro.active {

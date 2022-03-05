@@ -99,14 +99,12 @@ header{
 
 .options__menu a{
     color:var(--nuevo-texto);
-    cursor: default;
-    display: block;
-    position: relative;
     transition: color 300ms;
+    text-decoration: none;
 }
 
 .options__menu a:hover{
-    color: var(--texto-resalta);
+    color: var(--nuevo-fondo-body);
 }
 
 .options__menu .option{
@@ -123,23 +121,12 @@ header{
 }
 
 .options__menu .option h4{
-    font-weight: 300;
     cursor: pointer;
 }
 
-a.selected{
-    color: #fff;
-}
 
-.selected:before{
-    content: '';
-    width: 3px;
-    height: 80%;
-    background: white;
-    position: absolute;
-    top: 10%;
-    left: -30px;
-}
+
+
 
 /*Clases para usar en JavaScript*/
 
@@ -151,6 +138,15 @@ a.selected{
     width: 300px;
 }
 
+.btnCerrarVentana {
+	color: var(--nuevo-texto);
+    font-size: 1.3rem;
+    margin: 0 0 0 1.5rem;
+}
+
+.btnCerrarVentana:hover {
+	color: var(--nuevo-fondo-body);
+}
 
 @media screen and (max-width: 760px){
     .body_move{
@@ -163,16 +159,3 @@ a.selected{
     }
 }
 
-.btnCerrarVentana {
-	font-size: 16px;
-	line-height: 16px;
-	display: block;
-	text-align: right;
-	transition: .3s ease all;
-	color: #BBBBBB;
-    font-size: 2rem;
-}
-
-.btnCerrarVentana:hover {
-	color: var(--texto-resalta);
-}

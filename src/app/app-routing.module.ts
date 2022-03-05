@@ -10,7 +10,7 @@ import { MercadoCryptoComponent } from './mercado-crypto/mercado-crypto.componen
 import { SwapComponent } from './swap/swap.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
-
+import { BitcoinComponent } from './bitcoin/bitcoin.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
   { path: 'quienes-somos', component: QuienesSomosComponent },
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },
-  { path: 'prueba', component: PruebasComponent }
+  { path: 'prueba', component: PruebasComponent },
+  { path: 'bitcoin', component: BitcoinComponent }
 ];
 
 @NgModule({
