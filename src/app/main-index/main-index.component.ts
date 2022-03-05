@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
+import { ValidationErrors, ValidatorFn } from '@angular/forms';
 
 
 @Component({
@@ -83,7 +84,7 @@ registroPopup() {
   }
 
 
-  form!: FormGroup;
+  form: FormGroup = new FormGroup({}) ;
 
   
   ngOnInit() {
@@ -94,20 +95,16 @@ registroPopup() {
 
       nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-Z]+$/)]],
       apellido: ['',[Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-Z]+$/)]],
-      dni: ['',[Validators.required, Validators.pattern(/^\d[0-9]{18}$/)]], 
-      fecha: ['', [Validators.required]],
-      edad: ['', [Validators.required, Validators.min(18)]],
+      dni: ['',[Validators.required]], 
+      fecha: ['', [Validators.required, this.isYoung()]],
       email: ['', [Validators.required, Validators.pattern((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/))]],
       contraseña: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern(/^[a-zA-Z0-9\_\-]+$/)]],
-      contraseñaRepetida: ['', [Validators.required]], 
+      contraseñaRepetida: ['', [Validators.required, this.valContrasenias()]], 
       terminosCondiciones: ['',[Validators.required]],
     });
     
   }
 
-  get Edad (){
-    return this.form.get('edad');
-  }
 
 get Nombre () {
   return this.form.get('nombre');
@@ -120,10 +117,6 @@ get Apellido (){
 get Dni (){
   return this.form.get('dni');
 }
-
-
-
-
 
 get ContraseniaRepetida (){
   return this.form.get('contraseñaRepetida');
@@ -163,8 +156,33 @@ get FechaValid(){
   return this.Fecha?.touched && !this.Fecha?.valid;
 }
 
-get EdadValid(){
-  return this.Edad?.touched && !this.Edad?.valid;
-}
 
+  private valContrasenias (): ValidatorFn{
+    return(): ValidationErrors | null =>{
+      const contraseña: string = this.form.get('contraseña')?.value;
+      const contraseñaRepetida: string = this.form.get('contraseñaRepetida')?.value;
+      if(contraseña == contraseñaRepetida){
+        return null;
+      }
+      return {valuesContrasenias: true}
+    }
+  }
+
+
+  private isYoung (): ValidatorFn{
+    return(): ValidationErrors | null => {
+      const fechaCruda:string | undefined = this.form.get('fecha')?.value;
+      const cumpleanosUsuario:Date = new Date(fechaCruda!);
+      cumpleanosUsuario.setDate( cumpleanosUsuario.getDate() + 1 );
+
+      const hoydia:Date = new Date();
+
+      let edadUsuario = Math.abs(cumpleanosUsuario.getTime() - hoydia.getTime());
+      edadUsuario = Math.round(edadUsuario/(1000 * 3600 * 24 * 365));
+      if ( edadUsuario >= 18 ) {
+        return null;
+    }
+    return { valuesIsYoung: true }
+  }
+}
 }
