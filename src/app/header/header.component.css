@@ -111,6 +111,10 @@
 @media (min-width: 321px) and (max-width: 480px) {
 .nav {
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 
     width: 100vw;
 }
@@ -192,6 +196,10 @@
 @media (min-width: 481px) and (max-width: 600px) {
 .nav {
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
     width: 100vw;
     height: 100px;
 }
@@ -280,7 +288,12 @@
 /* // Large tablet portrait (ipad) */
 @media (min-width: 601px) and (max-width: 768px) {
 .nav {
+    /* position: fixed; */
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
     width: 100vw;
     height: 140px;
 }
@@ -370,8 +383,12 @@
 /* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
 @media (min-width: 769px) and (max-width: 1024px) {
 .nav {
-        position: fixed;
-
+    /* position: fixed; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
     width: 100vw;
     height: 160px;
 }
