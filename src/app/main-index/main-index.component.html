@@ -55,7 +55,7 @@
 <!-- DIV HIDDEN REGISTRO -->
 <div [class]="divRegistro" class="divRegistro" id="divRegistro">
     <div [class]="divRegistro1" class="divRegistro1" id="divRegistro1">
-        <a href="#" id="btnCerrarVentana" class="btnCerrarVentana" (click)="cerrarPopup1()"><i class="fas fa-times"></i></a>
+        <a href="#" id="btnCerrarVentana" class="btnCerrarVentana sticky-top" (click)="cerrarPopup1()"><i class="fas fa-times"></i></a>
         <main class="form-signin">
             
           <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="form-signin">
