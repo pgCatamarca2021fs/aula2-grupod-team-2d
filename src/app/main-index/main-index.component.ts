@@ -44,14 +44,6 @@ export class MainIndexComponent implements OnInit {
 //     });
 // }
 
-get Email (){
-return this.form.get('email');
-}
-
-get Contrasenia (){
-return this.form.get('contraseña');
-}
-
 
 onEnviar(event:Event){
 event.preventDefault;
@@ -63,13 +55,15 @@ if(this.form.valid){
 }
 }
 
-get EmailValid(){
-return this.Email?.touched && !this.Email?.valid;
-}
-
-get ContraseniaValid(){
-return this.Contrasenia?.touched && !this.Contrasenia?.valid;
-}
+onEnviarLog(event:Event){
+  event.preventDefault;
+  
+  if(this.formLog.valid){
+    alert ("Enviar al servidor..")
+  } else{
+    this.formLog.markAllAsTouched();
+  }
+  }
 
 // REGISTRO ===========================================
 registroPopup() {
@@ -85,7 +79,7 @@ registroPopup() {
 
 
   form: FormGroup = new FormGroup({}) ;
-
+formLog: FormGroup = new FormGroup({}) ;
   
   ngOnInit() {
   }
@@ -93,8 +87,8 @@ registroPopup() {
   private buildForm() {
     this.form = this.formBuilder.group({
 
-      nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-Z]+$/)]],
-      apellido: ['',[Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-Z]+$/)]],
+      nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-Z\s]+$/)]],
+      apellido: ['',[Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-Z\s]+$/)]],
       dni: ['',[Validators.required]], 
       fecha: ['', [Validators.required, this.isYoung()]],
       email: ['', [Validators.required, Validators.pattern((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/))]],
@@ -102,9 +96,31 @@ registroPopup() {
       contraseñaRepetida: ['', [Validators.required, this.valContrasenias()]], 
       terminosCondiciones: ['',[Validators.required]],
     });
+
+    this.formLog = this.formBuilder.group({
+
+      emailLog: ['', [Validators.required]],
+      contraseñaLog: ['',[Validators.required]],
+      
+    });
     
   }
 
+  get EmailLog (){
+    return this.formLog.get('emailLog');
+  }
+  
+  get ContraseniaLog (){
+    return this.formLog.get('contraseniaLog');
+  }
+
+  get EmailLogValid(){
+    return this.EmailLog?.touched && !this.EmailLog?.valid;
+  }
+
+  get ContraseniaLogValid(){
+    return this.ContraseniaLog?.touched && !this.ContraseniaLog?.valid;
+  }
 
 get Nombre () {
   return this.form.get('nombre');
@@ -130,7 +146,13 @@ get Fecha (){
   return this.form.get('fecha');
 }
 
-
+get Email (){
+  return this.form.get('email');
+  }
+  
+  get Contrasenia (){
+  return this.form.get('contraseña');
+  }
 
 
 get NombreValid(){
@@ -145,8 +167,13 @@ get DniValid(){
   return this.Dni?.touched && !this.Dni?.valid;
 }
 
-
-
+get EmailValid(){
+  return this.Email?.touched && !this.Email?.valid;
+  }
+  
+  get ContraseniaValid(){
+  return this.Contrasenia?.touched && !this.Contrasenia?.valid;
+  }
 
 get ContraseniaRepetidaValid(){
   return this.ContraseniaRepetida?.touched && !this.ContraseniaRepetida?.valid;
