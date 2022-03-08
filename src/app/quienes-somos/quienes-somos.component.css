@@ -55,7 +55,7 @@ section {
 .contenedor-card {
     display: flex;
     width: 90%;
-    flex-direction: row;
+    flex-direction: wrap;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;  
@@ -105,4 +105,16 @@ section {
 }
 .card-quienes-somos p {
     text-align: center;
+}
+
+.contenedor-map {
+    margin:1.5rem 0 3rem 0;
+}
+.contenedor-map h3 {
+    width: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 100;
 }
