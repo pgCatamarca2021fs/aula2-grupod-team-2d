@@ -22,7 +22,15 @@ import { PruebasComponent } from './pruebas/pruebas.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
-import { BitcoinComponent } from './bitcoin/bitcoin.component';
+import { BitcoinComponent } from './criptomonedas/bitcoin/bitcoin.component';
+import { DogecoinComponent } from './criptomonedas/dogecoin/dogecoin.component';
+import { BinancecoinComponent } from './criptomonedas/binancecoin/binancecoin.component';
+import { EthereumComponent } from './criptomonedas/ethereum/ethereum.component';
+import { CardanoComponent } from './criptomonedas/cardano/cardano.component';
+import { DaiComponent } from './criptomonedas/dai/dai.component';
+import { SolanaComponent } from './criptomonedas/solana/solana.component';
+import { SmoothLovePotionComponent } from './criptomonedas/smooth-love-potion/smooth-love-potion.component';
+import { UsdtComponent } from './criptomonedas/usdt/usdt.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +51,15 @@ import { BitcoinComponent } from './bitcoin/bitcoin.component';
     FormLoginComponent,
     SobreNosotrosComponent,
     QuienesSomosComponent,
-    BitcoinComponent
+    BitcoinComponent,
+    DogecoinComponent,
+    BinancecoinComponent,
+    EthereumComponent,
+    CardanoComponent,
+    DaiComponent,
+    SolanaComponent,
+    SmoothLovePotionComponent,
+    UsdtComponent
   ],
   imports: [
     BrowserModule,
