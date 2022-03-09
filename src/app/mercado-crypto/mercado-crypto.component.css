@@ -1,19 +1,18 @@
 :root {
-    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
-    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
-    --lightblue: #004F8A;
-    --texto-resalta:#0091ff;
-    --darkblue: #ef5777;
-    --text-color: #d5e1ef;
-    --nuevo-fondo-body: #282A4C;
-    --nuevo-oscuro: #181C37;
-    --nuevo-claro: #26284E;
-    --nuevo-texto: #dfe2eb;
+  --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+  --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+  --lightblue: #004F8A;
+  --texto-resalta:#9092bc;
+  --purple: purple;
+  --text-color: #f8f9fc;
+  --fondo-body: #1a1b3f;
+  --fondo-oscuro:#0e0c2d;
+  --fondo-claro: #43456d;
 }
 
 
 section {
-    background-color: var(--nuevo-fondo-body);
+    background-color: var(--fondo-body);
     color: var(--nuevo-texto);
     display: flex;
     flex-direction: row;
@@ -25,19 +24,23 @@ section main {
 }
 
 .card-contenedor-cripto {
-  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.198);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.644);
   padding: 2rem 0;
   height: 18rem;
   margin: 0 .5rem;
   width: 22rem;
   border-radius: 20%;
   transition: all 500ms ease-out;    
+  color: var(--text-color);
 }
 
 .card-contenedor-cripto:hover {
   box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
 }
 
+.ultimo-cuadrado {
+  color: var(--text-color);
+}
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
@@ -57,7 +60,7 @@ section main {
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 20rem;
-  background-color: var(--nuevo-oscuro);
+  background-color: var(--fondo-oscuro);
 }
 
 .logo-cripto {

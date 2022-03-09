@@ -1,18 +1,17 @@
 :root {
     --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
     --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
-    --lightblue: #004F8A ;
-    --texto-resalta:#0091ff;
-    --darkblue: #ef5777;
-    --text-color: #d5e1ef;
-    --nuevo-fondo-body: #282A4C;
-
-    --nuevo-oscuro: #181C37;
-    --nuevo-claro: #3e4283;
-    --nuevo-texto: #dfe2eb;
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
 }
+
 .dashboard{
-    background: var(--nuevo-fondo-body);
+    background:var(--fondo-body);
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -49,9 +48,10 @@
 .div-sup-izq , .div-sup-der {
     width: 45%;
     height: 90%;
-    background-color:#3e4283;
     margin: 1rem;
     border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
+    color: var(--text-color);
 }
 
 .div-sup-izq {
@@ -64,14 +64,14 @@
     width: 95%;
     height:38%;
     margin: 1rem;
-    background-color:#3e4283;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
     border-radius: 10px;
 }
 
 .div-derecho {
     width: 90%;
     height: 95%;
-    background-color:  var(--lightblue);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
     margin: 1rem;
     border-radius: 10px;
 }
@@ -100,7 +100,7 @@
     justify-content: flex-start;
     margin: .5rem ;
     padding-top: .5rem;
-    background-color: #434790;
+    background-color: var(--fondo-claro);
     width: 95%;
     border-radius: 10px;
 }
@@ -148,7 +148,7 @@
     flex-direction: row;
     height: 20%;
     align-items: center;
-    background-color: #434790;
+    background-color:var(--fondo-claro);
     margin: .5rem ;
     width: 95%;
     border-radius: 10px;
@@ -181,12 +181,13 @@
     padding: 10px 25px;
     border-radius: 10px;
     border: 0px solid #3866A3;
-    background:var(--texto-resalta);
+    background:var(--fondo-claro);
+    color: var(--text-color);
 }
 
 .testbutton:hover {
     background: #434790;
-    color: var(--nuevo-texto);
+    color: var(--text-color);
 }
 
 .div-botones {
@@ -197,7 +198,7 @@
 }
 
 .div-inf-doble {
-    color: var(--nuevo-texto);
+    color: var(--text-color);
 }
 
 .div-inf-doble h3 {

@@ -1,3 +1,15 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
+}
+
 .btc-img-index {
     width: 800px;
     
@@ -5,19 +17,19 @@
 
 .main__index {
     height: 80vh;
-    background-color: var(--nuevo-fondo-body);
-    color: var(--nuevo-texto);
+    background-color:var(--fondo-body);
+    color: var(--text-color);
 	padding-top: 3rem;
 }
 
 .btn-inicar {
     background-color: var(--lightblue);
-    color: var(--nuevo-texto);
+    color: var(--text-color);
 }
 
 .btn-registrar {
-    background-color: var(--nuevo-oscuro);
-    color: var(--texto-resalta);
+    background-color: var(--fondo-oscuro);
+    color: var(--text-color);
 }
 
 .form-signin {
@@ -71,7 +83,7 @@
 }
 
 .divInicioSesion1 {
-	background: linear-gradient(var(--lightblue),var(--nuevo-fondo-body), var(--nuevo-oscuro));
+	background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
@@ -81,6 +93,7 @@
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
+	color: var(--text-color);
 }
 
 .divInicioSesion1 .btnCerrarVentana {
@@ -166,7 +179,8 @@
   max-width: 700px;
   padding: 15px;
   margin: auto;
-  background-color: linear-gradient(var(--lightblue),var(--nuevo-fondo-body), var(--nuevo-oscuro));
+  background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+  
 }
 
 .form-signin .form-floating:focus-within {
@@ -243,7 +257,7 @@ form h1{
 }
 
 .divRegistro1 {
-	background: linear-gradient(var(--lightblue),var(--nuevo-fondo-body), var(--nuevo-oscuro));
+	background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;

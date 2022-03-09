@@ -2,16 +2,17 @@
     --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
     --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
     --lightblue: #004F8A;
-    --texto-resalta:#0091ff;
-    --darkblue: #ef5777;
-    --text-color: #d5e1ef;
-    --nuevo-fondo-body: #282A4C;
-    --nuevo-oscuro: #181C37;
-    --nuevo-claro: #26284E;
-    --nuevo-texto: #dfe2eb;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
 }
+
+
 section {
-    background-color: var(--nuevo-fondo-body);
+    background-color: var(--fondo-body);
     padding: 2rem 0 ;
 }
 
@@ -24,7 +25,7 @@ section {
     height:auto;
     padding: 2rem 2rem 4rem 2rem;
     background-color: var(--lightblue);
-    color: var(--nuevo-texto);
+    color: var(--text-color);
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
     padding: 6rem 0;
 
@@ -45,7 +46,9 @@ section {
     text-align: center;
     width: 60%;
     margin: 0 0 2rem 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 36);
 }
 
 .quienes-somos p {
@@ -105,16 +108,4 @@ section {
 }
 .card-quienes-somos p {
     text-align: center;
-}
-
-.contenedor-map {
-    margin:1.5rem 0 3rem 0;
-}
-.contenedor-map h3 {
-    width: 100%;
-}
-
-.map {
-    width: 100%;
-    height: 100;
 }

@@ -2,22 +2,20 @@
     --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
     --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
     --lightblue: #004F8A;
-    --texto-resalta:#0091ff;
-    --darkblue: #ef5777;
-    --text-color: #d5e1ef;
-    --nuevo-fondo-body: #282A4C;
-    --nuevo-oscuro: #181C37;
-    --nuevo-claro: #26284E;
-    --nuevo-texto: #dfe2eb;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
 }
 
 
 
-
 .nav {
-    background-color: var(--nuevo-oscuro);
+    background-color:var(--fondo-oscuro);
     height: 80px;
-    color: var(--nuevo-texto); 
+    color: var(--text-color); 
 }
 
 .titulo__img {
@@ -65,7 +63,7 @@
         }
 
 .nav__item {
-                color: var(--nuevo-texto);
+                color: var(--text-color);
                 text-decoration: none;
                 --clippy: polygon(0 1%, 0 0, 0 100%, 0 100%);
             }
@@ -74,7 +72,7 @@
 .nav__item:after {
                     content: "";
                     display: block;
-                    background:var(--nuevo-texto);
+                    background:var(--text-color);
                     width: 90%;
                     margin-top: 3px;
                     height: 3px;
@@ -88,7 +86,7 @@
                 }
 
 .nav__input:checked + .nav__menu{
-    background:var(--nuevo-oscuro);
+    background:var(--fondo-oscuro);
 }
 
 .nav__label, .nav__input {
