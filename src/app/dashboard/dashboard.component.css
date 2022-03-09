@@ -68,13 +68,7 @@
     border-radius: 10px;
 }
 
-.div-derecho {
-    width: 90%;
-    height: 95%;
-    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
-    margin: 1rem;
-    border-radius: 10px;
-}
+
 
 .titulo-sup-izq {
     display: flex;
@@ -223,8 +217,56 @@
 
 
 
+/* MADAFAKIN DIV DERECHOOOOO */
+.div-derecho {
+    width: 90%;
+    height: 95%;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
+    margin: 1rem;
+    border-radius: 10px;
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.div-derecho h3 {
+    color: var(--texto-resalta);
+}
 
+.news {
+    width: 80%;
+    height: 8rem;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.507);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.news-img {
+    width: 40%;
+    height: 95%;
+}
+
+.news-text {
+    padding: 0 .8rem 0 .8rem;
+}
+
+.news-text h4 {
+    font-size:1rem;
+    text-align: left;
+}
+
+.news-text p {
+    color:#c4c4c4 ;
+}
+
+.news-text p span {
+    color: var(--texto-resalta);
+}
 
 /* Phone landscape + portrait (iphone x) */
 @media (min-width: 321px) and (max-width: 480px) {
