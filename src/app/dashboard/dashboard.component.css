@@ -219,6 +219,7 @@
 
 /* MADAFAKIN DIV DERECHOOOOO */
 .div-derecho {
+    background-color: var(--fondo-claro);
     width: 90%;
     height: 95%;
     box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
@@ -230,6 +231,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow-y: scroll;
 }
 
 .div-derecho h3 {
@@ -237,6 +239,7 @@
 }
 
 .news {
+    background-color: var(--fondo-body);
     width: 80%;
     height: 8rem;
     box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.507);
@@ -244,6 +247,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 2rem;
+    margin: 2rem 0;
 }
 
 .news-img {
@@ -414,7 +419,6 @@
 .div-derecho {
     width: 95%;
     height: 50%;
-
 }
 
 .titulo-sup-der {
