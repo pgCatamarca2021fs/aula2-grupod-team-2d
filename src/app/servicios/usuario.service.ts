@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsuarioService {
 
-  urlApiRest:string="https://localhost:43555/api/Usuario";
+  urlApiRest:string="https://localhost:44354/api/Usuario";
 
   constructor(private http:HttpClient) {
 

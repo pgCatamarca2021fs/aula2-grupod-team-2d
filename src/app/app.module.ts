@@ -33,14 +33,14 @@ import { SolanaComponent } from './criptomonedas/solana/solana.component';
 import { SmoothLovePotionComponent } from './criptomonedas/smooth-love-potion/smooth-love-potion.component';
 import { UsdtComponent } from './criptomonedas/usdt/usdt.component';
 import { UsuarioComponent } from './componente/usuario/usuario.component';
-import { BilleteraComponent } from './billetera/billetera.component';
-import { ComerciaComponent } from './comercia/comercia.component';
-import { CriptoMonedaComponent } from './cripto-moneda/cripto-moneda.component';
-import { CuentaPesoComponent } from './cuenta-peso/cuenta-peso.component';
-import { EnviaDepositaComponent } from './envia-deposita/envia-deposita.component';
-import { EstadoCuentaComponent } from './estado-cuenta/estado-cuenta.component';
-import { OperaCriptoComponent } from './opera-cripto/opera-cripto.component';
-import { OperacionePesoComponent } from './operacione-peso/operacione-peso.component';
+import { BilleteraComponent } from './componente/billetera/billetera.component';
+import { CriptoMonedaComponent } from './componente/cripto-moneda/cripto-moneda.component';
+import { ComerciaComponent } from './componente/comercia/comercia.component';
+import { CuentaPesoComponent } from './componente/cuenta-peso/cuenta-peso.component';
+import { EnviaDepositaComponent } from './componente/envia-deposita/envia-deposita.component';
+import { EstadoCuentaComponent } from './componente/estado-cuenta/estado-cuenta.component';
+import { OperaCriptoComponent } from './componente/opera-cripto/opera-cripto.component';
+import { OperacionePesoComponent } from './componente/operacione-peso/operacione-peso.component';
 
 @NgModule({
   declarations: [
@@ -72,8 +72,8 @@ import { OperacionePesoComponent } from './operacione-peso/operacione-peso.compo
     UsdtComponent,
     UsuarioComponent,
     BilleteraComponent,
-    ComerciaComponent,
     CriptoMonedaComponent,
+    ComerciaComponent,
     CuentaPesoComponent,
     EnviaDepositaComponent,
     EstadoCuentaComponent,
