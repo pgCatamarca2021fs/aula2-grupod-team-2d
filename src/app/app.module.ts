@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // RUTAS
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +32,15 @@ import { DaiComponent } from './criptomonedas/dai/dai.component';
 import { SolanaComponent } from './criptomonedas/solana/solana.component';
 import { SmoothLovePotionComponent } from './criptomonedas/smooth-love-potion/smooth-love-potion.component';
 import { UsdtComponent } from './criptomonedas/usdt/usdt.component';
+import { UsuarioComponent } from './componente/usuario/usuario.component';
+import { BilleteraComponent } from './billetera/billetera.component';
+import { ComerciaComponent } from './comercia/comercia.component';
+import { CriptoMonedaComponent } from './cripto-moneda/cripto-moneda.component';
+import { CuentaPesoComponent } from './cuenta-peso/cuenta-peso.component';
+import { EnviaDepositaComponent } from './envia-deposita/envia-deposita.component';
+import { EstadoCuentaComponent } from './estado-cuenta/estado-cuenta.component';
+import { OperaCriptoComponent } from './opera-cripto/opera-cripto.component';
+import { OperacionePesoComponent } from './operacione-peso/operacione-peso.component';
 
 @NgModule({
   declarations: [
@@ -59,14 +69,24 @@ import { UsdtComponent } from './criptomonedas/usdt/usdt.component';
     DaiComponent,
     SolanaComponent,
     SmoothLovePotionComponent,
-    UsdtComponent
+    UsdtComponent,
+    UsuarioComponent,
+    BilleteraComponent,
+    ComerciaComponent,
+    CriptoMonedaComponent,
+    CuentaPesoComponent,
+    EnviaDepositaComponent,
+    EstadoCuentaComponent,
+    OperaCriptoComponent,
+    OperacionePesoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
