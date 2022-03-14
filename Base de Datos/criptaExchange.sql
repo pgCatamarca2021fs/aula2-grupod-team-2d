@@ -1,6 +1,6 @@
-create database MalditaBaseDeDatos2
+create database CataExchange
 
-use MalditaBaseDeDatos2
+use CataExchange
 
 
 CREATE TABLE Usuarios(
