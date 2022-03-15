@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CoingeckoApiService } from '../servicios/coingecko-api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,11 +6,6 @@ import { CoingeckoApiService } from '../servicios/coingecko-api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-    criptomonedas: any ={};
-
-    constructor(private service: CoingeckoApiService){
-
-    }
 
   precioPeso = 0;
   precioDolar = 0;
@@ -21,11 +15,9 @@ export class DashboardComponent implements OnInit {
 
 
 
-  // constructor() { }
+  constructor() { }
 
   ngOnInit(): void {
-      this.service.getAllCoins().subscribe(criptomonedas => this.criptomonedas = criptomonedas)
   }
 
 }
-
