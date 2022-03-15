@@ -1,0 +1,174 @@
+<section>
+    <app-navbar-lateral></app-navbar-lateral>
+
+
+
+    
+    <main>
+    
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    
+    
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Consulta el Mercado Cripto</h1>
+                            <p>Aqui podras acceder a información de tus criptomonedas favoritas</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    
+    
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Swap</h1>
+                            <p>Si desea intercambiar sus criptomonedas por otras debe dirigirse a la sección de SWAP</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">SWAP</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    
+    
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Para comprar o enviar</h1>
+                            <p>Ahora si usted lo que desea es comprar criptomonedas o transferirlas debe ir a su billetera</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Billetera</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+    
+        <!-- Marketing messaging and featurettes
+      ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+        <div class="container marketing">
+    
+            <!-- ACA COMIENZAN LAS CRIPTO CIRCULARES -->
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/bitcoin-btc-logo.svg" class="logo-cripto">
+    
+                    <h2>Bitcoin</h2>
+                    <p>Consulta información sobre BTC</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../bitcoin']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/dogecoin-doge-logo.svg" class="logo-cripto">
+    
+                    <h2>Doge Coin</h2>
+                    <p>Consulta información sobre DOGE</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../dogecoin']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/binance-coin-bnb-logo.svg" class="logo-cripto">
+    
+                    <h2>Binance Coin</h2>
+                    <p>Consulta información sobre BNB</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../binancecoin']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+    
+            <div class="row">
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/cardano-ada-logo.svg" class="logo-cripto">
+            
+                    <h2>Cardano</h2>
+                    <p>Consulta información sobre CAR</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../cardano']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/ethereum-eth-logo.svg" class="logo-cripto-eth">
+            
+                    <h2>Ethereum</h2>
+                    <p>Consulta información sobre ETH</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../ethereum']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/multi-collateral-dai-dai-logo.svg" class="logo-cripto">
+            
+                    <h2>DAI</h2>
+                    <p>Consulta información sobre DAI</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../dai']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/solana-sol-logo.svg" class="logo-cripto">
+            
+                    <h2>Solana</h2>
+                    <p>Consulta información sobre SOL</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../solana']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/smooth-love-potion-slp-logo.svg" class="logo-cripto">
+            
+                    <h2>Smooth Love Potion</h2>
+                    <p>Consulta información sobre SLP</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../slp']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 card-contenedor-cripto">
+                    <img src="../../assets/tether-usdt-logo.svg" class="logo-cripto">
+            
+                    <h2>USDT</h2>
+                    <p>Consulta información sobre USDT</p>
+                    <p><a class="btn btn-secondary" [routerLink]="['../usdt']">Ver más &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+    
+            <!-- START THE FEATURETTES -->
+    
+            
+    
+
+
+            <!-- ULTIMO CUADRADO -->
+            <div class="row featurette ultimo-cuadrado">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Cata Exchange. </h2>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus voluptatibus dolorum inventore ea nisi recusandae facere fuga possimus tempore est consequatur perferendis praesentium, officia minus ad maiores corporis neque dolore!</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="../../assets/logo.png" width="500px"  alt="">
+    
+                </div>
+            </div>
+    
+            
+    
+            
+    
+        </div><!-- /.container -->
+    
+    
+        
+    </main>
+
+</section>
+<app-footer></app-footer>

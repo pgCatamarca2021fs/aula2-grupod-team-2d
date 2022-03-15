@@ -1,0 +1,100 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#0091ff;
+    --darkblue: #ef5777;
+    --text-color: #d5e1ef;
+    --nuevo-fondo-body: #282A4C;
+    --nuevo-oscuro: #181C37;
+    --nuevo-claro: #26284E;
+    --nuevo-texto: #dfe2eb;
+    
+}
+
+
+
+.navbar {
+    background-color: var(--nuevo-oscuro);
+    height: 100px;
+    color: white; 
+}
+
+.titulo__img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo__img h1 {
+    font-size: 2rem;
+}
+
+.titulo__img img {
+    width: 5rem;
+}
+
+.nav__container {
+
+        display: flex;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+}
+
+
+.nav__logo__div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__img__logo {
+    width: 10rem;
+    margin-top: 1.7rem;
+}
+
+.nav__logo {
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+
+.nav__menu {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 3em;}
+
+.nav__item {
+                color: white;
+                text-decoration: none;
+                --clippy: polygon(0 1%, 0 0, 0 100%, 0 100%);
+            }
+
+
+.nav__item:after {
+                    content: "";
+                    display: block;
+                    background: white;
+                    width: 90%;
+                    margin-top: 3px;
+                    height: 3px;
+                    clip-path: var(--clippy);
+                    transition: clip-path .5s;
+                }
+
+.nav__item:hover {
+    --clippy: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+    color: var(--nuevo-texto);
+                }
+
+.nav__input:checked + .nav__menu{
+	background: #083892;
+}
+
+.nav__label, .nav__input {
+            display: none;
+    
+        }

@@ -1,0 +1,254 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
+}
+
+footer {
+    background-color: var(--fondo-oscuro);
+    padding: 0 5rem ;
+    color: var(--text-color);
+}
+
+.parrafos-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.segundo-parrafo-footer {
+    width: 90%;
+}
+
+.segundo-parrafo-footer span {
+    font-weight: 700;
+}
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2rem;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color:#E1306C ;
+}
+
+.container-footer {
+    background-color: var(--fondo-body);
+    width: 100%;
+    height: auto;
+}
+
+.footer-abajo {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0 0 0;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+}
+
+.footer-arriba div {
+    margin: 0 2.5rem;
+}
+
+.container-listas {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+.container-listas {
+    display: flex;
+    flex-direction:column;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+}
+
+
+
+.segundo-parrafo-footer {
+    width: 100%;
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2.5rem;
+    margin:  0 1rem 1rem 0;
+}
+
+
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+.container-listas {
+    display: flex;
+    flex-direction:column;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+}
+
+
+
+.segundo-parrafo-footer {
+    width: 100%;
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 2.5rem;
+    margin:  0 1rem 1rem 0;
+}
+
+
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+.container-listas {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba div h5 {
+    font-size: 1.8rem;
+}
+
+.segundo-parrafo-footer {
+    width: 100%;
+    
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 3rem;
+    margin:  0 1rem 1rem 0;
+}
+
+
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+.container-listas {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer-abajo  {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer-arriba div {
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.footer-arriba div h5 {
+    font-size: 1.8rem;
+}
+
+.segundo-parrafo-footer {
+    width: 100%;
+    
+}
+
+
+.fa-twitter, .fa-instagram, .fa-facebook {
+    font-size: 3rem;
+    margin:  0 1rem 1rem 0;
+}
+
+}

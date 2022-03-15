@@ -1,0 +1,1014 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
+}
+
+.dashboard{
+    background:var(--fondo-body);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.dashboard-propio {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.div-dashboard-izq {
+    width: 60%;
+    height: 100vh;
+    
+}
+
+
+.div-dashboard-der {
+    width: 40%;
+    height: 100vh;
+
+}
+
+.div-sup-doble {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+
+.div-sup-izq , .div-sup-der {
+    width: 45%;
+    height: 90%;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
+    color: var(--text-color);
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div-inf-doble {
+    width: 95%;
+    height:38%;
+    margin: 1rem;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+}
+
+
+
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: var(--fondo-claro);
+    width: 95%;
+    border-radius: 10px;
+}
+
+.criptos-sup-izq:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.criptos-sup-izq div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.criptos-sup-izq h3{
+    font-size: 1rem;
+    margin: 0 0 0 2rem;
+}
+
+.logo-btc-sup-izq {
+    width: 30px;
+    margin: 0 1rem 0 1rem;
+}
+
+.parrafo-numero-sup-izq {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/* DIV SUPERIOR DERECHO */
+
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color:var(--fondo-claro);
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 8rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--fondo-claro);
+    color: var(--text-color);
+}
+
+.testbutton:hover {
+    background: #434790;
+    color: var(--text-color);
+}
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-inf-doble {
+    color: var(--text-color);
+}
+
+.div-inf-doble h3 {
+    padding: 1rem 0 .5rem 1rem;
+}
+
+.table-movimientos {
+    width: 95%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+
+
+
+/* MADAFAKIN DIV DERECHOOOOO */
+.div-derecho {
+    background-color: var(--fondo-claro);
+    width: 90%;
+    height: 95%;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.37);
+    margin: 1rem;
+    border-radius: 10px;
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.div-derecho h3 {
+    color: var(--texto-resalta);
+}
+
+.news {
+    background-color: var(--fondo-body);
+    width: 80%;
+    height: 8rem;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.507);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.news-img {
+    width: 40%;
+    height: 95%;
+}
+
+.news-text {
+    padding: 0 .8rem 0 .8rem;
+}
+
+.news-text h4 {
+    font-size:1rem;
+    text-align: left;
+}
+
+.news-text p {
+    color:#c4c4c4 ;
+}
+
+.news-text p span {
+    color: var(--texto-resalta);
+}
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:80%;
+    margin: 1rem;
+    display: none;
+}
+
+.table-movimientos {
+    width: 40%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:80%;
+    margin: 1rem;
+    display: none;
+}
+
+.table-movimientos {
+    width: 40%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:auto;
+    margin: 1rem;
+    padding-bottom: .1rem;
+}
+
+.table-movimientos {
+    width: 90%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+.dashboard-propio {
+    flex-direction: column;
+    height: auto;
+}
+
+.div-dashboard-izq {
+    width: 100%;
+    height:auto;
+}
+
+
+
+/* ESTE ES EL CONTENEDOR DE LOS DOS HNITOS DE ARRIBA */
+.div-sup-doble {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+/* LOS HNITOS DE ARRIBA */
+.div-sup-izq , .div-sup-der {
+    width: 90%;
+    height: auto;
+    background-color:#3e4283;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.div-sup-der {
+    padding-bottom: 2rem;
+}
+
+.div-sup-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/* ESTE ES EL DIV DOBLE DE TAMAÑO QUE CONTIENE LOS ULT MOVIMIENTOS */
+.div-inf-doble {
+    width: 90%;
+    height:auto;
+    margin: 1rem;
+    padding-bottom: .1rem;
+}
+
+.table-movimientos {
+    width: 90%;
+    margin: 2rem .5rem;
+    
+}
+
+.table-tr:hover {
+    background-color:#292e80;
+}
+
+.table-tr-th {
+    padding-bottom: .5rem;
+    color: var(--texto-resalta);
+}
+
+/* ============================================== */
+.titulo-sup-izq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.titulo-sup-izq h3{
+    margin: 0 5rem 0 0;
+}
+.monedas-sup-izq {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+.criptos-sup-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: .5rem ;
+    padding-top: .5rem;
+    background-color: #434790;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/* LA PARTE DEL MARKET */
+
+.div-market-hoy {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    align-items: center;
+    background-color: #434790;
+    margin: .5rem ;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.div-market-hoy:hover {
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+}
+
+.div-market-hoy h3 { 
+    font-size: 1.5rem;
+}
+
+.div-market-hoy p {
+    margin: 0 0 0 7rem;
+}
+
+.svg-market {
+    width: 20px;
+    margin: 0 1rem ;
+}
+
+.monedas-sup-der {
+    width: 40px;
+    margin: 0 1rem;
+}
+
+
+
+
+/* DIV SUPERIOR DERECHO */
+/* ESTE ES EL COTENEDOR DEL FLACO LARGO */
+/* ESTE ES EL LARGO */
+.div-dashboard-der {
+    width: 95%;
+    height: 30vh;
+
+}
+.div-derecho {
+    width: 95%;
+    height: 50%;
+
+}
+
+.titulo-sup-der {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0 0;
+    padding-bottom: 1rem;
+    
+}
+
+
+
+
+.testbutton {
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background:var(--texto-resalta);
+}
+.testbutton:hover {
+    background: #434790;
+    color: var(--nuevo-texto);
+}
+
+
+.div-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+}
