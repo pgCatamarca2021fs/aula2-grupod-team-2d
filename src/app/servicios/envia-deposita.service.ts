@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EnviaDepositaService {
 
-  urlApiRest:string="https://localhost:43555/api/EnviaDeposita";
+  urlApiRest:string="http://cataexchange.somee.com/backend/api/EnviaDeposita";
 
   constructor(private http:HttpClient) { }
 

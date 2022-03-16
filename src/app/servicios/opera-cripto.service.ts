@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OperaCriptoService {
 
-  urlApiRest:string="https://localhost:43555/api/OperaCripto";
+  urlApiRest:string="http://cataexchange.somee.com/backend/api/OperaCripto";
 
   constructor(private http:HttpClient) { }
   

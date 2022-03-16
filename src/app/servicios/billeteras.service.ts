@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BilleterasService {
 
-  urlApiRest:string="https://localhost:43555/api/Billetera";
+  urlApiRest:string="http://cataexchange.somee.com/backend/api/Billetera";
   
   constructor(private http:HttpClient) { }
 

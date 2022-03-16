@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CriptoMonedaService {
 
-  urlApiRest:string="https://localhost:43555/api/CriptoMoneda";
+  urlApiRest:string="http://cataexchange.somee.com/backend/api/CriptoMoneda";
   
   constructor(private http:HttpClient) { }
   

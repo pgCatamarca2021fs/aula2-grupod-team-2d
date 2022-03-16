@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EstadoCuentaService {
 
-  urlApiRest:string="https://localhost:43555/api/EstadoCuenta";
+  urlApiRest:string="http://cataexchange.somee.com/backend/api/EstadoCuenta";
 
   constructor(private http:HttpClient) { }
 
