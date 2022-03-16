@@ -22,12 +22,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    padding: 0;
+    width: 100%;
 }
 
 .grid-cripto-cotizaciones {
     color: var(--fondo-oscuro);
-    margin: 2rem 0 0 0;
+    width: 100%;
 }
 
 .grid-cripto-cotizaciones img {
@@ -46,7 +47,7 @@
 .contenedor-cripto-cotizacion {
     background: var(--text-color);
     backdrop-filter: blur( 4px );
-    width: 30%;
+    width: 20%;
     border-radius: 10px;
     padding-top: 1rem;
     margin:1rem 2rem;
@@ -66,13 +67,13 @@
 
 .contenedor-cards-swap {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .swap {
-    width: 30rem;
+    width: 80%;
     height: auto;
     background: rgba( 0, 0, 0, 0.5 );
     box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
@@ -84,9 +85,7 @@
     justify-content: space-around;
     align-items: center;
     padding-bottom: 1.5rem;
-    margin: 3rem 3rem 0 0;
-    align-self:baseline;
-    
+    margin: 3rem 0 ;
 }
 
 .swap h3 {
@@ -150,3 +149,77 @@
     font-size: 2rem;
     cursor: pointer;
 } 
+/* .contenedor-cards-swap {
+    width: 100%;
+}
+.card-contenedor-cripto {
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+    padding: 2rem 0;
+    height: 14rem;
+    margin: 0 .5rem;
+    width: 20%;
+    border-radius: 20%;
+    transition: all 500ms ease-out;    
+    color: var(--text-color);
+  }
+  
+  .card-contenedor-cripto:hover {
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
+  }
+*/
+  article {
+      width: 100%;
+  } 
+
+  .contenedor-cards {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0 3rem;
+  }
+
+  .cards {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 20%;
+      box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+      margin: 1rem;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 500ms ease-out;    
+  }
+
+  .cards:hover {
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
+  }
+
+  .card-logo-nombre {
+      display: flex;
+      flex-direction: row;
+      margin: 1rem 0;
+      
+  }
+
+  .span0 {
+      color: var(--texto-resalta);
+  }
+
+  
+
+  .div-balance {
+    background-color: var(--fondo-oscuro);
+    height: 30vh;
+    padding: 3rem 0 0 2rem;
+    color: var(--text-color);
+    margin: 0 0 2rem 0;
+}
+
+.div-balance a {
+    color: var(--texto-resalta);
+    text-decoration: none;
+}
