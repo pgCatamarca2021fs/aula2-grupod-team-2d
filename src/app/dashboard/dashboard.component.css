@@ -134,16 +134,17 @@
     align-items: center;
     margin: .5rem 0 0 0;
     padding-bottom: 1rem;
+    background-color: var(--fondo-body) 
     
 }
 
 .div-market-hoy {
     display: flex;
     flex-direction: row;
-    height: 20%;
+    height: 70%;
     align-items: center;
     background-color:var(--fondo-claro);
-    margin: .5rem ;
+    /* margin: .5rem ; */
     width: 95%;
     border-radius: 10px;
 }
@@ -304,7 +305,7 @@
     width: 90%;
     height: auto;
     background-color:#3e4283;
-    margin: 0;
+    margin: 1rem;
     border-radius: 10px;
 }
 
@@ -375,7 +376,7 @@
 .div-market-hoy {
     display: flex;
     flex-direction: row;
-    height: 20%;
+    /* height: 20%; */
     align-items: center;
     background-color: #434790;
     margin: .5rem ;
@@ -425,7 +426,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: .5rem 0 0 0;
+    margin: 0 0 0 0;
     padding-bottom: 1rem;
     
 }
@@ -488,12 +489,12 @@
     width: 90%;
     height: auto;
     background-color:#3e4283;
-    margin: 0;
+    margin: 1rem;
     border-radius: 10px;
 }
 
 .div-sup-der {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .div-sup-izq {
@@ -559,7 +560,7 @@
 .div-market-hoy {
     display: flex;
     flex-direction: row;
-    height: 20%;
+    /* height: 20%; */
     align-items: center;
     background-color: #434790;
     margin: .5rem ;
@@ -610,7 +611,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: .5rem 0 0 0;
+    margin: 0 0 0 0;
     padding-bottom: 1rem;
     
 }
@@ -674,7 +675,7 @@
     width: 90%;
     height: auto;
     background-color:#3e4283;
-    margin: 0;
+    margin: 1rem;
     border-radius: 10px;
 }
 
@@ -745,7 +746,7 @@
 .div-market-hoy {
     display: flex;
     flex-direction: row;
-    height: 20%;
+    /* height: 20%; */
     align-items: center;
     background-color: #434790;
     margin: .5rem ;
@@ -796,7 +797,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: .5rem 0 0 0;
+    margin: 0 0 0 0;
     padding-bottom: 1rem;
     
 }
@@ -860,7 +861,7 @@
     width: 90%;
     height: auto;
     background-color:#3e4283;
-    margin: 0;
+    margin: 1rem;
     border-radius: 10px;
 }
 
@@ -931,7 +932,7 @@
 .div-market-hoy {
     display: flex;
     flex-direction: row;
-    height: 20%;
+    /* height: 20%; */
     align-items: center;
     background-color: #434790;
     margin: .5rem ;
@@ -982,7 +983,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: .5rem 0 0 0;
+     margin: 0 0 0 0;
+
     padding-bottom: 1rem;
     
 }

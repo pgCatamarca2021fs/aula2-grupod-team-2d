@@ -45,28 +45,49 @@
                 
                 
                 <!-- DIV SUP DER -->
-                <div class="div-sup-der">
-                    <div class="titulo-sup-der">
+                <div class="div-sup-der overflow-auto">
+                    <div class="titulo-sup-der sticky-top">
                         <img src="../../assets/dogecoin-doge-logo.svg" class="monedas-sup-der">
                         <h3>Market hoy</h3>
                     </div>
-                    <div class="div-market-hoy">
-                        <img src="../../assets/bitcoin-btc-logo.svg" class="svg-market">
-                        <h3>BTC</h3>
-                        <p>+3.5</p>
-                    </div>
-                    <div class="div-market-hoy">
-                        <img src="../../assets/binance-coin-bnb-logo.svg" class="svg-market">
-                        <h3>BNB</h3>
-                        <p>+8.6</p>
-                    </div>
-                    <div class="div-market-hoy">
-                        <img src="../../assets/solana-sol-logo.svg" class="svg-market">
-                        <h3>SOL</h3>
-                        <p>+1.2</p>
-                    </div>
                     
+                    <mat-grid-list cols="1" rowHeight="3:0.9" gutterSize="0px" >
+                           <mat-grid-tile  *ngFor="let moneda of criptomonedas">
+                               <div class="div-market-hoy">
+                                   <img src="{{moneda.image}}" class="svg-market">
+                                   <h3>{{moneda.symbol.toUpperCase()}}</h3>
+                                   <p>{{moneda.price_change_percentage_24h}}</p>
+                               </div>
+                           </mat-grid-tile>
+                    </mat-grid-list>
+
                 </div>
+
+
+
+
+                <!-- <div class="div-sup-der"> -->
+                    <!-- <div class="titulo-sup-der"> -->
+                    <!--     <img src="../../assets/dogecoin-doge-logo.svg" class="monedas-sup-der"> -->
+                    <!--     <h3>Market hoy</h3> -->
+                    <!-- </div> -->
+                    <!-- <div class="div-market-hoy"> -->
+                    <!--     <img src="../../assets/bitcoin-btc-logo.svg" class="svg-market"> -->
+                    <!--     <h3>BTC</h3> -->
+                    <!--     <p>+3.5</p> -->
+                    <!-- </div> -->
+                    <!-- <div class="div-market-hoy"> -->
+                    <!--     <img src="../../assets/binance-coin-bnb-logo.svg" class="svg-market"> -->
+                    <!--     <h3>BNB</h3> -->
+                    <!--     <p>+8.6</p> -->
+                    <!-- </div> -->
+                    <!-- <div class="div-market-hoy"> -->
+                    <!--     <img src="../../assets/solana-sol-logo.svg" class="svg-market"> -->
+                    <!--     <h3>SOL</h3> -->
+                    <!--     <p>+1.2</p> -->
+                    <!-- </div> -->
+                    <!--  -->
+                <!-- </div> -->
             </div>
 
 

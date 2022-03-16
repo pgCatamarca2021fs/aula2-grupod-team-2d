@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list'; 
+
 
 // RUTAS
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +43,7 @@ import { EnviaDepositaComponent } from './componente/envia-deposita/envia-deposi
 import { EstadoCuentaComponent } from './componente/estado-cuenta/estado-cuenta.component';
 import { OperaCriptoComponent } from './componente/opera-cripto/opera-cripto.component';
 import { OperacionePesoComponent } from './componente/operacione-peso/operacione-peso.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -86,7 +89,10 @@ import { OperacionePesoComponent } from './componente/operacione-peso/operacione
     ReactiveFormsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule, 
+    HttpClientModule,
+    BrowserAnimationsModule, 
+    MatGridListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
