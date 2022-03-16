@@ -55,15 +55,13 @@
                            <mat-grid-tile  *ngFor="let moneda of criptomonedas">
                                <div class="div-market-hoy">
                                    <img src="{{moneda.image}}" class="svg-market">
-                                   <h3>{{moneda.symbol.toUpperCase()}}</h3>
-                                   <p>{{moneda.price_change_percentage_24h}}</p>
+                                   <h3>{{moneda.symbol | uppercase}}</h3>
+                                   <p>{{moneda.price_change_percentage_24h.toString().slice(0, 4)}}%</p>
                                </div>
                            </mat-grid-tile>
                     </mat-grid-list>
 
                 </div>
-
-
 
 
                 <!-- <div class="div-sup-der"> -->
