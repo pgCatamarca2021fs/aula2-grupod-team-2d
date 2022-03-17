@@ -99,3 +99,16 @@ section {
     width: 30px;
     margin: 0 1rem 0 0;
 }
+
+ /* ============ CBU =========== */
+ 
+#Cbu{
+    height:30px;
+    width: 50%;
+}
+
+#btnCbu{
+    height:30px;
+    font-size: 13px;
+}
+  

@@ -7,6 +7,7 @@ CREATE TABLE Usuarios(
 idUsuario INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
 Nombre VARCHAR(20) NOT NULL,
 Apellido VARCHAR(20) NOT NULL,
+DNI varchar(8) NOT NULL,
 fechaNacimiento date NOT NULL,
 email varchar(50) not null,
 clave varchar(15) not null

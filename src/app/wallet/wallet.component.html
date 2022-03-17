@@ -4,7 +4,25 @@
         <div class="div-balance">
             <h3>BALANCE TOTAL</h3>
             <p>$00.000</p>
+<!--Ingresar CBU-->
+
+    <form [formGroup]="formCbu" (ngSubmit)="onEnviarCbu($event)">
+    <div class="input-group mb-3">
+        <h4 class="text-center">Ingresa tu CBU </h4>
+        <input type="number" formControlName="cbu" class="form-control" [class.border-danger]="CbuValid" id="Cbu" placeholder="">
+        <button class="btn btn-primary" type="submit" id="btnCbu">Enviar</button>
+        <div *ngIf="Cbu?.errors && Cbu?.touched || Cbu?.dirty">
+            <p *ngIf="Cbu?.hasError('required')" class="text-danger">
+              Campo obligatorio.
+            </p>
         </div>
+    </div>
+</form>
+  <!--Hasta acá CBU-->
+        </div>
+
+
+
         <div class="contenedor-wallet">
 
 
