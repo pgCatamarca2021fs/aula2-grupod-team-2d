@@ -14,6 +14,14 @@ export class UsuarioComponent implements OnInit {
     this.miServicio.listarUsuario().subscribe(data => {
       this.usuario=data;
     })
+
+    this.miServicio.modificarUsuario()subscribe(data => {
+      this.usuario=data;
+    })
+
+    this.miServicio.eliminarUsuario()subscribe(data => {
+      this.usuario=data;
+    })
   }
 
 }
