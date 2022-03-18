@@ -3,6 +3,7 @@ import { registerLocaleData } from '@angular/common';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
 import { ValidationErrors, ValidatorFn } from '@angular/forms';
+import { UsuarioService } from '../servicios/usuario.service';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class MainIndexComponent implements OnInit {
 
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private usuarioService: UsuarioService
   ) {
     this.buildForm();
   }
@@ -46,13 +48,28 @@ export class MainIndexComponent implements OnInit {
 
 
 onEnviar(event:Event){
-event.preventDefault;
+    event.preventDefault;
+   
+    
+    // OBJETO DEL FORMULARIO
+    let datosUsuarioObj = {
+            Nombre: this.form.controls["nombre"].value,
+            Apellido: this.form.controls["apellido"].value ,
+            FechaNacimiento:this.form.controls["fecha"].value ,
+            dni: this.form.controls["dni"].value ,
+            Email:this.form.controls["email"].value ,
+            Clave:this.form.controls["contraseña"].value 
+    }
 
-if(this.form.valid){
-  alert ("Enviar al servidor..")
-} else{
-  this.form.markAllAsTouched();
-}
+    
+    if(this.form.valid){
+      this.usuarioService.crearUsuario(datosUsuarioObj).subscribe()
+      this.form.reset()
+      alert ("Enviado con exito!");
+      
+    } else{
+      this.form.markAllAsTouched();
+    }
 }
 
 onEnviarLog(event:Event){
@@ -79,7 +96,7 @@ registroPopup() {
 
 
   form: FormGroup = new FormGroup({}) ;
-formLog: FormGroup = new FormGroup({}) ;
+  formLog: FormGroup = new FormGroup({}) ;
   
   ngOnInit() {
   }
@@ -208,11 +225,10 @@ get FechaValid(){
       edadUsuario = Math.round(edadUsuario/(1000 * 3600 * 24 * 365));
       if ( edadUsuario >= 18 ) {
         return null;
-    }
+      }
     return { valuesIsYoung: true }
-  }
-}
-
+        }
+    }
 }
 
 

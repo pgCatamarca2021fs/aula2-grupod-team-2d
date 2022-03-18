@@ -16,4 +16,8 @@ export class UsuarioService {
    listarUsuario():Observable<any> {
      return this.http.get(this.urlApiRest);
    }
+
+   crearUsuario(objDatos: any): Observable<any> {
+       return this.http.post(this.urlApiRest, objDatos);
+   }
 }
