@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\CataEchange",
     "\\CataEchange\\Controllers",
     "\\CataEchange\\Models"
   ],
+  "SelectedNode": "\\CataEchange\\Models\\Usuario.cs",
   "PreviewInSolutionExplorer": false
 }
