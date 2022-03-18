@@ -20,4 +20,12 @@ export class UsuarioService {
    crearUsuario(objDatos: any): Observable<any> {
        return this.http.post(this.urlApiRest, objDatos);
    }
+
+   modificarUsuario(objModify: any):Observable<any> {
+     return this.http.put(this.urlApiRest, objModify);
+   }
+
+   eliminarUsuario(objDelete: any):Observable<any> {
+     return this.http.delete(this.urlApiRest, objDelete);
+   }
 }

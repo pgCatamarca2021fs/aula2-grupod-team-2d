@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,9 +31,10 @@ namespace CataEchange.Models
                         usuario.IdUsuario = dataReader.GetInt32(0);
                         usuario.Nombre = dataReader.GetString(1);
                         usuario.Apellido = dataReader.GetString(2);
-                        usuario.FechaNacimiento = dataReader.GetDateTime(3);
-                        usuario.Email = dataReader.GetString(4);
-                        usuario.Clave = dataReader.GetString(5);
+                        usuario.Dni = dataReader.GetString(3);
+                        usuario.FechaNacimiento = dataReader.GetDateTime(4);
+                        usuario.Email = dataReader.GetString(5);
+                        usuario.Clave = dataReader.GetString(6);
                         
                         lista.Add(usuario);
                     }
@@ -53,6 +54,7 @@ namespace CataEchange.Models
 
                 command.Parameters.Add(new SqlParameter("@nombre", usuario.Nombre));
                 command.Parameters.Add(new SqlParameter("@apellido", usuario.Apellido));
+                command.Parameters.Add(new SqlParameter("@dni", usuario.Dni));
                 command.Parameters.Add(new SqlParameter("@fechaNacimiento", usuario.FechaNacimiento));
                 command.Parameters.Add(new SqlParameter("@email", usuario.Email));
                 command.Parameters.Add(new SqlParameter("@clave", usuario.Clave));
@@ -90,6 +92,7 @@ namespace CataEchange.Models
 
                 command.Parameters.Add(new SqlParameter("@nombre", usuario.Nombre));
                 command.Parameters.Add(new SqlParameter("@apellido", usuario.Apellido));
+                command.Parameters.Add(new SqlParameter("@dni", usuario.Dni));
                 command.Parameters.Add(new SqlParameter("@fechaNacimiento", usuario.FechaNacimiento));
                 command.Parameters.Add(new SqlParameter("@email", usuario.Email));
                 command.Parameters.Add(new SqlParameter("@clave", usuario.Clave));
