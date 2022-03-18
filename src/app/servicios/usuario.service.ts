@@ -7,25 +7,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsuarioService {
 
-  urlApiRest:string="http://cataexchange.somee.com/backend/api/Usuario";
+  urlApiRest:string="http://cataexchange.somee.com/backend/api/";
 
   constructor(private http:HttpClient) {
 
    }
 
    listarUsuario():Observable<any> {
-     return this.http.get(this.urlApiRest);
+     return this.http.get(this.urlApiRest + "Usuario");
    }
 
    crearUsuario(objDatos: any): Observable<any> {
-       return this.http.post(this.urlApiRest, objDatos);
+     return this.http.post(this.urlApiRest + "Usuario", objDatos);
    }
 
    modificarUsuario(objModify: any):Observable<any> {
-     return this.http.put(this.urlApiRest, objModify);
+     return this.http.put(this.urlApiRest + "modificarUsuario", objModify);
    }
 
    eliminarUsuario(objDelete: any):Observable<any> {
-     return this.http.delete(this.urlApiRest, objDelete);
+     return this.http.delete(this.urlApiRest + "eliminarUsuario", objDelete);
    }
 }
