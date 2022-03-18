@@ -9,7 +9,7 @@ import { CoingeckoApiService } from '../servicios/coingecko-api.service';
 export class SwapComponent implements OnInit {
 
   criptomonedas: any =[];
-
+    precioprueba: number = -1;
 
   formatoPrecio = (price: number) => {
     let opDivisa = { style: 'currency', currency: 'ARS' };

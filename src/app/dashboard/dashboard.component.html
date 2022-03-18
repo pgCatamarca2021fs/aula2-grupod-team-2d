@@ -56,7 +56,8 @@
                                <div class="div-market-hoy">
                                    <img src="{{moneda.image}}" class="svg-market">
                                    <h3>{{moneda.symbol | uppercase}}</h3>
-                                   <p>{{moneda.price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                   <p *ngIf="moneda.price_change_percentage_24h < 0" class="market-down">{{moneda.price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                   <p *ngIf="moneda.price_change_percentage_24h > 0" >{{moneda.price_change_percentage_24h.toString().slice(0, 4)}}%</p>
                                </div>
                            </mat-grid-tile>
                     </mat-grid-list>
@@ -168,43 +169,7 @@
                         <p>Publicado en <span>Coindesk</span></p>
                     </div>
                 </div>
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/precio_bitcoin.jpeg" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>Bitcoin: cuáles son las razones de que su precio suba o baje</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/GALA.png" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>GALA se dispara 20% y lidera las subidas de tokens del metaverso</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
                 
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/wo.png" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>Bitcoin supera los $58.000 con la atención puesta en Ómicron y el..</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/precio_bitcoin.jpeg" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>Bitcoin: cuáles son las razones de que su precio suba o baje</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/GALA.png" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>GALA se dispara 20% y lidera las subidas de tokens del metaverso</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
-
                 
             </div>
         </div>

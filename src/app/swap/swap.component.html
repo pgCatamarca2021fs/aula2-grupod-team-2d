@@ -20,10 +20,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[0].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: <span>{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 4)}}%</span></p>
+                                <div *ngIf="criptomonedas[0].price_change_percentage_24h < 0;else criptomoneda0">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda0>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+                         
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[1].image}}">
@@ -31,10 +37,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[1].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[1].price_change_percentage_24h < 0;else criptomoneda1">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda1>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+                         
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[2].image}}">
@@ -42,10 +54,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[2].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[2].price_change_percentage_24h < 0;else criptomoneda2">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda2>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[3].image}}">
@@ -53,10 +71,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[3].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[3].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[3].price_change_percentage_24h < 0;else criptomoneda3">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[3].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda3>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[3].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[4].image}}">
@@ -64,10 +88,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[4].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[4].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[4].price_change_percentage_24h < 0;else criptomoneda4">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[4].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda4>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[4].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[5].image}}">
@@ -75,10 +105,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[5].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[5].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[5].price_change_percentage_24h < 0;else criptomoneda5">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[5].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda5>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[5].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[6].image}}">
@@ -86,10 +122,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[6].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[6].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[6].price_change_percentage_24h < 0;else criptomoneda6">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[6].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda6>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[6].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[7].image}}">
@@ -97,10 +139,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[7].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[7].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[7].price_change_percentage_24h < 0;else criptomoneda7">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[7].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda7>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[7].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[8].image}}">
@@ -108,10 +156,16 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[8].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[8].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[8].price_change_percentage_24h < 0;else criptomoneda8">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[8].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda8>
+                                    <p>Ult. 24hs: <span>{{criptomonedas[8].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
+  
                         <div class="cards">
                             <div class="card-logo-nombre">
                                 <img src="{{criptomonedas[9].image}}">
@@ -119,51 +173,83 @@
                             </div>
                             <div class="card-precio">
                                 <p><span class="span0"></span> {{formatoPrecio(criptomonedas[9].current_price).toString().slice(0)}}</p>
-                                <p>Ult. 24hs: {{criptomonedas[9].price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                <div *ngIf="criptomonedas[9].price_change_percentage_24h < 0; else criptomoneda9">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[9].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda9>
+                                    <p>Ult. 24hs: <span >{{criptomonedas[9].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-                                                
+  
                     </div>
         
         
         
         
         
-        
-                    <div class="swap sticky-top">
-                        <h3>SWAP</h3>
-                        <div class="swap-moneda-arriba">
-                            <div>
-                                <img src="../../assets/logo-peso.png">
-                                <p>Peso Argentino</p>
+                    <div class="div-swap-compra container">
+
+                        <div class="swap ">
+                            <h3>COMPRAR VENDER</h3>
+                            <select id="" name="">
+                                <option value="">Comprar</option>
+                                <option value="">Vender</option>
+                            </select>
+                            <div class="swap-moneda-arriba">
+                                <div>
+                                    <img src="../../assets/logo-peso.png">
+                                    
+                                    <p>Peso Argentino</p>
+                                </div>
+
+                                <input type="number" id="peso-arg" >
                             </div>
-        
-                            <input type="number" id="peso-arg" >
+
+                                <i class="fas fa-exchange-alt awesome"></i>
+
+                                <div class="swap-moneda-abajo">
+                                    <div>
+                                        <img src="../../assets/tether-usdt-logo.svg">
+                                        <select id="" name="" >
+                                            <option value="" *ngFor="let moneda of criptomonedas">{{moneda.name}} {{moneda.current_price}}</option>
+                                        </select>
+                                        <p>USDT</p>
+                                    </div>
+                                    <input type="number" id="dolares">
+                                </div>
+                                <button class="btn-confirmar-swap">
+                                    <p>Confirmar transacción</p>
+                                </button>
                         </div>
-        
-                        <i class="fas fa-exchange-alt awesome"></i>
-        
-                        <div class="swap-moneda-abajo">
-                            <div>
-                                <img src="../../assets/tether-usdt-logo.svg">
-                                <p>USDT</p>
+
+                        <div class="swap ">
+                            <h3>INTERCAMBIO</h3>
+                            <div class="swap-moneda-arriba">
+                                <div>
+                                    <img src="../../assets/logo-peso.png">
+                                    <p>Peso Argentino</p>
+                                </div>
+
+                                <input type="number" id="peso-arg" >
                             </div>
-                            <input type="number" id="dolares">
+
+                                <i class="fas fa-exchange-alt awesome"></i>
+
+                                <div class="swap-moneda-abajo">
+                                    <div>
+                                        <img src="../../assets/tether-usdt-logo.svg">
+                                        <p>USDT</p>
+                                    </div>
+                                    <input type="number" id="dolares">
+                                </div>
+                                <button class="btn-confirmar-swap">
+                                    <p>Confirmar transacción</p>
+                                </button>
                         </div>
-                        <button class="btn-confirmar-swap">
-                            <p>Confirmar transacción</p>
-                        </button>
                     </div>
+
                 </div>
         
             </div>
