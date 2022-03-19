@@ -50,7 +50,14 @@
 }
 
 .market-down {
-    color: #9E003C;
+    /* color: #DA1212; */
+    color: #FF0075;
+    font-weight: bold;
+}
+
+.market-up {
+    /* color: #39A388; */
+    color: #77D970;
     font-weight: bold;
 }
 

@@ -56,8 +56,8 @@
                                <div class="div-market-hoy">
                                    <img src="{{moneda.image}}" class="svg-market">
                                    <h3>{{moneda.symbol | uppercase}}</h3>
-                                   <p *ngIf="moneda.price_change_percentage_24h < 0" class="market-down">{{moneda.price_change_percentage_24h.toString().slice(0, 4)}}%</p>
-                                   <p *ngIf="moneda.price_change_percentage_24h > 0" >{{moneda.price_change_percentage_24h.toString().slice(0, 4)}}%</p>
+                                   <p *ngIf="moneda.price_change_percentage_24h < 0"><span class="market-down">{{moneda.price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                                   <p *ngIf="moneda.price_change_percentage_24h > 0"><span class="market-up">{{moneda.price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
                                </div>
                            </mat-grid-tile>
                     </mat-grid-list>
