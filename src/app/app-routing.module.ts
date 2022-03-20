@@ -21,6 +21,7 @@ import { SolanaComponent } from './criptomonedas/solana/solana.component';
 
 
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },

@@ -44,6 +44,7 @@ import { EstadoCuentaComponent } from './componente/estado-cuenta/estado-cuenta.
 import { OperaCriptoComponent } from './componente/opera-cripto/opera-cripto.component';
 import { OperacionePesoComponent } from './componente/operacione-peso/operacione-peso.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EnviaDepositaComponent,
     EstadoCuentaComponent,
     OperaCriptoComponent,
-    OperacionePesoComponent
+    OperacionePesoComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
