@@ -10,17 +10,17 @@ import { Usuario, UsuarioService } from '../usuario.service';
 export class AuthService {
 
   urlApiRest:string="http://cataexchange.somee.com/backend/api/Usuario/GetLogin";
-  currentUserSubject: BehaviorSubject<Usuario>;
-  currentUser: Observable<Usuario>;
+  currentUserSubject: BehaviorSubject<any>;
+  currentUser: Observable<any>;
     loggedIn: any;
 
-  constructor(private http:HttpClient ) {
+  constructor(private http:HttpClient, usuarioService: UsuarioService) {
       console.log("servicio de autenticacion esta corriendo");
-      this.currentUserSubject = new BehaviorSubject<Usuario>(JSON.parse(localStorage.getItem('currentUser') || '{}'));
+      this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser') || '{}'));
       this.currentUser = this.currentUserSubject.asObservable();
   }
 
-  login(usuario: Usuario):Observable<any>{
+  login(usuario: any):Observable<any>{
       return this.http.post<any>(this.urlApiRest, usuario)
       .pipe(map(data => {
           localStorage.setItem('currentUser', JSON.stringify(data));
@@ -34,7 +34,7 @@ export class AuthService {
       localStorage.removeItem('currentUser');
       this.loggedIn.next(false);
   }
-  get usuarioAutenticado(): Usuario {
+  get usuarioAutenticado(): any {
       return this.currentUserSubject.value;
   }
 

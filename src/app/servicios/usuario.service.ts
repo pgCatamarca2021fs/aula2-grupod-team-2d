@@ -25,7 +25,7 @@ export class UsuarioService {
 
    loginUsuario(usuario: any):Observable<any>{
        // return this.http.get(this.urlApiRest + "usuario/getLogin")
-       return this.http.get(this.urlApiRest, usuario);
+       return this.http.get(this.urlApiRest + "Usuario/GetLogin", usuario);
    }
 
    listarUsuario():Observable<any> {
