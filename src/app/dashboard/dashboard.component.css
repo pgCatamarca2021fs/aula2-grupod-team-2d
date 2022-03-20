@@ -10,6 +10,18 @@
     --fondo-claro: #43456d;
 }
 
+.market-down {
+    /* color: #DA1212; */
+    color: #FF0075;
+    font-weight: bold;
+}
+
+.market-up {
+    /* color: #39A388; */
+    color: #77D970;
+    font-weight: bold;
+}
+
 .dashboard{
     background:var(--fondo-body);
     display: flex;
@@ -232,7 +244,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .div-derecho h3 {

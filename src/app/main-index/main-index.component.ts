@@ -4,6 +4,8 @@ import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
 import { ValidationErrors, ValidatorFn } from '@angular/forms';
 import { UsuarioService } from '../servicios/usuario.service';
+import { AuthService } from '../servicios/auth/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -31,7 +33,10 @@ export class MainIndexComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private authService: AuthService,
+    private router: Router
+
   ) {
     this.buildForm();
   }
@@ -74,9 +79,26 @@ onEnviar(event:Event){
 
 onEnviarLog(event:Event){
   event.preventDefault;
+
+  let usuarioLog = {
+      email: this.formLog.controls["emailLog"].value,
+      clave: this.formLog.controls["contraseñaLog"].value
+  }
+
+  this.authService.login(usuarioLog).subscribe(data => {
+      console.log("DATA" + JSON.stringify(data));
+      this.router.navigate(['../dashboard']);
+  })
+
+  
   
   if(this.formLog.valid){
-    alert ("Enviar al servidor..")
+      console.log(usuarioLog.email)
+      console.log(usuarioLog.clave)
+      // this.usuarioService.loginUsuario(usuarioLog).subscribe()
+
+
+    alert ("")
   } else{
     this.formLog.markAllAsTouched();
   }
