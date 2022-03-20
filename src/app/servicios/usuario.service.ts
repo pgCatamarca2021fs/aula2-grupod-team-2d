@@ -2,6 +2,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
+export class Usuario {
+    nombre: string = "";
+    apellido: string = "";
+    fechaNacimiento: string = "";
+    email: string = "";
+    clave: string = "";
+    dni: string = "";
+    id: number = 0;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +21,11 @@ export class UsuarioService {
 
   constructor(private http:HttpClient) {
 
+   }
+
+   loginUsuario(usuario: any):Observable<any>{
+       // return this.http.get(this.urlApiRest + "usuario/getLogin")
+       return this.http.get(this.urlApiRest, usuario);
    }
 
    listarUsuario():Observable<any> {
