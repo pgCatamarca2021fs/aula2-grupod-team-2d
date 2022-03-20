@@ -6,7 +6,6 @@ import { ValidationErrors, ValidatorFn } from '@angular/forms';
 import { UsuarioService } from '../servicios/usuario.service';
 import { AuthService } from '../servicios/auth/auth.service';
 import { Router } from '@angular/router';
-import {stringify} from 'querystring';
 
 
 @Component({
