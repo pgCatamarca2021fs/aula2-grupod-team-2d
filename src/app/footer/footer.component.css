@@ -35,14 +35,20 @@ footer {
 
 .fa-twitter {
     color: #00acee;
+    text-shadow: 2px 2px 2px #000000;
+
 }
 
 .fa-facebook {
     color: #3b5998;
+    text-shadow: 2px 2px 2px #000000;
+
 }
 
 .fa-instagram {
     color:#E1306C ;
+    text-shadow: 2px 2px 2px #000000;
+
 }
 
 .container-footer {

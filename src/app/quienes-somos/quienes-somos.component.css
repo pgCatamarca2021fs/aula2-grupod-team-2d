@@ -109,3 +109,25 @@ section {
 .card-quienes-somos p {
     text-align: center;
 }
+
+.fa-linkedin{
+    color: #0e76a8;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+}
+
+.fa-github{
+    color: #171515;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+
+}
+
+.fa-instagram{
+    color: #E1306C;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+}
