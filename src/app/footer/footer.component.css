@@ -75,6 +75,10 @@ footer {
 
 /* Phone landscape + portrait (iphone x) */
 @media (min-width: 321px) and (max-width: 480px) {
+footer {
+    padding: 1rem;
+}
+
 .container-listas {
     display: flex;
     flex-direction:column;
@@ -111,8 +115,33 @@ footer {
     margin:  0 1rem 1rem 0;
 }
 
+.listas-link h5 {
+    font-size: 1.5rem;
+}
 
+.listas-link ul li {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
 
+.div-form-footer form h5 {
+    font-size: 1.5rem;
+}
+
+.div-form-footer form p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.primer-parrafo-footer {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.segundo-parrafo-footer {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
 }
 
 /* Small tablet portrait con aprox 800 de Height */

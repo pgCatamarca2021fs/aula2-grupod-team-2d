@@ -139,13 +139,13 @@
     
 }
 
-.div_article_info h2{
+.div_article_info h3{
     font-size: 1rem;
     letter-spacing: 3px;
     color: rgb(255, 255, 36);
 }
 
-.div_article_info h3{
+.div_article_info h2{
     font-size: 2rem;
     color: var(--text-color);
     padding: 1rem 0;
@@ -233,6 +233,8 @@
         padding: 3rem 0;
     }
 
+  
+
     .article__section__index {
         height: auto;
         padding-bottom: 2rem;
@@ -243,7 +245,7 @@
     }
 
     .div__article__titulos h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .div__article__titulos h3 {
@@ -256,6 +258,10 @@
 
     .article__card__cripto {
         margin: 1rem 0;
+    }
+
+    .article__card__cripto h4 {
+        font-size: 1.2rem;
     }
 
     /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
@@ -271,8 +277,92 @@
         width: 300px;
     }
 
+    .div_article_info h3 {
+        font-size: 1.2rem;
+    }
+
+    .div_article_info h2 {
+        font-size: 1.6rem;
+    }
+
     .div_article_info p{
         text-align: left;
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .article__section__index a {
+        margin: 1rem 0 0 0;
+        font-size: 1.5rem;
+    }
+
+    .div-go-dashboard {
+        width: 100%;
+        padding: 10rem 10%;
+    }
+
+    .div-go-dashboard h3 {
+        font-size: 1.3rem;
+    }
+
+    .div-go-dashboard h2 {
+        font-size: 1.5rem;
+    }
+
+    .div-go-dashboard p {
+        line-height: 2rem;
+        font-size: 1.3rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .donde-encontrarnos {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+        align-items: center;
+    }
+    
+    .div-contenedor-mapa-texto {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding:  0;
+    }
+    
+    .div-mapa {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .div-mapa iframe {
+        width: 95%;
+        height: 300px;
+    }
+    
+    .div-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0;
+        margin: 2rem 0 0 0;
+    }
+
+    .div-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .div-texto h4{
+        font-size: 1.3rem;
+    }
+
+    .div-texto ul li {
+        font-size: 1.2rem;
     }
 }
 

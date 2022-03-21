@@ -111,3 +111,33 @@ section {
     text-align: center;
 }
 
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .quienes-somos h3 {
+        font-size: 1.2rem;
+    }
+
+    .quienes-somos h1 {
+        font-size: 1.6rem;
+    }
+
+    .quienes-somos p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+
+}
+
+/*  Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+
+}
+
+/* Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}

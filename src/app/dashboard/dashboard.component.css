@@ -39,14 +39,14 @@
 
 .div-dashboard-izq {
     width: 60%;
-    height: 100vh;
+    height: 100%;
     
 }
 
 
 .div-dashboard-der {
     width: 40%;
-    height: 100vh;
+    height: 100%;
 
 }
 
@@ -300,12 +300,10 @@
 
 /* Phone landscape + portrait (iphone x) */
 @media (min-width: 321px) and (max-width: 480px) { 
-
-    
     .dashboard{
         display: flex;
-        flex-direction: column;
-        height: 100%;
+        flex-direction: row;
+        height: auto;
         width: auto;
     }
     
@@ -315,7 +313,6 @@
         align-items: left;
         justify-content: space-between;
         width: 100%;
-        height: 100%;
         margin-top: 80px;
     }
     
@@ -535,8 +532,10 @@
         text-align: left;
     }
     
+  
     
-
+    
+    
 }
 
 /* Small tablet portrait con aprox 800 de Height */
@@ -546,7 +545,7 @@
     .dashboard{
         display: flex;
         flex-direction: row;
-        height: 100%;
+        height: auto;
         width: auto;
     }
     
@@ -787,7 +786,7 @@
     .dashboard{
         display: flex;
         flex-direction: row;
-        height: 100%;
+        height:auto;
         width: auto;
     }
     
@@ -1036,7 +1035,7 @@
     .dashboard{
         display: flex;
         flex-direction: row;
-        height: 100%;
+        height: auto;
         width: auto;
     }
     

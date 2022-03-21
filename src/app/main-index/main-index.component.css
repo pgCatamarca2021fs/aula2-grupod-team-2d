@@ -344,7 +344,10 @@ form h1{
 		width: 90%;
 	}
 
-
+	.maneja-cripto {
+		font-size: 1.3rem;
+		line-height: 2rem;
+	}
 
 }
 
