@@ -9,7 +9,8 @@ import { Usuario, UsuarioService } from '../usuario.service';
 })
 export class AuthService {
 
-  urlApiRest:string="http://cataexchange.somee.com/backend/api/Usuario/GetLogin";
+  // urlApiRest:string="http://cataexchange.somee.com/backend/api/Usuario/GetLogin";
+  urlApiRest:string="https://localhost:44302/api/account";
   currentUserSubject: BehaviorSubject<any>;
   currentUser: Observable<any>;
     loggedIn: any;
@@ -22,13 +23,14 @@ export class AuthService {
 
   login(usuario: any):Observable<any>{
       return this.http.post<any>(this.urlApiRest, usuario)
-      .pipe(map(data => {
-          localStorage.setItem('currentUser', JSON.stringify(data));
-          this.currentUserSubject.next(data);
-          this.loggedIn.next(true);
-          return data;
-      }))
+      /* .pipe(map(data => { */
+          /* localStorage.setItem('currentUser', JSON.stringify(data)); */
+          /* this.currentUserSubject.next(data); */
+          /* this.loggedIn.next(true); */
+          /* return data; */
+      /* })) */
   }
+
 
   logout(): void {
       localStorage.removeItem('currentUser');
@@ -38,7 +40,18 @@ export class AuthService {
       return this.currentUserSubject.value;
   }
 
-  get estaAutenticado(): Observable<boolean>{
-      return this.loggedIn.asObservable();
+  /* get estaAutenticado(): Observable<boolean>{ */
+      /* return this.loggedIn.asObservable(); */
+  /* } */
+
+ get estaAutenticado(){
+     if (localStorage.getItem('token')){
+         return true;
+     }
+     return false
+  }
+
+  getToken(){
+      return localStorage.getItem('token');
   }
 }
