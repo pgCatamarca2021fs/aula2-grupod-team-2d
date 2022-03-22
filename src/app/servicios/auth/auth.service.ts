@@ -10,7 +10,7 @@ import { Usuario, UsuarioService } from '../usuario.service';
 })
 export class AuthService {
 
-  // urlApiRest:string="http://cataexchange.somee.com/backend/api/Usuario/GetLogin";
+  // urlApiRest:string="http://cataexchange.somee.com/backend/api/account";
   urlApiRest:string="https://localhost:44302/api/account";
   currentUserSubject: BehaviorSubject<any>;
   currentUser: Observable<any>;
