@@ -19,15 +19,16 @@ import { BinancecoinComponent } from './criptomonedas/binancecoin/binancecoin.co
 import { CardanoComponent } from './criptomonedas/cardano/cardano.component';
 import { SolanaComponent } from './criptomonedas/solana/solana.component';
 import {PerfilComponent} from './perfil/perfil.component';
+import {AuthGuard} from './auth/auth.guard';
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'swap', component: SwapComponent },
-  { path: 'billetera', component: WalletComponent },
-  { path: 'criptos', component: MercadoCryptoComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'swap', component: SwapComponent, canActivate: [AuthGuard] },
+  { path: 'billetera', component: WalletComponent, canActivate: [AuthGuard] },
+  { path: 'criptos', component: MercadoCryptoComponent, canActivate: [AuthGuard] },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
   { path: 'quienes-somos', component: QuienesSomosComponent },
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },
