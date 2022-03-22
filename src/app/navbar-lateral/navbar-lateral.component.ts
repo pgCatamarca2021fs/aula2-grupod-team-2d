@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../servicios/auth/auth.service';
 
 @Component({
   selector: 'app-navbar-lateral',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar-lateral.component.css']
 })
 export class NavbarLateralComponent implements OnInit {
+
+    constructor(
+        private authService: AuthService,
+    ){}
+
+
 
   show = true;
   body = "";
@@ -27,6 +34,11 @@ export class NavbarLateralComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  cerrarSesion(){
+      console.log("desde cerrar sesion");
+      return this.authService.logout();
   }
 
 }
