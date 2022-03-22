@@ -1,5 +1,6 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {Router} from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Usuario, UsuarioService } from '../usuario.service';
@@ -15,7 +16,10 @@ export class AuthService {
   currentUser: Observable<any>;
     loggedIn: any;
 
-  constructor(private http:HttpClient, usuarioService: UsuarioService) {
+  constructor(private http:HttpClient,
+              usuarioService: UsuarioService,
+              private route: Router,
+             ) {
       console.log("servicio de autenticacion esta corriendo");
       this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser') || '{}'));
       this.currentUser = this.currentUserSubject.asObservable();
@@ -33,8 +37,8 @@ export class AuthService {
 
 
   logout(): void {
-      localStorage.removeItem('currentUser');
-      this.loggedIn.next(false);
+      localStorage.removeItem('token');
+      this.route.navigate(['../'])
   }
   get usuarioAutenticado(): any {
       return this.currentUserSubject.value;
