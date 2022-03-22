@@ -45,6 +45,7 @@ import { OperaCriptoComponent } from './componente/opera-cripto/opera-cripto.com
 import { OperacionePesoComponent } from './componente/operacione-peso/operacione-peso.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PerfilComponent } from './perfil/perfil.component';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,9 @@ import { PerfilComponent } from './perfil/perfil.component';
     MatGridListModule
 
   ],
-  providers: [],
+  providers: [
+      AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
