@@ -1,68 +1,29 @@
-<!-- <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
-    show = {{show}}
-    <br>
-    <div *ngIf="show">Text to show</div> -->
 
-<div [class]="body" class="body">
+<header class="header">
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="titulo__img">
+                <img src="../../assets/logo.png" class="nav-img">
+                <h1 class="nav-h1">CataExchange</h1>
+            </div>
+            <label for="menu" class="nav__label">
+                <img src="../../assets/menu.svg" alt="logo menu" class="nav__img__logo">
+            </label>
+            <input type="checkbox" id="menu" class="nav__input">
+            <div class="nav__menu">
+                <img src="../../assets/logo.png" class="nav-img1">
+                <div class="enlaces-menu">
 
-
-    <div [class]="menu__side" id="menu_side" class="menu__side">
-
-        <div class="name__page">
-            <img src="../../assets/menu.svg" (click)="openMenu()" alt="logo menu" class="nav__img__logo" id="btn_open">
-            <h4>CataExchange</h4>
-
-            <i class="fas fa-window-close btnCerrarVentana" (click)="closeMenu()"></i>
+                    <a [routerLink]="['../dashboard']" class="nav__item">Dashboard</a>
+                    <a [routerLink]="['../billetera']" class="nav__item">Billetera</a>
+                    <a [routerLink]="['../swap']" class="nav__item">Comercia</a>
+                    <a [routerLink]="['../criptos']" class="nav__item">Mercado Cripto</a>
+                    <a [routerLink]="['../sobre-nosotros']" class="nav__item">Sobre Nosotros</a>
+                    <a [routerLink]="['../perfil']" class="nav__item">Perfil</a>
+                    <a [routerLink]="['../perfil']" class="nav__item">Cerrar Sesión</a>
+                </div>
+                
+            </div>
         </div>
-
-        <div class="options__menu">
-
-            <a [routerLink]="['../dashboard']" class="selected">
-                <div class="option">
-                    <i class="fas fa-clipboard-list" title="dashboard"></i>
-                    <h4>Dashboard</h4>
-                </div>
-            </a>
-
-            <a [routerLink]="['../billetera']">
-                <div class="option">
-                    <i class="fas fa-wallet" title="wallet"></i>
-                    <h4>Wallet</h4>
-                </div>
-            </a>
-
-            <a [routerLink]="['../swap']">
-                <div class="option">
-                    <i class="fas fa-balance-scale" title="swap/trade"></i>
-                    <h4>Swap/trade</h4>
-                </div>
-            </a>
-
-            <a [routerLink]="['../criptos']">
-                <div class="option">
-                    <i class="fas fa-chart-line" title="mercado crypto"></i>
-
-                    <h4>Mercado Crypto</h4>
-                </div>
-            </a>
-
-            <a [routerLink]="['../sobre-nosotros']">
-                <div class="option">
-                    <i class="fas fa-users" title="sobre nosotros"></i>
-                    <h4>Sobre Nosotros</h4>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="option">
-                    <i class="fas fa-user" title="perfil"></i>
-                    <h4>Perfil</h4>
-                </div>
-            </a>
-
-        </div>
-
-    </div>
-
-
-</div>
+    </nav>
+</header>

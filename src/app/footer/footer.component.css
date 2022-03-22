@@ -81,6 +81,10 @@ footer {
 
 /* Phone landscape + portrait (iphone x) */
 @media (min-width: 321px) and (max-width: 480px) {
+footer {
+    padding: 1rem;
+}
+
 .container-listas {
     display: flex;
     flex-direction:column;
@@ -117,49 +121,104 @@ footer {
     margin:  0 1rem 1rem 0;
 }
 
+.listas-link h5 {
+    font-size: 1.5rem;
+}
 
+.listas-link ul li {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
 
+.div-form-footer form h5 {
+    font-size: 1.5rem;
+}
+
+.div-form-footer form p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.primer-parrafo-footer {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.segundo-parrafo-footer {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
 }
 
 /* Small tablet portrait con aprox 800 de Height */
 @media (min-width: 481px) and (max-width: 600px) {
-.container-listas {
-    display: flex;
-    flex-direction:column;
-}
-
-
-.footer-abajo  {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 2rem 0 0 0;
-}
-
-.footer-arriba {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-}
-
-.footer-arriba div {
-    padding: 1rem 0 1rem 0;
-    margin: 0;
-}
-
-
-
-.segundo-parrafo-footer {
-    width: 100%;
-}
-
-
-.fa-twitter, .fa-instagram, .fa-facebook {
-    font-size: 2.5rem;
-    margin:  0 1rem 1rem 0;
-}
-
-
+    footer {
+        padding: 1rem;
+    }
+    
+    .container-listas {
+        display: flex;
+        flex-direction:column;
+    }
+    
+    
+    .footer-abajo  {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2rem 0 0 0;
+    }
+    
+    .footer-arriba {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .footer-arriba div {
+        padding: 1rem 0 1rem 0;
+        margin: 0;
+    }
+    
+    
+    
+    .segundo-parrafo-footer {
+        width: 100%;
+    }
+    
+    
+    .fa-twitter, .fa-instagram, .fa-facebook {
+        font-size: 2.5rem;
+        margin:  0 1rem 1rem 0;
+    }
+    
+    .listas-link h5 {
+        font-size: 1.5rem;
+    }
+    
+    .listas-link ul li {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    
+    .div-form-footer form h5 {
+        font-size: 1.5rem;
+    }
+    
+    .div-form-footer form p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    
+    .primer-parrafo-footer {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    
+    .segundo-parrafo-footer {
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
 }
 
 
@@ -214,47 +273,72 @@ footer {
 
 /* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
 @media (min-width: 769px) and (max-width: 1024px) {
-.container-listas {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-
-.footer-abajo  {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 2rem 0 0 0;
-    font-size: 1.5rem;
-}
-
-.footer-arriba {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-}
-
-.footer-arriba div {
-    padding: 1rem 0 1rem 0;
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.footer-arriba div h5 {
-    font-size: 1.8rem;
-}
-
-.segundo-parrafo-footer {
-    width: 100%;
+    footer {
+        padding: 1rem;
+    }
     
-}
-
-
-.fa-twitter, .fa-instagram, .fa-facebook {
-    font-size: 3rem;
-    margin:  0 1rem 1rem 0;
-}
-
+    .container-listas {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    
+    
+    .footer-abajo  {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2rem 0 0 0;
+    }
+    
+    .footer-arriba {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .footer-arriba div {
+        padding: 1rem 0 1rem 0;
+        margin: 0;
+    }
+    
+    
+    
+    .segundo-parrafo-footer {
+        width: 100%;
+    }
+    
+    
+    .fa-twitter, .fa-instagram, .fa-facebook {
+        font-size: 2.5rem;
+        margin:  0 1rem 1rem 0;
+    }
+    
+    .listas-link h5 {
+        font-size: 2.5rem;
+    }
+    
+    .listas-link ul li {
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+    
+    .div-form-footer form h5 {
+        font-size: 2rem;
+    }
+    
+    .div-form-footer form p {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    
+    .primer-parrafo-footer {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    .segundo-parrafo-footer {
+        font-size: 1.9rem;
+        line-height: 2rem;
+    }
 }

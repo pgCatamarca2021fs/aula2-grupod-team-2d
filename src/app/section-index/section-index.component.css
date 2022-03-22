@@ -139,13 +139,13 @@
     
 }
 
-.div_article_info h2{
+.div_article_info h3{
     font-size: 1rem;
     letter-spacing: 3px;
     color: rgb(255, 255, 36);
 }
 
-.div_article_info h3{
+.div_article_info h2{
     font-size: 2rem;
     color: var(--text-color);
     padding: 1rem 0;
@@ -233,6 +233,8 @@
         padding: 3rem 0;
     }
 
+  
+
     .article__section__index {
         height: auto;
         padding-bottom: 2rem;
@@ -243,7 +245,7 @@
     }
 
     .div__article__titulos h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .div__article__titulos h3 {
@@ -256,6 +258,10 @@
 
     .article__card__cripto {
         margin: 1rem 0;
+    }
+
+    .article__card__cripto h4 {
+        font-size: 1.2rem;
     }
 
     /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
@@ -271,8 +277,92 @@
         width: 300px;
     }
 
+    .div_article_info h3 {
+        font-size: 1.2rem;
+    }
+
+    .div_article_info h2 {
+        font-size: 1.6rem;
+    }
+
     .div_article_info p{
         text-align: left;
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .article__section__index a {
+        margin: 1rem 0 0 0;
+        font-size: 1.5rem;
+    }
+
+    .div-go-dashboard {
+        width: 100%;
+        padding: 10rem 10%;
+    }
+
+    .div-go-dashboard h3 {
+        font-size: 1.3rem;
+    }
+
+    .div-go-dashboard h2 {
+        font-size: 1.5rem;
+    }
+
+    .div-go-dashboard p {
+        line-height: 2rem;
+        font-size: 1.3rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .donde-encontrarnos {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+        align-items: center;
+    }
+    
+    .div-contenedor-mapa-texto {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding:  0;
+    }
+    
+    .div-mapa {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .div-mapa iframe {
+        width: 95%;
+        height: 300px;
+    }
+    
+    .div-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0;
+        margin: 2rem 0 0 0;
+    }
+
+    .div-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .div-texto h4{
+        font-size: 1.3rem;
+    }
+
+    .div-texto ul li {
+        font-size: 1.2rem;
     }
 }
 
@@ -282,9 +372,7 @@
         padding: 3rem 0;
     }
 
-    .titulo__principal__article {
-        padding: 0 1rem;
-    }
+  
 
     .article__section__index {
         height: auto;
@@ -296,7 +384,7 @@
     }
 
     .div__article__titulos h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .div__article__titulos h3 {
@@ -311,7 +399,11 @@
         margin: 1rem 0;
     }
 
-        /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+    .article__card__cripto h4 {
+        font-size: 1.2rem;
+    }
+
+    /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
     .article__index__info {
         width: 100%;
         height:auto;
@@ -324,11 +416,94 @@
         width: 300px;
     }
 
-    .div_article_info p {
+    .div_article_info h3 {
+        font-size: 1.2rem;
+    }
+
+    .div_article_info h2 {
+        font-size: 1.6rem;
+    }
+
+    .div_article_info p{
+        text-align: left;
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .article__section__index a {
+        margin: 1rem 0 0 0;
+        font-size: 1.5rem;
+    }
+
+    .div-go-dashboard {
+        width: 100%;
+        padding: 10rem 10%;
+    }
+
+    .div-go-dashboard h3 {
+        font-size: 1.3rem;
+    }
+
+    .div-go-dashboard h2 {
+        font-size: 1.5rem;
+    }
+
+    .div-go-dashboard p {
+        line-height: 2rem;
+        font-size: 1.3rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         text-align: left;
     }
-}
 
+    .donde-encontrarnos {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+        align-items: center;
+    }
+    
+    .div-contenedor-mapa-texto {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding:  0;
+    }
+    
+    .div-mapa {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .div-mapa iframe {
+        width: 95%;
+        height: 300px;
+    }
+    
+    .div-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0;
+        margin: 2rem 0 0 0;
+    }
+
+    .div-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .div-texto h4{
+        font-size: 1.3rem;
+    }
+
+    .div-texto ul li {
+        font-size: 1.2rem;
+    }
+}
 
 /* // Large tablet portrait (ipad) */
 @media (min-width: 601px) and (max-width: 768px) {
@@ -336,6 +511,10 @@
         padding: 3rem 0;
     }
 
+    .titulo__principal__article {
+        font-size: 1.8rem;
+    }
+
     .article__section__index {
         height: auto;
         padding-bottom: 2rem;
@@ -346,11 +525,11 @@
     }
 
     .div__article__titulos h2 {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .div__article__titulos h3 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .div__img__article {
@@ -361,51 +540,121 @@
         margin: 1rem 0;
     }
 
-    .article__card__cripto {
-        width: 25rem;
-        height: 20rem;
-    }
-
     .article__card__cripto h4 {
-        font-size: 3rem ;
+        font-size: 1.6rem;
     }
 
-    .article__card__cripto img {
-        width:10rem;
-    }
-
-        /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+    /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
     .article__index__info {
         width: 100%;
         height:auto;
         margin: 3rem 0 0 0;
-        padding: 0 2rem;
+        padding: 0 1rem;
         flex-direction: column;
     }
 
     .article__index__info img {
-        width: 400px;
-    }
-
-    .div_article_info h2 {
-        font-size: 1.8rem;
+        width: 300px;
     }
 
     .div_article_info h3 {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .div_article_info h2 {
+        font-size: 2rem;
     }
 
     .div_article_info p{
         text-align: left;
-        font-size: 1.7rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .article__section__index a {
+        margin: 1rem 0 0 0;
+        font-size: 1.8rem;
+    }
+
+    .div-go-dashboard {
+        width: 100%;
+        padding: 10rem 10%;
+    }
+
+    .div-go-dashboard h3 {
+        font-size: 1.3rem;
+    }
+
+    .div-go-dashboard h2 {
+        font-size: 1.8rem;
+    }
+
+    .div-go-dashboard p {
+        line-height: 2rem;
+        font-size: 1.6rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .donde-encontrarnos {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+        align-items: center;
+    }
+    
+    .div-contenedor-mapa-texto {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding:  0;
+    }
+    
+    .div-mapa {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .div-mapa iframe {
+        width: 95%;
+        height: 300px;
+    }
+    
+    .div-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0;
+        margin: 2rem 0 0 0;
+    }
+
+    .div-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .div-texto h4{
+        font-size: 1.6rem;
+    }
+
+    .div-texto ul li {
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }
-
 
 /* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .section__index {
-        padding: 3rem 0;
+        padding:  0;
+    }
+
+    .titulo__principal__article {
+        font-size: 1.8rem;
     }
 
     .article__section__index {
@@ -414,61 +663,145 @@
     }
 
     .article__section__index a {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .div__article__titulos h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .div__article__titulos h3 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .div__img__article {
         flex-direction: column;
+        width: 100%;
     }
 
     .article__card__cripto {
         margin: 1rem 0;
-    }
-
-    .article__card__cripto {
-        width: 25rem;
-        height: 20rem;
+        width: 70%;
     }
 
     .article__card__cripto h4 {
-        font-size: 3rem ;
+        font-size: 2.5rem;
     }
 
-    .article__card__cripto img {
-        width:10rem;
-    }
 
-            /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
+
+    /* INICIO DE LA PARTE DEL SEGUNDO ARTICLE */
     .article__index__info {
         width: 100%;
         height:auto;
         margin: 3rem 0 0 0;
-        padding: 0 2rem;
+        padding: 0 1rem;
         flex-direction: column;
     }
 
     .article__index__info img {
-        width: 400px;
-    }
-
-    .div_article_info h2 {
-        font-size: 1.8rem;
+        width: 300px;
     }
 
     .div_article_info h3 {
+        font-size: 1.8rem;
+    }
+
+    .div_article_info h2 {
         font-size: 2.5rem;
     }
 
     .div_article_info p{
         text-align: left;
-        font-size: 1.7rem;
+        line-height: 3rem;
+        font-size: 2rem;
+    }
+
+    .article__section__index a {
+        margin: 1rem 0 0 0;
+        font-size: 2.5rem;
+    }
+
+    .div-go-dashboard {
+        width: 100%;
+        padding: 10rem 10%;
+    }
+
+    .div-go-dashboard h3 {
+        font-size: 1.8rem;
+    }
+
+    .div-go-dashboard h2 {
+        font-size: 2.5rem;
+    }
+
+    .div-go-dashboard p {
+        line-height: 3rem;
+        font-size: 2rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .btn {
+        background-color: var(--texto-resalta);
+        font-size: 2rem;
+    }
+    
+    .donde-encontrarnos {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+        align-items: center;
+    }
+
+    .donde-encontrarnos h3 {
+        font-size: 1.8rem;
+    }
+
+    .donde-encontrarnos h2 {
+        font-size: 2.5rem;
+    }
+    
+    .div-contenedor-mapa-texto {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding:  0;
+    }
+    
+    .div-mapa {
+        margin: 0 0 3rem 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .div-mapa iframe {
+        width: 95%;
+        height: 600px;
+    }
+    
+    .div-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0;
+        margin: 2rem 0 0 0;
+    }
+
+    .div-texto h2 {
+        font-size: 2.5rem;
+    }
+
+    .div-texto h4{
+        font-size: 1.8rem;
+    }
+
+    .div-texto ul li {
+        font-size: 2rem;
+        line-height: 3rem;
     }
 }

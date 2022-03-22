@@ -1,5 +1,6 @@
 <section class="dashboard"> 
 
+    <!-- <app-navbar-lateral></app-navbar-lateral> -->
     <app-navbar-lateral></app-navbar-lateral>
 
     <article class="dashboard-propio">
@@ -11,9 +12,9 @@
                 <div class="div-sup-izq">
 
                     <div class="titulo-sup-izq">
-                        <img src="../../assets/monedas.png" class="monedas-sup-izq">
+                        
                         <h3>Balance</h3>
-                        <i class="fas fa-angle-double-down"></i>
+                        
                     </div>
 
 
@@ -45,96 +46,60 @@
                 
                 
                 <!-- DIV SUP DER -->
-                <div class="div-sup-der overflow-auto">
-                    <div class="titulo-sup-der sticky-top">
-                        <img src="../../assets/dogecoin-doge-logo.svg" class="monedas-sup-der">
+                <div class="div-sup-der ">
+                    <div class="titulo-sup-der">
+                        
                         <h3>Market hoy</h3>
                     </div>
                     
-                    <mat-grid-list cols="1" rowHeight="3:0.9" gutterSize="0px" >
-                           <mat-grid-tile  *ngFor="let moneda of criptomonedas">
+                   
                                <div class="div-market-hoy">
-                                   <img src="{{moneda.image}}" class="svg-market">
-                                   <h3>{{moneda.symbol | uppercase}}</h3>
-                                   <p *ngIf="moneda.price_change_percentage_24h < 0"><span class="market-down">{{moneda.price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
-                                   <p *ngIf="moneda.price_change_percentage_24h > 0"><span class="market-up">{{moneda.price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                                   <img src="{{criptomonedas[0].image}}" class="svg-market">
+                                   <h3>{{criptomonedas[0].symbol | uppercase}}</h3>
+                                   <p *ngIf="criptomonedas[0].price_change_percentage_24h < 0"><span class="market-down">{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                                   <p *ngIf="criptomonedas[0].price_change_percentage_24h > 0"><span class="market-up">{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
                                </div>
-                           </mat-grid-tile>
-                    </mat-grid-list>
+
+                            <div class="div-market-hoy">
+                                <img src="{{criptomonedas[1].image}}" class="svg-market">
+                                <h3>{{criptomonedas[1].symbol | uppercase}}</h3>
+                                <p *ngIf="criptomonedas[1].price_change_percentage_24h < 0"><span class="market-down">{{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                                <p *ngIf="criptomonedas[1].price_change_percentage_24h > 0"><span class="market-up">{{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                            </div>
+
+                            <div class="div-market-hoy">
+                                <img src="{{criptomonedas[2].image}}" class="svg-market">
+                                <h3>{{criptomonedas[2].symbol | uppercase}}</h3>
+                                <p *ngIf="criptomonedas[2].price_change_percentage_24h < 0"><span class="market-down">{{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                                <p *ngIf="criptomonedas[2].price_change_percentage_24h > 0"><span class="market-up">{{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 5)}}</span> %</p>
+                            </div>
+                           
 
                 </div>
 
-
-                <!-- <div class="div-sup-der"> -->
-                    <!-- <div class="titulo-sup-der"> -->
-                    <!--     <img src="../../assets/dogecoin-doge-logo.svg" class="monedas-sup-der"> -->
-                    <!--     <h3>Market hoy</h3> -->
-                    <!-- </div> -->
-                    <!-- <div class="div-market-hoy"> -->
-                    <!--     <img src="../../assets/bitcoin-btc-logo.svg" class="svg-market"> -->
-                    <!--     <h3>BTC</h3> -->
-                    <!--     <p>+3.5</p> -->
-                    <!-- </div> -->
-                    <!-- <div class="div-market-hoy"> -->
-                    <!--     <img src="../../assets/binance-coin-bnb-logo.svg" class="svg-market"> -->
-                    <!--     <h3>BNB</h3> -->
-                    <!--     <p>+8.6</p> -->
-                    <!-- </div> -->
-                    <!-- <div class="div-market-hoy"> -->
-                    <!--     <img src="../../assets/solana-sol-logo.svg" class="svg-market"> -->
-                    <!--     <h3>SOL</h3> -->
-                    <!--     <p>+1.2</p> -->
-                    <!-- </div> -->
-                    <!--  -->
-                <!-- </div> -->
             </div>
 
 
 
-            <div class="div-botones">
-                <button class="testbutton">Wallet</button>
-                <button class="testbutton">Swap</button>
-            </div>
+            
             
 
             <!-- DIV INF DOBLE -->
             <div class="div-inf-doble">
-                <h3>Últimos movimientos</h3>
-                <table class="table-movimientos">
-                    <tr class="tr-th">
-                        <th class="table-tr-th">Fecha</th>
-                        <th class="table-tr-th">Tipo de transacción</th>
-                        <th class="table-tr-th">Comisión</th>
-                        <th class="table-tr-th">Monto</th>
-                    </tr>
-                    <tr class="table-tr">
-                        <td>15/02/2022</td>
-                        <td>Deposito</td>
-                        <td>0.00003 BTC</td>
-                        <td>30 BTC</td>
-                    </tr>
-                    <tr class="table-tr">
-                        <td>11/02/2022</td>
-                        <td>Transferencia</td>
-                        <td>0</td>
-                        <td>14131 ARS</td>
-                    </tr>
-                    <tr class="table-tr">
-                        <td>15/02/2022</td>
-                        <td>Deposito</td>
-                        <td>0.00003 BTC</td>
-                        <td>30 BTC</td>
-                    </tr>
-                    <tr class="table-tr">
-                        <td>11/02/2022</td>
-                        <td>Transferencia</td>
-                        <td>0</td>
-                        <td>14131 ARS</td>
-                    </tr>
-                </table>
+                
+                    <h4>WALLET, SWAP, CRIPTO</h4>
+                    <p>Quiere consultar sus últimos movimientos?<br> Quiere comprar, vender o intercambiar sus cripto?<br> Quiere consultar su balance total o individual de cada cripto? <br> Quiere acceder mayor información sobre sus criptomonedas favoritas? </p>
+        
+                    <div class="div-botones"> 
+                        <button class="testbutton"><a [routerLink]="['../billetera']">Billetera</a></button>
+                        <button class="testbutton"><a [routerLink]="['../swap']">Comerciar</a></button>
+                        <button class="testbutton"><a [routerLink]="['../criptos']">Mercado Crypto</a></button>
+                    </div>
+                
+                
             </div>
 
-
+            
         </div>
 
         <div class="div-dashboard-der">
@@ -143,7 +108,7 @@
                 <div class="news">
                     <img src="https://cmswagtail.s3.amazonaws.com/original_images/wo.png" alt="" class="news-img">
                     <div class="news-text">
-                        <h4>Bitcoin supera los $58.000 con la atención puesta en Ómicron y el..</h4>
+                        <h4>Bitcoin y la guerra..</h4>
                         <p>Publicado en <span>Coindesk</span></p>
                     </div>
                 </div>
@@ -154,21 +119,9 @@
                         <p>Publicado en <span>Coindesk</span></p>
                     </div>
                 </div>
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/GALA.png" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>GALA se dispara 20% y lidera las subidas de tokens del metaverso</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
+                <p>Para consultar más noticias los invitamos a la <a class="link-news" [routerLink]="['../criptos']"> seccion de mercado crypto</a> o la pagina de <a class="link-news" href="coindesk.com" target="blank">Coindesk</a></p>
 
-                <div class="news">
-                    <img src="https://cmswagtail.s3.amazonaws.com/original_images/wo.png" alt="" class="news-img">
-                    <div class="news-text">
-                        <h4>Bitcoin supera los $58.000 con la atención puesta en Ómicron y el..</h4>
-                        <p>Publicado en <span>Coindesk</span></p>
-                    </div>
-                </div>
+                
                 
                 
             </div>
@@ -176,5 +129,6 @@
     </article>
     
 </section>
+
 
 <app-footer></app-footer>
