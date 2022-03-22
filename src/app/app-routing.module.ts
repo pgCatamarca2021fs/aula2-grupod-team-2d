@@ -18,7 +18,7 @@ import { UsdtComponent } from './criptomonedas/usdt/usdt.component';
 import { BinancecoinComponent } from './criptomonedas/binancecoin/binancecoin.component';
 import { CardanoComponent } from './criptomonedas/cardano/cardano.component';
 import { SolanaComponent } from './criptomonedas/solana/solana.component';
-
+import {PerfilComponent} from './perfil/perfil.component';
 
 
 
@@ -41,6 +41,7 @@ const routes: Routes = [
   { path: 'usdt', component: UsdtComponent },
   { path: 'dai', component: DaiComponent },
   { path: 'slp', component: SmoothLovePotionComponent },
+  { path: 'perfil', component: PerfilComponent}
 ];
 
 @NgModule({

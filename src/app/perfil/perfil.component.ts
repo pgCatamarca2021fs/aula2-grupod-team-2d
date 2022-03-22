@@ -55,8 +55,8 @@ onModificar(event:Event){
   private buildForm() {
     this.formPerfil = this.formBuilder.group({
 
-      nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-Z\s]+$/)]],
-      apellido: ['',[Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-Z\s]+$/)]],
+      nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/)]],
+      apellido: ['',[Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/)]],
       dni: ['',[Validators.required]], 
       fecha: ['', [Validators.required, this.isYoung()]],
       email: ['', [Validators.required, Validators.pattern((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/))]],

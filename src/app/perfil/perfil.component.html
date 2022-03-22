@@ -1,5 +1,6 @@
 
-           <section class="perfil">
+    <app-navbar-lateral></app-navbar-lateral>
+    <main class="perfil">
 
           <form [formGroup]="formPerfil" (ngSubmit)="onEnviar($event)" (ngSubmit)="onModificar($event)">
               <div class="perfilC">
@@ -11,12 +12,6 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingName">Nombre</label>
               <input type="text" formControlName="nombre"  name="nombre" class="form-control" [class.border-danger]="NombreValid" id="floatingName" placeholder="">
-              <button class="btn btn-primary" type="submit" id="btnCbu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                  </svg>
-              </button>
               <div *ngIf="Nombre?.errors && Nombre?.touched || Nombre?.dirty">
                 <p *ngIf="Nombre?.hasError('required')" class="text-danger">
                   Campo obligatorio.
@@ -37,12 +32,6 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingApellido">Apellido</label>
               <input type="text" formControlName="apellido" name="apellido" class="form-control" [class.border-danger]="ApellidoValid" id="floatingApellido" placeholder=""> <!--nombre del objeto en forcontrolname-->
-              <button class="btn btn-primary" type="submit" id="btnCbu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                  </svg>
-              </button>
               <div *ngIf="Apellido?.errors && Apellido?.touched || Apellido?.dirty">
                 <p *ngIf="Apellido?.hasError('required')" class="text-danger">
                     Campo obligatorio.
@@ -65,12 +54,6 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingDni">DNI</label>
               <input type="number" formControlName="dni" name="dni" class="form-control" [class.border-danger]="DniValid" id="floatingDni" placeholder=""> <!---nombre del objeto en forcontrolname-->
-              <button class="btn btn-primary" type="submit" id="btnCbu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                  </svg>
-              </button>
               <div *ngIf="Dni?.errors && Dni?.touched || Dni?.dirty">
                 <p *ngIf="Dni?.hasError('required')" class="text-danger">
                     Campo obligatorio.
@@ -85,12 +68,6 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingFecha">Fecha de Nacimiento</label>
               <input type="date" formControlName="fecha" name="fecha" class="form-control" [class.border-danger]="FechaValid" id="floatingFecha" placeholder="">
-              <button class="btn btn-primary" type="submit" id="btnCbu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                  </svg>
-              </button>
               <div *ngIf="Fecha?.errors && Fecha?.touched || Fecha?.dirty">
                 <p *ngIf="Fecha?.hasError('required')" class="text-danger">
                     Campo obligatorio.
@@ -109,12 +86,6 @@
                   <div class="input-group input-group-sm mb-3">
                     <label for="floatingEmail">Email</label>
                   <input type="email" formControlName="email" name="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="">
-                  <button class="btn btn-primary" type="submit" id="btnCbu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                      </svg>
-                  </button>
                   <div *ngIf="Email?.errors && Email?.touched || Email?.dirty">
                       <p *ngIf="Email?.hasError('required')" class="text-danger">
                         Campo obligatorio.
@@ -132,12 +103,7 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingContraseña">Contraseña</label>
                   <input type="password" formControlName="contraseña" name="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control" id="floatingContraseña" placeholder=""> <!---nombre del objeto en forcontrolname-->
-                  <button class="btn btn-primary" type="submit" id="btnCbu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                      </svg>
-                  </button>
+  
                   <div *ngIf="Contrasenia?.errors && Contrasenia?.touched || Contrasenia?.dirty">
                     <p *ngIf="Contrasenia?.hasError('required')" class="text-danger">
                         Campo obligatorio.
@@ -162,12 +128,7 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingContraseñaRepetida">Repetir contraseña</label>
                   <input type="password" formControlName="contraseñaRepetida" name="contraseñaRepetida" [class.border-danger]="ContraseniaRepetidaValid" class="form-control" id="floatingContraseñaRepetida" placeholder=""> <!---nombre del objeto en forcontrolname-->
-                  <button class="btn btn-primary" type="submit" id="btnCbu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                      </svg>
-                  </button>
+               
                   <div *ngIf="ContraseniaRepetida?.errors && ContraseniaRepetida?.touched || ContraseniaRepetida?.dirty">
                     <p *ngIf="ContraseniaRepetida?.hasError('required')" class="text-danger">
                         Campo obligatorio.
@@ -183,12 +144,7 @@
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingCbu">CBU</label>
                 <input type="number" formControlName="cbu" name="cbu" class="form-control" [class.border-danger]="CbuValid" id="floatingCbu" placeholder="">
-                <button class="btn btn-primary" type="submit" id="btnCbu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                      </svg>
-                </button>
+              
                 <div *ngIf="Cbu?.errors && Cbu?.touched || Cbu?.dirty">
                   <p *ngIf="Cbu?.hasError('required')" class="text-danger">
                       Campo obligatorio.
@@ -198,11 +154,12 @@
             </div>
 
               <button id="btnGCambio" class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button> 
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Modificar</button> 
             </div>
             </div>
         </div>
           </form>
     
-          </section>
+        </main>
+
         
+          <app-footer></app-footer>

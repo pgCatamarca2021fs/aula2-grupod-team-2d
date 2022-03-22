@@ -111,6 +111,7 @@ section {
     text-align: center;
 }
 
+
 /* Phone landscape + portrait (iphone x) */
 @media (min-width: 321px) and (max-width: 480px) {
     .quienes-somos h3 {
@@ -129,15 +130,79 @@ section {
 
 /* Small tablet portrait con aprox 800 de Height */
 @media (min-width: 481px) and (max-width: 600px) {
+    .quienes-somos h3 {
+        font-size: 1.2rem;
+    }
 
+    .quienes-somos h1 {
+        font-size: 1.6rem;
+    }
+
+    .quienes-somos p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
 }
 
 /*  Large tablet portrait (ipad) */
 @media (min-width: 601px) and (max-width: 768px) {
+    .quienes-somos h3 {
+        font-size: 1.4rem;
+    }
 
+    .quienes-somos h1 {
+        font-size: 1.8rem;
+    }
+
+    .quienes-somos p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .card-quienes-somos h2 {
+        font-size: 2rem;
+    }
 }
 
 /* Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .quienes-somos h3 {
+        font-size: 2rem;
+    }
+
+    .quienes-somos h1 {
+        font-size: 2.8rem;
+    }
+
+    .quienes-somos p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .card-quienes-somos h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+.fa-linkedin{
+    color: #0e76a8;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+}
+
+.fa-github{
+    color: #171515;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+
+}
+
+.fa-instagram{
+    color: #E1306C;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
 
 }
