@@ -79,20 +79,23 @@ onEnviar(event:Event){
 
 onEnviarLog(event:Event){
   event.preventDefault;
-
+  
   let usuarioLog = {
       email: this.formLog.controls["emailLog"].value,
       clave: this.formLog.controls["contraseñaLog"].value
   }
 
-  this.authService.login(usuarioLog).subscribe(data => {
-      console.log("DATA" + JSON.stringify(data));
-      this.router.navigate(['../dashboard']);
-  })
 
   
   
   if(this.formLog.valid){
+      this.authService.login(usuarioLog).subscribe(data => {
+          console.log("DATA" + JSON.stringify(data));
+          console.log(data);
+          
+          localStorage.setItem('token', data);
+          this.router.navigate(['../dashboard']);
+      }, err => console.log(err))
       console.log(usuarioLog.email)
       console.log(usuarioLog.clave)
       // this.usuarioService.loginUsuario(usuarioLog).subscribe()
