@@ -51,8 +51,7 @@ export class MainIndexComponent implements OnInit {
 //     });
 // }
 
-
-onEnviar(event:Event){
+ onEnviar(event:Event){
     event.preventDefault;
    
     
