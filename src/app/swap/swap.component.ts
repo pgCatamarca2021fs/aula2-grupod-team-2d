@@ -21,7 +21,7 @@ export class SwapComponent implements OnInit {
 
   formatoPrecio = (price: number) => {
     let opDivisa = { style: 'currency', currency: 'ARS' };
-    let formatNum = new Intl.NumberFormat('ar-AR', opDivisa);
+    let formatNum = new Intl.NumberFormat('us-US', opDivisa);
     return formatNum.format(price)
   }
 
