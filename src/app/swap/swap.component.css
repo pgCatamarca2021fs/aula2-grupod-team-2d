@@ -11,6 +11,11 @@
     --color-danger: #9F1317;
 }
 
+.badge {
+    color: var(--fondo-oscuro);
+    font-size: 1rem;
+    font-weight: 500;
+}
 
 .contenedor-swap {
     background-color: var(--fondo-body);

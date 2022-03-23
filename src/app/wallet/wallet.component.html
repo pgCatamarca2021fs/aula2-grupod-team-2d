@@ -7,18 +7,7 @@
             <p>$00.000</p>
 <!--Ingresar CBU-->
 
-    <form [formGroup]="formCbu" (ngSubmit)="onEnviarCbu($event)">
-    <div class="input-group mb-3">
-        <h4 class="text-center">Ingresa tu CBU </h4>
-        <input type="number" formControlName="cbu" class="form-control" [class.border-danger]="CbuValid" id="Cbu" placeholder="">
-        <button class="btn btn-primary" type="submit" id="btnCbu">Enviar</button>
-        <div *ngIf="Cbu?.errors && Cbu?.touched || Cbu?.dirty">
-            <p *ngIf="Cbu?.hasError('required')" class="text-danger">
-              Campo obligatorio.
-            </p>
-        </div>
-    </div>
-</form>
+
   <!--Hasta acá CBU-->
         </div>
 
@@ -41,21 +30,10 @@
                     <h4 class="titulo">$40.000</h4>
                 </div>
                 <div class="accion-cripto">
-
-                    
-                    <form [formGroup]="formDeposita"
-                        (ngSubmit)="onDepositar($event)">
-
-                        <input type="number"
-                        formControlName="saldo"
-                        class="form-control"
-                        placeholder="$40.000"> 
-                        
-                        <button id="btnGCambio" class="w-100
-                            btn btn-lg btn-primary"
-                            type="submit">Depositar</button> 
-
-                    </form>
+    <form [formGroup]="formDeposita" (ngSubmit)="onDepositar($event)" class="form-signin">
+        <input type="number" formControlName="saldo"  name="saldo" class="form-control" id="floatingSaldo" placeholder="$40000"> 
+        <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnDepo">Depositar</button> 
+          </form>
                 </div>
             </div>
 

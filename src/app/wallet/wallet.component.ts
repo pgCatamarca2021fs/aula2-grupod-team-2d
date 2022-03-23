@@ -68,9 +68,11 @@ onDepositar(event:Event){
     event.preventDefault;
 
     let saldo = {
-        saldo: "no tengo value jejeje"
+        saldo: this.formDeposita.controls["saldo"].value,
     }
-
+if (this.formDeposita.valid){
+  alert("Deposito exitoso");
+}
     /* this.cuentaPesoService.cargarPesos(saldo, localStorage.getItem('idUsuario')) */
     console.log(console.log(saldo));
     
@@ -108,6 +110,10 @@ onDepositar(event:Event){
 
       cbu: ['', [Validators.required]],
       
+    });
+
+    this.formDeposita= this.formBuilder.group({
+      saldo: ['',],
     });
     
   }

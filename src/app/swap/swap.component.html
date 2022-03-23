@@ -190,8 +190,8 @@
         
                     <div class="div-swap-compra ">
 
-                        <div class="swap ">
-                            <h3>COMPRAR VENDER</h3>
+                        <!-- <div class="swap ">
+                            <h3>COMPRAR</h3>
                             <select id="" name="">
                                 <option value="">Comprar</option>
                                 <option value="">Vender</option>
@@ -203,45 +203,69 @@
                                     <p>{{formatoPrecio(datosUsuarios.saldo)}}</p>
                                 </div>
 
-                                <input type="number" id="peso-arg" >
+                                <input type="number" id="peso-arg" placeholder="Ingrese la cantidad de pesos con la que desea comprar" (input)="convertir()"
+                                [(ngModel)]="cantidadPeso" >
                             </div>
 
                                 <i class="fas fa-exchange-alt awesome"></i>
 
                                 <div class="swap-moneda-abajo">
                                     <div>
-                                        <img src="../../assets/tether-usdt-logo.svg">
-                                        <select id="" name="" >
-                                            <option value="" *ngFor="let moneda of criptomonedas">{{moneda.name}} {{moneda.current_price}}</option>
+                                        <select  id="tengo" class="form-control" (change)="convertir()" [(ngModel)]="quiero1">
+                                            <option *ngFor="let item of crypto"> {{item}} </option>
                                         </select>
-                                        <p>USDT</p>
                                     </div>
-                                    <input type="number" id="dolares">
+                                    <span class="badge bg-info">
+                                        {{cantidad1}} {{tengo}} 
+                                    </span>
+                                    <span class="badge bg-info">son</span>
+                                    <span class="badge bg-info">
+                                        {{total1}} {{quiero}}
+                                    </span>
                                 </div>
                                 <button class="btn-confirmar-swap">
                                     <p>Confirmar transacción</p>
                                 </button>
-                        </div>
+                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
 
                         <div class="swap ">
-                            <h3>INTERCAMBIO</h3>
+                            <h3>OPERACIONES</h3>
                             <div class="swap-moneda-arriba">
                                 <div>
-                                    <img src="../../assets/logo-peso.png">
-                                    <p>Peso Argentino</p>
+                                    
+                                    <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="tengo">
+                                        <option *ngFor="let item of fiat"> {{item}} </option>
+                                    </select>
                                 </div>
 
-                                <input type="number" id="peso-arg" >
+                                <input type="number" class="form-control mt-2" placeholder="Ingrese cantidad a convertir" (input)="convertirCripto()" [(ngModel)]="cantidad">
                             </div>
 
                                 <i class="fas fa-exchange-alt awesome"></i>
 
                                 <div class="swap-moneda-abajo">
                                     <div>
-                                        <img src="../../assets/tether-usdt-logo.svg">
-                                        <p>USDT</p>
+                                        <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="quiero">
+                                            <option *ngFor="let item of crypto"> {{item}} </option>
+                                        </select>
                                     </div>
-                                    <input type="number" id="dolares">
+                                    
+
+                                    <span class="badge ">
+                                        {{total}} {{quiero}}
+                                    </span>
                                 </div>
                                 <button class="btn-confirmar-swap">
                                     <p>Confirmar transacción</p>
@@ -257,6 +281,38 @@
 
     
     </div>
+
+    
 </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Operación</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Importe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Deposito</td>
+        <td>23-03-2022</td>
+        <td>$10000</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Compra</td>
+        <td>23-03-2022</td>
+        <td>$500</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Venta</td>
+        <td>23-03-2022</td>
+        <td>$300</td>
+      </tr>
+    </tbody>
+  </table>
 <app-footer></app-footer>
 
