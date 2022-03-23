@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CoingeckoApiService } from '../servicios/coingecko-api.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
+
+
+
 @Component({
   selector: 'app-swap',
   templateUrl: './swap.component.html',
@@ -14,6 +17,7 @@ export class SwapComponent implements OnInit {
   listarCuentaPeso: any=[];
   precioprueba: number = -1;
   precioUsdt:any = "";
+  datosUsuarios: any = "";
 
   formatoPrecio = (price: number) => {
     let opDivisa = { style: 'currency', currency: 'ARS' };
@@ -62,9 +66,13 @@ export class SwapComponent implements OnInit {
       })
 
       this.cuentaPeso.listarCuentaPeso().subscribe(
-            pesos => {
-                this.listarCuentaPeso = pesos;
-                console.log(this.listarCuentaPeso)
+            cuentasPesosUsuarios => {
+                for (let datos of cuentasPesosUsuarios){
+                    if (datos.idUsuario == localStorage.getItem('idUsuario')){
+                        this.datosUsuarios = datos;
+                        console.log(this.datosUsuarios)
+                    }
+                }
             }
         )
 
