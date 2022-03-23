@@ -123,6 +123,7 @@ registroPopup() {
   formLog: FormGroup = new FormGroup({}) ;
   
   ngOnInit() {
+    this.iniciaPopup();
   }
 
   private buildForm() {
