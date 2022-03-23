@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
+import { BilleterasService } from '../servicios/billeteras.service';
+import { CuentaPesoService } from '../servicios/cuenta-peso.service';
 
 
 @Component({
@@ -10,6 +12,8 @@ import {debounceTime} from 'rxjs/operators';
   styleUrls: ['./wallet.component.css']
 })
 export class WalletComponent implements OnInit {
+
+    billeteraUsuario: any = [];
 
   divInicioSesion = "";
   divInicioSesion1 = "";
@@ -25,7 +29,9 @@ export class WalletComponent implements OnInit {
   }
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private billeteraService: BilleterasService,
+    private cuentaPesoService: CuentaPesoService
   ) {
     this.buildForm();
    }
@@ -56,9 +62,34 @@ cerrarPopup1() {
 formCbu: FormGroup = new FormGroup({}) ;
 
 
+formDeposita: FormGroup = new FormGroup({}) ;
+
+onDepositar(event:Event){
+    event.preventDefault;
+
+    let saldo = {
+        saldo: "no tengo value jejeje"
+    }
+
+    /* this.cuentaPesoService.cargarPesos(saldo, localStorage.getItem('idUsuario')) */
+    console.log(console.log(saldo));
+    
+   }
+
+   get Saldo (){
+       return this.formDeposita.get('saldo');
+   }
+
 
 
   ngOnInit(): void {
+      this.billeteraService.listarBilletera().subscribe(
+          billeteraUsuario => {
+              for (let billeteras of billeteraUsuario)
+            this.billeteraUsuario = billeteraUsuario
+            console.log(this.billeteraUsuario)
+          }
+      )
   }
 
   private buildForm() {

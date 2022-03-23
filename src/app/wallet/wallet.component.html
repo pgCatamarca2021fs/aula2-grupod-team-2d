@@ -26,6 +26,39 @@
 
         <div class="contenedor-wallet">
 
+             <div class="cripto">
+                <div class="nombre-cripto">
+                    <img src="../../assets/bitcoin-btc-logo.svg" class="logo-cripto" alt="">
+                    <div class="nombre-abreviatura">
+                        <h4>Pesos</h4>
+                        <h5>ARS</h5>
+                    </div>
+                </div>
+                <div class="total-cripto">
+                    <h4 class="titulo">$00.000</h4>
+                </div>
+                <div class="valor-cripto">
+                    <h4 class="titulo">$40.000</h4>
+                </div>
+                <div class="accion-cripto">
+
+                    
+                    <form [formGroup]="formDeposita"
+                        (ngSubmit)="onDepositar($event)">
+
+                        <input type="number"
+                        formControlName="saldo"
+                        class="form-control"
+                        placeholder="$40.000"> 
+                        
+                        <button id="btnGCambio" class="w-100
+                            btn btn-lg btn-primary"
+                            type="submit">Depositar</button> 
+
+                    </form>
+                </div>
+            </div>
+
 
             <div class="wallet-titulos">
                 <div class="div-titulo-moneda"><h4 class="titulo">MONEDA</h4></div>

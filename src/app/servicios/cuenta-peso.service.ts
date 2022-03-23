@@ -14,4 +14,8 @@ export class CuentaPesoService {
   listarCuentaPeso():Observable<any> {
     return this.http.get(this.urlApiRest);
   }
+
+  cargarPesos(saldo: any, id: any){
+      return this.http.put(this.urlApiRest + `/${id}`, saldo)
+  }
 }
