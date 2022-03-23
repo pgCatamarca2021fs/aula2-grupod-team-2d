@@ -14,4 +14,8 @@ export class BilleterasService {
   listarBilletera():Observable<any> {
     return this.http.get(this.urlApiRest);
   }
+
+  crearBilletera(formulario: any):any{
+      return this.http.post(this.urlApiRest, formulario)
+  }
 }
