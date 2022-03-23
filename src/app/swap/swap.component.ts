@@ -41,12 +41,10 @@ export class SwapComponent implements OnInit {
     quiero:string = 'BTC' ;
     fiat: string[] = ['ARS','BTC', 'ETH', 'USDT', 'BNB', 'ADA', 'SOL', 'DOT', 'DOGE', 'DAI', 'SLP'];
     crypto: string[] = ['ARS','BTC', 'ETH', 'USDT', 'BNB', 'ADA', 'SOL', 'DOT', 'DOGE', 'DAI', 'SLP'];
-    quiero1:string = 'DAI';
     cantidad: number = 0;
-    cantidad1: number = 0;
     cantidadUsdt: number = 0;
     total: any = 0;
-    total1: any = 0;
+
 
   formatoPrecio = (price: number) => {
     let opDivisa = { style: 'currency', currency: 'ARS' };
@@ -59,7 +57,7 @@ export class SwapComponent implements OnInit {
  
   convertirCripto() {
     switch (this.tengo) {
-      case 'ARS':
+        case 'ARS':
         if (this.quiero === 'BTC') {
           this.total = this.cantidad / this.precioBtc;
         }
@@ -91,7 +89,6 @@ export class SwapComponent implements OnInit {
           this.total = this.cantidad / this.precioAda;
         }
         break;
-
 
         case 'BTC':
         if (this.quiero === 'ARS') {
@@ -399,10 +396,7 @@ export class SwapComponent implements OnInit {
 
         break;
         
-  
-        // return (cotizacioncripto * cantidadCiptoACambiar) * 1 / cotizacionNuevaCripto
-
-      case 'USDT':
+        case 'USDT':
         if (this.quiero === 'ARS') {
           this.total =  this.cantidad * this.precioUsdt;
         }
