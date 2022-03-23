@@ -36,3 +36,11 @@
   #btnGCambio{
     width: 50%;
   }
+
+  .tamaño{
+    height: 100%;
+  }
+   
+  form p {
+    color: white;
+  }
