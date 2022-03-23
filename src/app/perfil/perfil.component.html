@@ -11,7 +11,7 @@
             <div class="form-floating  mb-3 mt-3" >
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingName">Nombre</label>
-              <input type="text" formControlName="nombre"  name="nombre" class="form-control" [class.border-danger]="NombreValid" id="floatingName" placeholder="">
+                    <input type="text" formControlName="nombre"  name="nombre" class="form-control" [class.border-danger]="NombreValid" id="floatingName" placeholder="" value="{{usuario.Nombre}}">
               <div *ngIf="Nombre?.errors && Nombre?.touched || Nombre?.dirty">
                 <p *ngIf="Nombre?.hasError('required')" class="text-danger">
                   Campo obligatorio.
@@ -31,7 +31,8 @@
             <div class="form-floating  mb-3 mt-3">
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingApellido">Apellido</label>
-              <input type="text" formControlName="apellido" name="apellido" class="form-control" [class.border-danger]="ApellidoValid" id="floatingApellido" placeholder=""> <!--nombre del objeto en forcontrolname-->
+                    <input type="text" formControlName="apellido" name="apellido" class="form-control" [class.border-danger]="ApellidoValid" id="floatingApellido" placeholder=""
+                    value="{{usuario.Apellido}}"> <!--nombre del objeto en forcontrolname-->
               <div *ngIf="Apellido?.errors && Apellido?.touched || Apellido?.dirty">
                 <p *ngIf="Apellido?.hasError('required')" class="text-danger">
                     Campo obligatorio.
@@ -53,7 +54,7 @@
             <div class="form-floating  mb-3 mt-3">
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingDni">DNI</label>
-              <input type="number" formControlName="dni" name="dni" class="form-control" [class.border-danger]="DniValid" id="floatingDni" placeholder=""> <!---nombre del objeto en forcontrolname-->
+              <input type="number" formControlName="dni" name="dni" class="form-control" [class.border-danger]="DniValid" id="floatingDni" placeholder="" value="{{usuario.dni}}" > <!---nombre del objeto en forcontrolname-->
               <div *ngIf="Dni?.errors && Dni?.touched || Dni?.dirty">
                 <p *ngIf="Dni?.hasError('required')" class="text-danger">
                     Campo obligatorio.
@@ -67,7 +68,7 @@
             <div class="form-floating mb-3 mt-3">
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingFecha">Fecha de Nacimiento</label>
-              <input type="date" formControlName="fecha" name="fecha" class="form-control" [class.border-danger]="FechaValid" id="floatingFecha" placeholder="">
+              <input type="date" formControlName="fecha" name="fecha" class="form-control" [class.border-danger]="FechaValid" id="floatingFecha" placeholder="" value="{{usuario.fechaNacimiento}}">
               <div *ngIf="Fecha?.errors && Fecha?.touched || Fecha?.dirty">
                 <p *ngIf="Fecha?.hasError('required')" class="text-danger">
                     Campo obligatorio.
@@ -85,7 +86,7 @@
                 <div class="form-floating mb-3 mt-3">
                   <div class="input-group input-group-sm mb-3">
                     <label for="floatingEmail">Email</label>
-                  <input type="email" formControlName="email" name="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="">
+                  <input type="email" formControlName="email" name="email" class="form-control" [class.border-danger]="EmailValid" id="floatingEmail" placeholder="" value="{{usuario.Email}}">
                   <div *ngIf="Email?.errors && Email?.touched || Email?.dirty">
                       <p *ngIf="Email?.hasError('required')" class="text-danger">
                         Campo obligatorio.
@@ -102,7 +103,8 @@
             <div class="form-floating mb-3 mt-3">
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingContraseña">Contraseña</label>
-                  <input type="password" formControlName="contraseña" name="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control" id="floatingContraseña" placeholder=""> <!---nombre del objeto en forcontrolname-->
+                  <input type="password" formControlName="contraseña" name="contraseña" minlength="8" maxlength="16" [class.border-danger]="ContraseniaValid" class="form-control"
+                  id="floatingContraseña" placeholder="" value="{{usuario.Clave}}"> <!---nombre del objeto en forcontrolname-->
   
                   <div *ngIf="Contrasenia?.errors && Contrasenia?.touched || Contrasenia?.dirty">
                     <p *ngIf="Contrasenia?.hasError('required')" class="text-danger">
@@ -143,7 +145,8 @@
             <div class="form-floating mb-3 mt-3">
                 <div class="input-group input-group-sm mb-3">
                     <label for="floatingCbu">CBU</label>
-                <input type="number" formControlName="cbu" name="cbu" class="form-control" [class.border-danger]="CbuValid" id="floatingCbu" placeholder="">
+                <input type="number" formControlName="cbu" name="cbu" class="form-control"
+                [class.border-danger]="CbuValid" id="floatingCbu" placeholder="">
               
                 <div *ngIf="Cbu?.errors && Cbu?.touched || Cbu?.dirty">
                   <p *ngIf="Cbu?.hasError('required')" class="text-danger">
