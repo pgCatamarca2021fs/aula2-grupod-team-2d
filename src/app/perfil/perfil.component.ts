@@ -4,6 +4,8 @@ import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
 import { ValidationErrors, ValidatorFn } from '@angular/forms';
 import { NgControl } from '@angular/forms';
+import { UsuarioService } from '../servicios/usuario.service';
+import {CuentaPesoService} from '../servicios/cuenta-peso.service';
 
 @Component({
   selector: 'app-perfil',
@@ -11,9 +13,17 @@ import { NgControl } from '@angular/forms';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+  usuario: any = [];
+  cuentaPesoUsuario: any = [];
 
+
+  idUsuario: any = "";
+
+  
   constructor(
     private formBuilder: FormBuilder,
+    private usuarioService: UsuarioService,
+    private cuentaPeso: CuentaPesoService
   ) { 
     this.buildForm();
   }
@@ -50,9 +60,25 @@ onModificar(event:Event){
 
 
   ngOnInit(): void {
+      this.usuarioService.listarUsuario().subscribe(
+          usuarios => {
+              for (let usuario of usuarios){
+                  if (usuario.Email == localStorage.getItem('Email')){
+                    this.usuario = usuario;
+                    this.idUsuario = usuario.idUsuario;
+                    localStorage.setItem('idUsuario', usuario.idUsuario)
+                    console.log(usuario);
+                    console.log("idUsuario: " + this.idUsuario)
+                  }
+              }
+              // this.usuarios = usuarios;
+          }
+      );
+
+            
   }
 
-  private buildForm() {
+    private buildForm() {
     this.formPerfil = this.formBuilder.group({
 
       nombre: ['', [Validators.required, Validators.minLength(4), Validators.pattern(/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/)]],
