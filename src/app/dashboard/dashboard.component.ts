@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoingeckoApiService } from '../servicios/coingecko-api.service';
+import {UsuarioService} from '../servicios/usuario.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +15,10 @@ export class DashboardComponent implements OnInit {
         return Math.round(number);
     }
 
-    constructor(private service: CoingeckoApiService){
+    constructor(
+        private service: CoingeckoApiService,
+        private usuarioService: UsuarioService
+    ){
 
     }
     
@@ -39,6 +43,19 @@ export class DashboardComponent implements OnInit {
           
           console.log(criptomonedas[0].price_change_percentage_24h);
       })
+
+      this.usuarioService.listarUsuario().subscribe(
+          usuarios => {
+              for (let usuario of usuarios){
+                  if (usuario.Email == localStorage.getItem('Email')){
+                    localStorage.setItem('idUsuario', usuario.idUsuario)
+                    console.log(usuario);
+                  }
+              }
+              // this.usuarios = usuarios;
+          }
+      );
+
 
       
   }
