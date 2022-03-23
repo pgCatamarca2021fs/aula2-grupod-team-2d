@@ -38,6 +38,8 @@ export class AuthService {
 
   logout(): void {
       localStorage.removeItem('token');
+      localStorage.removeItem('Email')
+      localStorage.removeItem('idUsuario')
       this.route.navigate(['../'])
   }
   get usuarioAutenticado(): any {
