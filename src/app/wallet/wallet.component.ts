@@ -85,9 +85,19 @@ onDepositar(event:Event){
   ngOnInit(): void {
       this.billeteraService.listarBilletera().subscribe(
           billeteraUsuario => {
-              for (let billeteras of billeteraUsuario)
-            this.billeteraUsuario = billeteraUsuario
-            console.log(this.billeteraUsuario)
+
+
+              for (let billeteras of billeteraUsuario){
+                  if (billeteras.idUsuario == localStorage.getItem('idUsuario')){
+                      this.billeteraUsuario.push(billeteras);
+                  }
+                  console.log(this.billeteraUsuario)
+
+              }
+
+
+            /* this.billeteraUsuario = billeteraUsuario */
+            /* console.log(this.billeteraUsuario) */
           }
       )
   }

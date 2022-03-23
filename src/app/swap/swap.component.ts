@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BilleterasService} from '../servicios/billeteras.service';
 import { CoingeckoApiService } from '../servicios/coingecko-api.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
 
@@ -43,7 +44,8 @@ export class SwapComponent implements OnInit {
 
   constructor(
       private service: CoingeckoApiService,
-      private cuentaPeso: CuentaPesoService
+      private cuentaPeso: CuentaPesoService,
+      private billetera: BilleterasService
   ){
 
     }
@@ -75,6 +77,11 @@ export class SwapComponent implements OnInit {
                 }
             }
         )
+
+
+        
+
+    
 
       
     }
