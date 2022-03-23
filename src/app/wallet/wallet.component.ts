@@ -14,6 +14,7 @@ import { CuentaPesoService } from '../servicios/cuenta-peso.service';
 export class WalletComponent implements OnInit {
 
     billeteraUsuario: any = [];
+    datosUsuarios: any = [];
 
   divInicioSesion = "";
   divInicioSesion1 = "";
@@ -35,6 +36,13 @@ export class WalletComponent implements OnInit {
   ) {
     this.buildForm();
    }
+
+   formatoPrecio = (price: number) => {
+    let opDivisa = { style: 'currency', currency: 'ARS' };
+    let formatNum = new Intl.NumberFormat('us-US', opDivisa);
+    return formatNum.format(price)
+  }
+
 
    onEnviarCbu(event:Event){
     event.preventDefault;
@@ -68,13 +76,14 @@ onDepositar(event:Event){
     event.preventDefault;
 
     let saldo = {
-        saldo: this.formDeposita.controls["saldo"].value,
+        saldo: this.datosUsuarios.saldo + this.formDeposita.controls["saldo"].value,
     }
+
 if (this.formDeposita.valid){
   alert("Deposito exitoso");
 }
-    /* this.cuentaPesoService.cargarPesos(saldo, localStorage.getItem('idUsuario')) */
-    console.log(console.log(saldo));
+    this.cuentaPesoService.cargarPesos(saldo, localStorage.getItem('idUsuario') ).subscribe()
+    // console.log(console.log(saldo));
     
    }
 
@@ -93,7 +102,7 @@ if (this.formDeposita.valid){
                   if (billeteras.idUsuario == localStorage.getItem('idUsuario')){
                       this.billeteraUsuario.push(billeteras);
                   }
-                  console.log(this.billeteraUsuario)
+                  // console.log(this.billeteraUsuario)
 
               }
 
@@ -102,6 +111,19 @@ if (this.formDeposita.valid){
             /* console.log(this.billeteraUsuario) */
           }
       )
+
+
+      this.cuentaPesoService.listarCuentaPeso().subscribe(
+            cuentasPesosUsuarios => {
+                for (let datos of cuentasPesosUsuarios){
+                    if (datos.idUsuario == localStorage.getItem('idUsuario')){
+                        this.datosUsuarios = datos;
+                        console.log(this.datosUsuarios)
+                    }
+                }
+            }
+        )
+
   }
 
   private buildForm() {

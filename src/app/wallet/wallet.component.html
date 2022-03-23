@@ -24,10 +24,10 @@
                     </div>
                 </div>
                 <div class="total-cripto">
-                    <h4 class="titulo">$00.000</h4>
+                    <h4 class="titulo">{{ formatoPrecio(datosUsuarios.saldo) }}</h4>
                 </div>
                 <div class="valor-cripto">
-                    <h4 class="titulo">$40.000</h4>
+                    <h4 class="titulo">SALDO EN PESOS</h4>
                 </div>
                 <div class="accion-cripto">
     <form [formGroup]="formDeposita" (ngSubmit)="onDepositar($event)" class="form-signin">

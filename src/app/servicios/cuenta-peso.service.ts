@@ -16,6 +16,6 @@ export class CuentaPesoService {
   }
 
   cargarPesos(saldo: any, id: any){
-      return this.http.put(this.urlApiRest + `/${id}`, saldo)
+      return this.http.put(this.urlApiRest + "/"+id, saldo);
   }
 }
