@@ -6,6 +6,10 @@ import { ValidationErrors, ValidatorFn } from '@angular/forms';
 import { UsuarioService } from '../servicios/usuario.service';
 import { AuthService } from '../servicios/auth/auth.service';
 import { Router } from '@angular/router';
+import {CuentaPesoService} from '../servicios/cuenta-peso.service';
+import {BilleterasService} from '../servicios/billeteras.service';
+import {CoingeckoApiService} from '../servicios/coingecko-api.service';
+import {async} from 'rxjs';
 
 
 @Component({
@@ -18,6 +22,83 @@ export class MainIndexComponent implements OnInit {
   // popup = "";
   divInicioSesion = "";
   divInicioSesion1 = "";
+  listarUsuarios: any = [];
+  criptomonedas: any =[];
+
+  /* crearCriptos: any = [ */
+        /*  */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Bitcoin", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },         */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Ethereum", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },         */
+        /* { */
+        /*   idUsuario: idUsuario , */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Tether", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },         */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Binancecoin", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },        */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Cardano", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },        */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Solana", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },        */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Polkadot", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },         */
+        /* { */
+        /*   idUsuario:, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Dogecoin", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },         */
+        /* { */
+        /*   idUsuario: idUsuario, */
+        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
+        /*   nombreCripto: "Dai", */
+        /*   cantidadCripto: 0, */
+        /*   cotizacion: 0 */
+        /* },        */
+ /*        { */
+          /* idUsuario: idUsuario, */
+          /* clavePublica: "87ao6e5u876oa45ua4oe65", */
+          /* nombreCripto: "Smooth-love-potion", */
+          /* cantidadCripto: 0, */
+          /* cotizacion: 0 */
+        /* }, */
+    /* ] */
+
   
   iniciaPopup() {
     this.divInicioSesion = "active"
@@ -30,26 +111,26 @@ export class MainIndexComponent implements OnInit {
   }
 
 
+  cargarDineroUsuarioNuevo(){
+    // let ultimoUsuario = Math.max(...this.listarUsuarios);
+    // console.log(ultimoUsuario);
+  }
+
 
   constructor(
     private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private cuentaPesosService: CuentaPesoService,
+    private billeteraService: BilleterasService,
+    private coniGeckoService: CoingeckoApiService
 
   ) {
     this.buildForm();
   }
   
  
-
-//   private buildForm() {
-//     this.form = this.formBuilder.group({
-
-//       email: ['', [Validators.required, Validators.pattern((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/))]],
-//       contraseña: ['',[Validators.required]],
-//     });
-// }
 
  onEnviar(event:Event){
     event.preventDefault;
@@ -67,10 +148,49 @@ export class MainIndexComponent implements OnInit {
 
     
     if(this.form.valid){
-      this.usuarioService.crearUsuario(datosUsuarioObj).subscribe()
-      this.form.reset()
+        this.usuarioService.crearUsuario(datosUsuarioObj).subscribe(
+            createUser => console.log(createUser)
+        );
+      this.form.reset();
+
+      this.usuarioService.listarUsuario().subscribe(
+        usuarios => {
+            for (let id of usuarios){
+                this.listarUsuarios.push(id.idUsuario)
+            }
+            
+            // BUSCAMOS EL ULTIMO USUARIO y le sumamos 1
+            let nuevoUsuario = Math.max(...this.listarUsuarios) + 1;
+            // CREAMOS LAS BILLETERAS PARA EL NUEVO USUARIO
+            for (let moneda of this.criptomonedas){
+                let crearMoneda = {
+                  idUsuario: nuevoUsuario,
+                  clavePublica: "87ao6e5u876oa45ua4oe65",
+                  nombreCripto: moneda.name,
+                  cantidadCripto: 0,
+                  cotizacion: 0
+                }
+                console.log(crearMoneda);
+                this.billeteraService.crearBilletera(crearMoneda).subscribe(
+                    (makingWallet: any) => console.log(makingWallet)
+                )
+            }
+
+            let cuentaPesosNuevoUsuario = {
+                  idUsuario: nuevoUsuario,
+                  cbu: "12332112331123213223",
+                  saldo: 0
+                }
+
+                console.log(cuentaPesosNuevoUsuario);
+                this.cuentaPesosService.crearCuentaPesos(cuentaPesosNuevoUsuario).subscribe(
+                    ( makingBankAccount: any ) => console.log(makingBankAccount)
+                )
+
+        });
+
+
       alert ("Enviado con exito!");
-      
     } else{
       this.form.markAllAsTouched();
     }
@@ -124,6 +244,14 @@ registroPopup() {
   
   ngOnInit() {
     this.iniciaPopup();
+    
+    this.coniGeckoService.getAllCoins().subscribe(
+        monedas => {
+            this.criptomonedas = monedas;
+        }
+    )
+
+    
   }
 
   private buildForm() {

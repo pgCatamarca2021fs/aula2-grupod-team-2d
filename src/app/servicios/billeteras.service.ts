@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class BilleterasService {
 
   urlApiRest:string="http://cataexchange.somee.com/backend/api/Billetera";
+  // urlApiRest:string="https://localhost:44302/api/Billetera";
   
   constructor(private http:HttpClient) { }
 
@@ -15,7 +16,13 @@ export class BilleterasService {
     return this.http.get(this.urlApiRest);
   }
 
-  crearBilletera(formulario: any):any{
+  crearBilletera(formulario: any,):any{
+      
       return this.http.post(this.urlApiRest, formulario)
+  }
+
+  actualizarBilletera(formulario: any, id: number, nombreCripto: string):any{
+      
+      return this.http.post(this.urlApiRest +`/${id}?nombreMoneda=${ nombreCripto }`, formulario)
   }
 }
