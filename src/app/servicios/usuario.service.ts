@@ -18,6 +18,7 @@ export class Usuario {
 export class UsuarioService {
 
   urlApiRest:string="http://cataexchange.somee.com/backend/api/";
+  // urlApiRest:string="https://localhost:44302/api/";
 
   constructor(private http:HttpClient) {
 

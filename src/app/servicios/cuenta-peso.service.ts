@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class CuentaPesoService {
 
   urlApiRest:string="http://cataexchange.somee.com/backend/api/cuentapeso";
+  // urlApiRest:string="https://localhost:44302/api/cuentapeso";
 
   constructor(private http:HttpClient) { }
 
@@ -17,5 +18,9 @@ export class CuentaPesoService {
 
   cargarPesos(saldo: any, id: any){
       return this.http.put(this.urlApiRest + "/"+id, saldo);
+  }
+
+  crearCuentaPesos(cuentaObj: any){
+    return this.http.post(this.urlApiRest, cuentaObj);
   }
 }

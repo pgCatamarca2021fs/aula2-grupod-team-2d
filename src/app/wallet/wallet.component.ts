@@ -4,6 +4,7 @@ import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
 import { BilleterasService } from '../servicios/billeteras.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -32,7 +33,8 @@ export class WalletComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private billeteraService: BilleterasService,
-    private cuentaPesoService: CuentaPesoService
+    private cuentaPesoService: CuentaPesoService,
+    private router: Router
   ) {
     this.buildForm();
    }
@@ -84,6 +86,9 @@ if (this.formDeposita.valid){
 }
     this.cuentaPesoService.cargarPesos(saldo, localStorage.getItem('idUsuario') ).subscribe()
     // console.log(console.log(saldo));
+    this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['../wallet']);
+    });
     
    }
 
@@ -94,6 +99,9 @@ if (this.formDeposita.valid){
 
 
   ngOnInit(): void {
+    
+
+
       this.billeteraService.listarBilletera().subscribe(
           billeteraUsuario => {
 
