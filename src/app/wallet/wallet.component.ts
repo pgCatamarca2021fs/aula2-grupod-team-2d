@@ -5,6 +5,7 @@ import {debounceTime} from 'rxjs/operators';
 import { BilleterasService } from '../servicios/billeteras.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
 import {Router} from '@angular/router';
+import {CoingeckoApiService} from '../servicios/coingecko-api.service';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class WalletComponent implements OnInit {
 
     billeteraUsuario: any = [];
     datosUsuarios: any = [];
+    criptomonedas: any = [];
 
   divInicioSesion = "";
   divInicioSesion1 = "";
@@ -34,7 +36,8 @@ export class WalletComponent implements OnInit {
     private formBuilder: FormBuilder,
     private billeteraService: BilleterasService,
     private cuentaPesoService: CuentaPesoService,
-    private router: Router
+    private router: Router,
+    private coingeckoApiService: CoingeckoApiService
   ) {
     this.buildForm();
    }
@@ -99,9 +102,12 @@ if (this.formDeposita.valid){
 
 
   ngOnInit(): void {
-    
-
-
+      this.coingeckoApiService.getAllCoins().subscribe(
+          coins => {
+              this.criptomonedas = coins;
+              console.log(this.criptomonedas);
+          }
+      )
       this.billeteraService.listarBilletera().subscribe(
           billeteraUsuario => {
 
@@ -110,13 +116,8 @@ if (this.formDeposita.valid){
                   if (billeteras.idUsuario == localStorage.getItem('idUsuario')){
                       this.billeteraUsuario.push(billeteras);
                   }
-                  // console.log(this.billeteraUsuario)
-
               }
-
-
-            /* this.billeteraUsuario = billeteraUsuario */
-            /* console.log(this.billeteraUsuario) */
+              console.log(this.billeteraUsuario);
           }
       )
 
@@ -126,12 +127,11 @@ if (this.formDeposita.valid){
                 for (let datos of cuentasPesosUsuarios){
                     if (datos.idUsuario == localStorage.getItem('idUsuario')){
                         this.datosUsuarios = datos;
-                        console.log(this.datosUsuarios)
+                        // console.log(this.datosUsuarios)
                     }
                 }
             }
         )
-
   }
 
   private buildForm() {
