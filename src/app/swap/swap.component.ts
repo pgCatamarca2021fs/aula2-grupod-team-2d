@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {BilleterasService} from '../servicios/billeteras.service';
 import { CoingeckoApiService } from '../servicios/coingecko-api.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 
 
@@ -441,12 +443,32 @@ export class SwapComponent implements OnInit {
   
 
   constructor(
+    private formBuilder: FormBuilder,
       private service: CoingeckoApiService,
       private cuentaPeso: CuentaPesoService,
       private billetera: BilleterasService
   ){
-
+    this.buildForm();
     }
+
+    onConfirmaT(event:Event){
+      event.preventDefault;
+     
+      
+      // OBJETO DEL FORMULARIO
+      let datosOperaObj = {
+              CantidadAConver: this.formOpera.controls["cantidadAConver"].value
+      }
+  
+      
+      if(this.formOpera.valid){      
+        alert ("Enviado con exito!");
+      } else{
+        this.formOpera.markAllAsTouched();
+      }
+  }
+
+  formOpera: FormGroup = new FormGroup({}) ;
 
     ngOnInit(): void {
 
@@ -491,6 +513,20 @@ export class SwapComponent implements OnInit {
     
 
       
+    }
+
+    private buildForm() {
+  
+      this.formOpera = this.formBuilder.group({
+  
+        cantidadAConver: ['', Validators.pattern(/^(0|[1-9]\d*)$/)],
+        
+      });
+      
+    }
+
+    get CantidadAConver (){
+      return this.formOpera.get('cantidadAConver');
     }
     
     /* onCuentaPesos(): void{ */

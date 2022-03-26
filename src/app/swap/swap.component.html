@@ -244,6 +244,7 @@
 
                         <div class="swap ">
                             <h3>OPERACIONES</h3>
+                            <form [formGroup]="formOpera" (ngSubmit)="onConfirmaT($event)">
                             <div class="swap-moneda-arriba">
                                 <div>
                                     
@@ -252,7 +253,12 @@
                                     </select>
                                 </div>
 
-                                <input type="number" class="form-control mt-2" placeholder="Ingrese cantidad a convertir" (input)="convertirCripto()" [(ngModel)]="cantidad">
+                                <input type="number" class="form-control mt-2" formControlName="cantidadAConver" name="cantidadAConver" placeholder="Ingrese cantidad a convertir" (input)="convertirCripto()" [(ngModel)]="cantidad">
+                                <div *ngIf="CantidadAConver?.errors && CantidadAConver?.touched || CantidadAConver?.dirty">
+                                    <p *ngIf="CantidadAConver?.hasError('pattern')" class="text-danger">
+                                        Ingresar una cantidad positiva.
+                                    </p>
+                                    </div>
                             </div>
 
                                 <i class="fas fa-exchange-alt awesome"></i>
@@ -269,9 +275,10 @@
                                         {{total}} {{quiero}}
                                     </span>
                                 </div>
-                                <button class="btn-confirmar-swap">
+                                <button class="btn-confirmar-swap" type="submit">
                                     <p>Confirmar transacción</p>
                                 </button>
+                            </form>
                         </div>
                     </div>
 
