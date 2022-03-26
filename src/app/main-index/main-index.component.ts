@@ -25,81 +25,6 @@ export class MainIndexComponent implements OnInit {
   listarUsuarios: any = [];
   criptomonedas: any =[];
 
-  /* crearCriptos: any = [ */
-        /*  */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Bitcoin", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },         */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Ethereum", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },         */
-        /* { */
-        /*   idUsuario: idUsuario , */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Tether", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },         */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Binancecoin", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },        */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Cardano", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },        */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Solana", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },        */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Polkadot", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },         */
-        /* { */
-        /*   idUsuario:, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Dogecoin", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },         */
-        /* { */
-        /*   idUsuario: idUsuario, */
-        /*   clavePublica: "87ao6e5u876oa45ua4oe65", */
-        /*   nombreCripto: "Dai", */
-        /*   cantidadCripto: 0, */
-        /*   cotizacion: 0 */
-        /* },        */
- /*        { */
-          /* idUsuario: idUsuario, */
-          /* clavePublica: "87ao6e5u876oa45ua4oe65", */
-          /* nombreCripto: "Smooth-love-potion", */
-          /* cantidadCripto: 0, */
-          /* cotizacion: 0 */
-        /* }, */
-    /* ] */
-
-  
   iniciaPopup() {
     this.divInicioSesion = "active"
     this.divInicioSesion1 = "active"
@@ -168,7 +93,9 @@ export class MainIndexComponent implements OnInit {
                   clavePublica: "87ao6e5u876oa45ua4oe65",
                   nombreCripto: moneda.name,
                   cantidadCripto: 0,
-                  cotizacion: 0
+                  cotizacion: 0,
+                  imagen: moneda.image,
+                  simbolo: moneda.symbol
                 }
                 console.log(crearMoneda);
                 this.billeteraService.crearBilletera(crearMoneda).subscribe(
