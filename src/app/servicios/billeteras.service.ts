@@ -23,6 +23,6 @@ export class BilleterasService {
 
   actualizarBilletera(formulario: any, id: number, nombreCripto: string):any{
       
-      return this.http.post(this.urlApiRest +`/${id}?nombreMoneda=${ nombreCripto }`, formulario)
+      return this.http.put(this.urlApiRest +`/${id}?nombreMoneda=${ nombreCripto }`, formulario)
   }
 }
