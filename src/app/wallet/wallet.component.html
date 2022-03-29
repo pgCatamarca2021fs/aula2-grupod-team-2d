@@ -17,7 +17,7 @@
 
              <div class="cripto">
                 <div class="nombre-cripto">
-                    <img src="../../assets/bitcoin-btc-logo.svg" class="logo-cripto" alt="">
+                    <img src="../../assets/pixlr-bg-result.png" class="logo-cripto" alt="">
                     <div class="nombre-abreviatura">
                         <h4>Pesos</h4>
                         <h5>ARS</h5>
@@ -60,9 +60,10 @@
                     <h4 class="titulo">{{formatoPrecio((billeteraUsuario[i].cantidadCripto) * (criptomonedas[i].current_price))}}</h4>
                 </div>
                 <div class="accion-cripto">
-                    <p>Comprar</p>
-                    <p>Depositar</p>
-                    <p>Retirar</p>
+                    <a [routerLink]="['../swap']">Comprar</a>
+                    <a [routerLink]="['../swap']">Depositar</a>
+                    <a [routerLink]="['../swap']">Retirar</a>
+                    
                 </div>
             </div>
 
