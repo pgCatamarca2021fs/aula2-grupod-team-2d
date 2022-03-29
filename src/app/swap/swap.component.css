@@ -11,6 +11,14 @@
     --color-danger: #9F1317;
 }
 
+table {
+    background-color: var(--fondo-body);
+    color: var(--text-color);
+    width: 90%;
+    margin: 0 5% 3rem 5% ;
+    border: var(--texto-resalta);
+}
+
 .caja-balance-saldo {
     color: var(--text-color);
     width: 10rem;
