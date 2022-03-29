@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {BilleterasService} from '../servicios/billeteras.service';
 import { CoingeckoApiService } from '../servicios/coingecko-api.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl, Validators, SelectMultipleControlValueAccessor} from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import {async} from 'rxjs';
 
 
 
@@ -14,6 +15,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class SwapComponent implements OnInit {
 
+      billeteraUsuario: any[] = [];
       datosUsuarios: any = "";
       criptomonedas: any =[];
       // VARIABLES CON EL PRECIO DE LAS CRIPTO EN TIEMPO REAL
@@ -38,6 +40,7 @@ export class SwapComponent implements OnInit {
     // VARIABLES PARA COMPRAR 
     cantidadPeso: number = 0;
     totalUsdt:any = 0;
+    compraPeso: boolean = true;
 
     // VARIABLES PARA INTERCAMBIAR
     tengo: string = 'ARS';
@@ -48,14 +51,22 @@ export class SwapComponent implements OnInit {
     cantidadUsdt: number = 0;
     total: any = 0;
 
-
+// DAR FORMATO A LOS PRECIOS
   formatoPrecio = (price: number) => {
     let opDivisa = { style: 'currency', currency: 'ARS' };
     let formatNum = new Intl.NumberFormat('us-US', opDivisa);
     return formatNum.format(price)
   }
 
-
+//VARIABLE DE EVENTOS
+    symbolValue: string[]= ['ARS'];
+    symbolQuiero: string[]=[];
+    tengoName: string = '';
+    quieroName: string = 'Bitcoin';
+    cantidadConvertir: any = 0;
+    obtenerCantidadFiat: any = '';
+    costoAPagar: any = '';
+    cantidadCripto: string = '';
 
  
   convertirCripto() {
@@ -446,31 +457,90 @@ export class SwapComponent implements OnInit {
     private formBuilder: FormBuilder,
       private service: CoingeckoApiService,
       private cuentaPeso: CuentaPesoService,
-      private billetera: BilleterasService
+      private billeteraService: BilleterasService
   ){
     this.buildForm();
     }
 
-    onConfirmaT(event:Event){
+
+    //BOTON CONFIRMACION DE COMPRA O CAMBIO
+
+   async onConfirmaT(event:any){
       event.preventDefault;
-     
-      
-      // OBJETO DEL FORMULARIO
-      let datosOperaObj = {
-              CantidadAConver: this.formOpera.controls["cantidadAConver"].value
-      }
-  
-      
       if(this.formOpera.valid){      
+          console.log(this.cantidadConvertir);
+          if(this.compraPeso){
+              
+              for(let billetera of this.billeteraUsuario){
+                  if(this.quieroName.toLowerCase() == billetera.nombreCripto.toLowerCase()){
+                      this.cantidadCripto = billetera.cantidadCripto;
+                  }
+              }
+
+              this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto + this.total}, Number(localStorage.getItem('idUsuario')), this.quieroName).subscribe((sumaCripto: any) => console.log(sumaCripto));
+
+              this.cuentaPeso.cargarPesos({ saldo: this.datosUsuarios.saldo - Number( this.obtenerCantidadFiat ) }, localStorage.getItem('idUsuario')).subscribe(restaCuentaPesos => console.log(restaCuentaPesos));
+          }          
+
         alert ("Enviado con exito!");
+        this.symbolValue
+
       } else{
         this.formOpera.markAllAsTouched();
-      }
+      };
+  }
+
+  getSymbolTengo(symbol:any){
+      symbol.preventDefault
+
+    this.symbolValue.push( symbol.target.value );
+    for (let cripto of this.criptomonedas){
+        if(this.symbolValue[this.symbolValue.length -1] == cripto.symbol.toUpperCase()){
+            this.tengoName = cripto.name;
+            console.log(this.tengoName);
+        }
+
+         if (this.symbolValue[this.symbolValue.length -1] == "ARS"){
+             this.compraPeso = true;
+         }else{
+             this.compraPeso = false;
+         }
+    }
+
+    console.log(this.compraPeso)
+  }
+
+  getSymbolQuiero(event: any){
+    event.preventDefault;
+
+    this.symbolQuiero.push(event.target.value);
+    for (let cripto of this.criptomonedas){
+        if(this.symbolQuiero[this.symbolQuiero.length -1] == cripto.symbol.toUpperCase()){
+            this.quieroName = cripto.name;
+            console.log(this.quieroName);
+        }
+        
+    }
+  }
+
+  getFiat(event: any){
+      this.obtenerCantidadFiat = event.target.value;
+      console.log(this.obtenerCantidadFiat)
+  }
+
+  getCostoAPagar(event: any){
+      this.costoAPagar = event.target.value;
+      console.log(this.costoAPagar);
   }
 
   formOpera: FormGroup = new FormGroup({}) ;
 
     ngOnInit(): void {
+
+
+       
+
+        console.log(this.total);
 
       this.service.getAllCoins().subscribe(criptomonedas => {
           this.criptomonedas = criptomonedas;
@@ -507,12 +577,17 @@ export class SwapComponent implements OnInit {
             }
         )
 
-
-        
-
-    
-
-      
+        this.billeteraService.listarBilletera().subscribe(
+            billeteraUsuario => {
+                // console.log(billeteraUsuario);
+                for(let usuario of billeteraUsuario){
+                    if(usuario.idUsuario == localStorage.getItem('idUsuario')){
+                        this.billeteraUsuario.push(usuario);
+                    }
+                }
+                // console.log(this.billeteraUsuario);
+            }
+        )
     }
 
     private buildForm() {

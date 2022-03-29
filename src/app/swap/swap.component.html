@@ -242,43 +242,84 @@
 
 
 
+                        <!-- <div class="swap "> -->
+                            <!-- <h3>OPERACIONES</h3> -->
+                            <!-- <form [formGroup]="formOpera" (ngSubmit)="onConfirmaT($event)"> -->
+                            <!-- <div class="swap-moneda-arriba"> -->
+                            <!--     <div> -->
+                            <!--          -->
+                            <!--         <select  id="tengo" class="form-control" -->
+                            <!--             (change)="convertirCripto()" [(ngModel)]="tengo" -->
+                            <!--             (change)="getSymbolTengo($event)"> -->
+                            <!--             <option *ngFor="let item of fiat"> {{item}} </option> -->
+                            <!--         </select> -->
+                            <!--     </div> -->
+                            <!--  -->
+                            <!--     <input type="number" class="form-control mt-2" -->
+                            <!--     formControlName="cantidadAConver" name="cantidadAConver" -->
+                            <!--     placeholder="Ingrese cantidad a convertir" -->
+                            <!--     (input)="convertirCripto()" [(ngModel)]="cantidad" -->
+                            <!--     (change)="getFiat($event)"> -->
+                            <!--     <div *ngIf="CantidadAConver?.errors && CantidadAConver?.touched || CantidadAConver?.dirty"> -->
+                            <!--         <p *ngIf="CantidadAConver?.hasError('pattern')" class="text-danger"> -->
+                            <!--             Ingresar una cantidad positiva. -->
+                            <!--         </p> -->
+                            <!--         </div> -->
+                            <!-- </div> -->
+                            <!--  -->
+                            <!--     <i class="fas fa-exchange-alt awesome"></i> -->
+                            <!--  -->
+                            <!--     <div class="swap-moneda-abajo"> -->
+                            <!--         <div> -->
+                            <!--             <select  id="tengo" class="form-control" -->
+                            <!--                 (change)="convertirCripto()" [(ngModel)]="quiero" -->
+                            <!--                 (change)="getSymbolQuiero($event)"> -->
+                            <!--                 <option *ngFor="let item of crypto"> {{item}} </option> -->
+                            <!--             </select> -->
+                            <!--         </div> -->
+                            <!--          -->
+                            <!--  -->
+                            <!--         <span class="badge "> -->
+                            <!--             {{total}} {{quiero}} -->
+                            <!--         </span> -->
+                            <!--     </div> -->
+                            <!--     <button class="btn-confirmar-swap" type="submit"> -->
+                            <!--         <p>Confirmar transacción</p> -->
+                            <!--     </button> -->
+                            <!-- </form> -->
+                        <!-- </div> -->
+
+
                         <div class="swap ">
                             <h3>OPERACIONES</h3>
-                            <form [formGroup]="formOpera" (ngSubmit)="onConfirmaT($event)">
                             <div class="swap-moneda-arriba">
                                 <div>
-                                    
-                                    <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="tengo">
+
+                                    <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="tengo" (change)="getSymbolTengo($event)">
                                         <option *ngFor="let item of fiat"> {{item}} </option>
                                     </select>
                                 </div>
 
-                                <input type="number" class="form-control mt-2" formControlName="cantidadAConver" name="cantidadAConver" placeholder="Ingrese cantidad a convertir" (input)="convertirCripto()" [(ngModel)]="cantidad">
-                                <div *ngIf="CantidadAConver?.errors && CantidadAConver?.touched || CantidadAConver?.dirty">
-                                    <p *ngIf="CantidadAConver?.hasError('pattern')" class="text-danger">
-                                        Ingresar una cantidad positiva.
-                                    </p>
-                                    </div>
+                                <input type="number" class="form-control mt-2" placeholder="Ingrese cantidad a convertir" (input)="convertirCripto()" [(ngModel)]="cantidad" (change)="getFiat($event)">
                             </div>
 
                                 <i class="fas fa-exchange-alt awesome"></i>
 
                                 <div class="swap-moneda-abajo">
                                     <div>
-                                        <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="quiero">
+                                        <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="quiero" (change)="getSymbolQuiero($event)">
                                             <option *ngFor="let item of crypto"> {{item}} </option>
                                         </select>
                                     </div>
-                                    
+
 
                                     <span class="badge ">
                                         {{total}} {{quiero}}
                                     </span>
                                 </div>
-                                <button class="btn-confirmar-swap" type="submit">
+                                <button class="btn-confirmar-swap" (click)="onConfirmaT($event)">
                                     <p>Confirmar transacción</p>
                                 </button>
-                            </form>
                         </div>
                     </div>
 
@@ -290,38 +331,38 @@
 
     
     </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Operación</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Deposito</td>
+                <td>23-03-2022</td>
+                <td>$10000</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Compra</td>
+                <td>23-03-2022</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Venta</td>
+                <td>23-03-2022</td>
+                <td>$300</td>
+            </tr>
+        </tbody>
+    </table>
 
     
 </div>
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Operación</th>
-        <th scope="col">Fecha</th>
-        <th scope="col">Importe</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Deposito</td>
-        <td>23-03-2022</td>
-        <td>$10000</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Compra</td>
-        <td>23-03-2022</td>
-        <td>$500</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Venta</td>
-        <td>23-03-2022</td>
-        <td>$300</td>
-      </tr>
-    </tbody>
-  </table>
 <app-footer></app-footer>
 
