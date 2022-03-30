@@ -14,6 +14,10 @@ import {CoingeckoApiService} from '../servicios/coingecko-api.service';
   styleUrls: ['./wallet.component.css']
 })
 export class WalletComponent implements OnInit {
+    //----PROBANDO ENVIAR
+   async onConfirmaT(event:any){
+    event.preventDefault;
+}
 
     billeteraUsuario: any = [];
     datosUsuarios: any = [];

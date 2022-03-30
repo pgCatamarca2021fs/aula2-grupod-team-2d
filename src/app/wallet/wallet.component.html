@@ -61,7 +61,7 @@
                 </div>
                 <div class="accion-cripto">
                     <a [routerLink]="['../swap']">Comprar</a>
-                    <a [routerLink]="['../swap']">Depositar</a>
+                   <button type="button" class="btn btn-inicar btn-lg btnIniciaSesion" id="btnIniciaSesion" (click)="iniciaPopup()">Enviar</button> 
                     <a [routerLink]="['../swap']">Retirar</a>
                     
                 </div>
@@ -265,7 +265,31 @@
 <!--                     <p>Retirar</p> -->
 <!--                 </div> -->
             <!-- </div> -->
+                 <!--PROBANDO POPUP-->   
 
+                <div [class]="divInicioSesion" class="divInicioSesion" id="divInicioSesion">
+                    <div [class]="divInicioSesion1" class="divInicioSesion1" id="divInicioSesion1">
+                        <a [routerLink]="['billetera']" id="btnCerrarVentana"class="btnCerrarVentana" (click)="cerrarPopup()"><i class="fas fa-times"></i></a>
+                        <main class="form-signin">
+                            <div class="swap ">
+                                <h3>OPERACIONES</h3>
+                                <div class="swap-moneda-arriba">
+                                
+
+                                    <input type="number" class="form-control mt-2" placeholder="Ingrese cantidad a convertir">
+                                </div>
+
+                                    <input type="email" class="form-control mt-2" placeholder="Ingrese email">
+
+                                    <button class="btn-confirmar-swap" (click)="onConfirmaT($event)">
+                                        <p>Confirmar transacción</p>
+                                    </button>
+                            </div>
+                        </main>
+                    </div>
+                  </div>     
+
+                <!--Acá finaliza--> 
 
         </div>
     </article>  
