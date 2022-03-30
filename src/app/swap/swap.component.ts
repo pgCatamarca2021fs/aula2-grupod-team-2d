@@ -149,19 +149,19 @@ export class SwapComponent implements OnInit {
           this.total = this.cantidad / this.precioAda;
         }
         if (this.quiero === 'SOL') {
-          this.total = this.cantidad / this.precioAda;
+          this.total = this.cantidad / this.precioSol;
         }
         if (this.quiero === 'DOT') {
-          this.total = this.cantidad / this.precioAda;
+          this.total = this.cantidad / this.precioDot;
         }
         if (this.quiero === 'DOGE') {
-          this.total = this.cantidad / this.precioAda;
+          this.total = this.cantidad / this.precioDoge;
         }
         if (this.quiero === 'DAI') {
-          this.total = this.cantidad / this.precioAda;
+          this.total = this.cantidad / this.precioDai;
         }
         if (this.quiero === 'SLP') {
-          this.total = this.cantidad / this.precioAda;
+          this.total = this.cantidad / this.precioSlp;
         }
         break;
 
@@ -538,6 +538,8 @@ export class SwapComponent implements OnInit {
           else {
                 this.intercambiarCripto();
           }        
+          this.cantidad = 0;
+          this.total = 0;
         alert ("Enviado con exito!");
       } else{
         this.formOpera.markAllAsTouched();
