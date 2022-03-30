@@ -69,6 +69,7 @@ export class SwapComponent implements OnInit {
     cantidadCripto: number = 0;
     cantidadCriptoNueva: number = 0;
     criptoCan: number = 0;
+    cantidadTengo: number = 0;
 
     cantidadCriptoTengo: any = (tengoName: string) => {
         for(let billetera of this.billeteraUsuario){
@@ -84,6 +85,48 @@ export class SwapComponent implements OnInit {
                       this.cantidadCriptoNueva = Number(billetera.cantidadCripto);
                   }
               }
+    }
+
+    comprarCripto: any = () => {
+        for(let billetera of this.billeteraUsuario){
+            if(this.quieroName.toLowerCase() == billetera.nombreCripto.toLowerCase()){
+            this.cantidadCripto = Number(billetera.cantidadCripto);
+            }
+        }
+        this.cuentaPeso.cargarPesos({ saldo: this.datosUsuarios.saldo - Number( this.obtenerCantidadFiat ) }, localStorage.getItem('idUsuario')).subscribe(restaCuentaPesos => console.log(restaCuentaPesos));
+
+        this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto + this.total}, Number(localStorage.getItem('idUsuario')), this.quieroName).subscribe((sumaCripto: any) => console.log(sumaCripto));
+    };
+
+
+    venderCripto: any = () => {
+              this.cantidadCriptoTengo(this.tengoName);
+
+              this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto - Number(this.obtenerCantidadFiat)}, Number(localStorage.getItem('idUsuario')), this.tengoName).subscribe((sumaCripto: any) => console.log(sumaCripto));
+
+              this.cuentaPeso.cargarPesos({ saldo: this.datosUsuarios.saldo + Number( this.total ) }, localStorage.getItem('idUsuario')).subscribe(restaCuentaPesos => console.log(restaCuentaPesos));
+
+                  console.log(`enviando: ${this.quiero}`);
+                  console.log(`descontando: ${this.tengoName}`);
+    }
+
+    intercambiarCripto: any = () => {
+              this.cantidadCriptoTengo(this.tengoName);
+              //DESCUENTA CANTIDAD CRIPTOMONEDA SELECCIONADA PARA CAMBIAR Y ENVIA EL METODO PUT
+              this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto - Number(this.obtenerCantidadFiat)}, Number(localStorage.getItem('idUsuario')), this.tengoName).subscribe((sumaCripto: any) => console.log(sumaCripto));
+              //
+              this.cantidadCriptoQuiero(this.quieroName);
+
+              this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCriptoNueva + this.total}, Number(localStorage.getItem('idUsuario')), this.quieroName).subscribe((sumaCripto: any) => console.log(sumaCripto));
+    }
+
+    obtenerTotalCripto: any = () => {
+        for(let cripto of this.billeteraUsuario){
+            if(this.tengoName.toLowerCase() == cripto.nombreCripto.toLowerCase()){
+               this.cantidadTengo = cripto.cantidadCripto;   
+               console.log(this.cantidadTengo + " " + this.tengoName);
+            }
+        }
     }
 
  
@@ -488,53 +531,14 @@ export class SwapComponent implements OnInit {
       if(this.formOpera.valid){      
           console.log(this.cantidadConvertir);
           if(this.compraPeso){
-              
-              for(let billetera of this.billeteraUsuario){
-                  if(this.quieroName.toLowerCase() == billetera.nombreCripto.toLowerCase()){
-                      this.cantidadCripto = Number(billetera.cantidadCripto);
-                  }
-              }
-
-              // this.cantidadCriptoTengo(this.tengoName);
-              this.cuentaPeso.cargarPesos({ saldo: this.datosUsuarios.saldo - Number( this.obtenerCantidadFiat ) }, localStorage.getItem('idUsuario')).subscribe(restaCuentaPesos => console.log(restaCuentaPesos));
-
-              this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto + this.total}, Number(localStorage.getItem('idUsuario')), this.quieroName).subscribe((sumaCripto: any) => console.log(sumaCripto));
-
+            this.comprarCripto();
           }else if (this.quiero == 'ARS'){
-              this.cantidadCriptoTengo(this.tengoName);
-
-              this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto - Number(this.obtenerCantidadFiat)}, Number(localStorage.getItem('idUsuario')), this.tengoName).subscribe((sumaCripto: any) => console.log(sumaCripto));
-
-              this.cuentaPeso.cargarPesos({ saldo: this.datosUsuarios.saldo + Number( this.total ) }, localStorage.getItem('idUsuario')).subscribe(restaCuentaPesos => console.log(restaCuentaPesos));
-
-                  console.log(`enviando: ${this.quiero}`);
-                  console.log(`descontando: ${this.tengoName}`)
-
-              } else {
-              
-              console.log(`operando: ${this.quieroName}`)
-              this.cantidadCriptoTengo(this.tengoName);
-
-
-              //DESCUENTA CANTIDAD CRIPTOMONEDA SELECCIONADA PARA CAMBIAR Y ENVIA EL METODO PUT
-              /* this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCripto - Number(this.obtenerCantidadFiat)}, Number(localStorage.getItem('idUsuario')), this.tengoName).subscribe((sumaCripto: any) => console.log(sumaCripto)); */
-              /* // */
-              /* this.cantidadCriptoQuiero(this.quieroName); */
-              /*  */
-              /* this.billeteraService.actualizarBilletera({ cantidadCripto: this.cantidadCriptoNueva + this.total}, Number(localStorage.getItem('idUsuario')), this.quieroName).subscribe((sumaCripto: any) => console.log(sumaCripto)); */
-
-              console.log(`se descuentan${this.obtenerCantidadFiat}`)
-              console.log(this.total + " total a pagar");
-              console.log(this.cantidadCripto + "es?");
-              console.log(this.tengoName);
-              console.log(this.quieroName);
-              console.log(this.cantidadCriptoNueva);
-              console.log(`quiero: ${this.quiero}`);
+              this.venderCripto();
+              } 
+          else {
+                this.intercambiarCripto();
           }        
-
         alert ("Enviado con exito!");
-        this.symbolValue
-
       } else{
         this.formOpera.markAllAsTouched();
       };
@@ -547,7 +551,9 @@ export class SwapComponent implements OnInit {
     for (let cripto of this.criptomonedas){
         if(this.symbolValue[this.symbolValue.length -1] == cripto.symbol.toUpperCase()){
             this.tengoName = cripto.name;
-            console.log(this.tengoName);
+            this.obtenerTotalCripto();
+            console.log(this.tengoName + "este es el nombre");
+            console.log(this.cantidadTengo);
         }
 
          if (this.symbolValue[this.symbolValue.length -1] == "ARS"){
@@ -588,7 +594,7 @@ export class SwapComponent implements OnInit {
     ngOnInit(): void {
 
 
-       console.log(this.tengoName)
+       console.log(this.symbolValue)
 
         console.log(this.total);
 
@@ -635,7 +641,7 @@ export class SwapComponent implements OnInit {
                         this.billeteraUsuario.push(usuario);
                     }
                 }
-                // console.log(this.billeteraUsuario);
+                console.log(this.billeteraUsuario);
             }
         )
     }
