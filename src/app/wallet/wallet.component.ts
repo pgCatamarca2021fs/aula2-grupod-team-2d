@@ -6,6 +6,7 @@ import { BilleterasService } from '../servicios/billeteras.service';
 import { CuentaPesoService } from '../servicios/cuenta-peso.service';
 import {Router} from '@angular/router';
 import {CoingeckoApiService} from '../servicios/coingecko-api.service';
+import {UsuarioService} from '../servicios/usuario.service';
 
 
 @Component({
@@ -22,9 +23,36 @@ export class WalletComponent implements OnInit {
     billeteraUsuario: any = [];
     datosUsuarios: any = [];
     criptomonedas: any = [];
+    cantidadCripto: number = 0;
+    nombreCripto: string = '';
+    sumarBalanceTotal: number = 0;
+
+    // DATOS FORMULARIO ENVIAR CRIPTO
+    emailUsuarioEnviar: string = 'aleibz@gmail.com';
+    idUsuarioEnviar: number = 0;
+    cantidadAEnviar: number = 0;
 
   divInicioSesion = "";
   divInicioSesion1 = "";
+
+  sumarBalance: any = (precioASumar: number) => {
+      this.sumarBalanceTotal += precioASumar;
+      console.log(this.sumarBalanceTotal)
+      return precioASumar;
+  }
+
+  getCriptoEnviar: any = (cantidad: number, nombre: string) => {
+    this.cantidadCripto = cantidad;
+    this.nombreCripto = nombre;
+    this.iniciaPopup();
+    console.log(this.cantidadCripto);
+    console.log(this.nombreCripto);
+  }
+
+  getEmail: any = (event: any) => {
+   this.emailUsuarioEnviar = event.target.value
+   console.log(this.emailUsuarioEnviar);
+  }
   
   iniciaPopup() {
     this.divInicioSesion = "active"
@@ -41,7 +69,8 @@ export class WalletComponent implements OnInit {
     private billeteraService: BilleterasService,
     private cuentaPesoService: CuentaPesoService,
     private router: Router,
-    private coingeckoApiService: CoingeckoApiService
+    private coingeckoApiService: CoingeckoApiService,
+    private usuarioService: UsuarioService
   ) {
     this.buildForm();
    }
@@ -109,7 +138,7 @@ if (this.formDeposita.valid){
       this.coingeckoApiService.getAllCoins().subscribe(
           coins => {
               this.criptomonedas = coins;
-              console.log(this.criptomonedas);
+              // console.log(this.criptomonedas);
           }
       )
       this.billeteraService.listarBilletera().subscribe(
@@ -121,7 +150,7 @@ if (this.formDeposita.valid){
                       this.billeteraUsuario.push(billeteras);
                   }
               }
-              console.log(this.billeteraUsuario);
+              // console.log(this.billeteraUsuario);
           }
       )
 
@@ -136,6 +165,16 @@ if (this.formDeposita.valid){
                 }
             }
         )
+
+        this.usuarioService.listarUsuario().subscribe(listaUsuarios => {
+            for (let usuario of listaUsuarios){
+                if(this.emailUsuarioEnviar == usuario.Email){
+                    this.idUsuarioEnviar = usuario.idUsuario;
+                    console.log(this.idUsuarioEnviar);
+                }
+            }
+            // console.log(listaUsuarios)
+        })
   }
 
   private buildForm() {

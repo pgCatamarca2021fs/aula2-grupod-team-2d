@@ -4,7 +4,7 @@
     <article class="wallet">
         <div class="div-balance">
             <h3>BALANCE TOTAL</h3>
-            <p>$00.000</p>
+            <p>{{formatoPrecio(sumarBalanceTotal)}}</p>
 <!--Ingresar CBU-->
 
 
@@ -57,11 +57,12 @@
                     <h4 class="titulo">{{billeteraUsuario[i].cantidadCripto}}</h4>
                 </div>
                 <div class="valor-cripto">
-                    <h4 class="titulo">{{formatoPrecio((billeteraUsuario[i].cantidadCripto) * (criptomonedas[i].current_price))}}</h4>
+                    <h4 class="titulo" >{{formatoPrecio(sumarBalance((billeteraUsuario[i].cantidadCripto) * (criptomonedas[i].current_price)))}}</h4>
                 </div>
                 <div class="accion-cripto">
                     <a [routerLink]="['../swap']">Comprar</a>
-                   <button type="button" class="btn btn-inicar btn-lg btnIniciaSesion" id="btnIniciaSesion" (click)="iniciaPopup()">Enviar</button> 
+                   <button type="button" class="btn btn-inicar btn-lg btnIniciaSesion" id="btnIniciaSesion"
+                       (click)="getCriptoEnviar(billeteraUsuario[i].cantidadCripto, billeteraUsuario[i].nombreCripto)">Enviar</button> 
                     <a [routerLink]="['../swap']">Retirar</a>
                     
                 </div>
@@ -272,14 +273,19 @@
                         <a [routerLink]="['billetera']" id="btnCerrarVentana"class="btnCerrarVentana" (click)="cerrarPopup()"><i class="fas fa-times"></i></a>
                         <main class="form-signin">
                             <div class="swap ">
-                                <h3>OPERACIONES</h3>
+                                <h3>ENVIAR</h3>
+                                <small>{{nombreCripto}}</small>
+                                <br>
+                                <small>{{cantidadCripto}}</small>
                                 <div class="swap-moneda-arriba">
                                 
 
                                     <input type="number" class="form-control mt-2" placeholder="Ingrese cantidad a convertir">
                                 </div>
 
-                                    <input type="email" class="form-control mt-2" placeholder="Ingrese email">
+                                    <input type="email" class="form-control
+                                    mt-2" placeholder="Ingrese email"
+                                    (event)="getEmail($event)">
 
                                     <button class="btn-confirmar-swap" (click)="onConfirmaT($event)">
                                         <p>Confirmar transacción</p>
