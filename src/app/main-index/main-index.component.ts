@@ -136,14 +136,14 @@ onEnviarLog(event:Event){
   
   if(this.formLog.valid){
       this.authService.login(usuarioLog).subscribe(data => {
-          console.log("DATA" + JSON.stringify(data));
-          console.log(data);
+          // console.log("DATA" + JSON.stringify(data));
+          // console.log(data);
           localStorage.setItem('token', data);
           localStorage.setItem('Email', usuarioLog.email)
           this.router.navigate(['../dashboard']);
       }, err => console.log(err))
-      console.log(usuarioLog.email)
-      console.log(usuarioLog.clave)
+      // console.log(usuarioLog.email)
+      // console.log(usuarioLog.clave)
       // this.usuarioService.loginUsuario(usuarioLog).subscribe()
 
 

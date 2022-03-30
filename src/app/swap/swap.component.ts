@@ -615,12 +615,12 @@ export class SwapComponent implements OnInit {
 
           this.criptomonedas;
             // INDICE PARA PROBAR CADA ARREGLO
-          console.log(this.criptomonedas);
+          // console.log(this.criptomonedas);
 
           // GUARDO VALORES NECESARIOS PARA SU POSTERIOR USO EJEM: PRECIO BITCOIN
           // this.precioBitcoin = criptomonedas[0].current_price;
           // console.log(this.precioBitcoin)
-          console.log(this.precioUsdt)
+          // console.log(this.precioUsdt)
           
       })
 
@@ -629,7 +629,7 @@ export class SwapComponent implements OnInit {
                 for (let datos of cuentasPesosUsuarios){
                     if (datos.idUsuario == localStorage.getItem('idUsuario')){
                         this.datosUsuarios = datos;
-                        console.log(this.datosUsuarios)
+                        // console.log(this.datosUsuarios)
                     }
                 }
             }
@@ -643,7 +643,7 @@ export class SwapComponent implements OnInit {
                         this.billeteraUsuario.push(usuario);
                     }
                 }
-                console.log(this.billeteraUsuario);
+                // console.log(this.billeteraUsuario);
             }
         )
     }

@@ -39,14 +39,14 @@ export class DashboardComponent implements OnInit {
           this.criptomonedas = criptomonedas;
 
             // INDICE PARA PROBAR CADA ARREGLO
-          console.log(this.criptomonedas);
+          // console.log(this.criptomonedas);
 
           // GUARDO VALORES NECESARIOS PARA SU POSTERIOR USO EJEM: PRECIO BITCOIN
           this.precioBitcoin = criptomonedas[0].current_price;
           // console.log(this.precioBitcoin)
-          console.log(criptomonedas[2].symbol)
+          // console.log(criptomonedas[2].symbol)
           
-          console.log(criptomonedas[0].price_change_percentage_24h);
+          // console.log(criptomonedas[0].price_change_percentage_24h);
       })
 
 // LISTAR USUARIO PARA EXTRAER EL ID
@@ -64,11 +64,11 @@ export class DashboardComponent implements OnInit {
 
       
 
-    this.billeteraService.listarBilletera().subscribe(
-                billeteras => {
-                    console.log(billeteras)
-                }
-            )
+    // this.billeteraService.listarBilletera().subscribe(
+    //             billeteras => {
+    //                 console.log(billeteras)
+    //             }
+    //         )
   }
 
 }

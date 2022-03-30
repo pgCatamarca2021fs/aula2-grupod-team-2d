@@ -67,8 +67,8 @@ onModificar(event:Event){
                     this.usuario = usuario;
                     this.idUsuario = usuario.idUsuario;
                     localStorage.setItem('idUsuario', usuario.idUsuario)
-                    console.log(usuario);
-                    console.log("idUsuario: " + this.idUsuario)
+                    // console.log(usuario);
+                    // console.log("idUsuario: " + this.idUsuario)
                   }
               }
               // this.usuarios = usuarios;
