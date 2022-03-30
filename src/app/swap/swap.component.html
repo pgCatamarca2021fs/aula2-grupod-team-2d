@@ -292,6 +292,23 @@
 
                         <div class="swap ">
                             <h3>OPERACIONES</h3>
+                            <!-- MOSTRAR CANTIDAD CRIPTOMONEDA EN BILLETERA -->
+                            <div  *ngIf=" compraPeso; else nombreMoneda">
+                                <small class="text-white">ARS</small>
+                            </div>
+                            <ng-template #nombreMoneda>
+                                <small class="text-white">{{tengoName}}</small>
+                            </ng-template>
+
+                            <div  *ngIf=" compraPeso; else criptos">
+                                <small class="text-white">{{formatoPrecio(datosUsuarios.saldo)}}</small>
+                            </div>
+                            <ng-template #criptos>
+                              <small class="text-white">{{cantidadTengo}}</small>
+                            </ng-template>
+                            <!-- CIERRA MOSTRAR CANTIDAD CRIPTOMONEDA EN BILLETERA -->
+                            
+
                             <div class="swap-moneda-arriba">
                                 <div>
 
