@@ -601,13 +601,25 @@ export class SwapComponent implements OnInit {
         console.log(this.total);
 
       this.service.getAllCoins().subscribe(criptomonedas => {
+         /*  this.criptomonedas = criptomonedas; */
+          /* this.precioBtc = criptomonedas[0].current_price; */
+          /* this.precioEth = criptomonedas[1].current_price; */
+          /* this.precioUsdt = criptomonedas[2].current_price; */
+          /* this.precioBnb = criptomonedas[3].current_price; */
+          /* this.precioAda = criptomonedas[4].current_price; */
+          /* this.precioSol= criptomonedas[5].current_price; */
+          /* this.precioDot = criptomonedas[6].current_price; */
+          /* this.precioDoge = criptomonedas[7].current_price; */
+          /* this.precioDai = criptomonedas[8].current_price; */
+          /* this.precioSlp = criptomonedas[9].current_price; */
+
           this.criptomonedas = criptomonedas;
           this.precioBtc = criptomonedas[0].current_price;
           this.precioEth = criptomonedas[1].current_price;
           this.precioUsdt = criptomonedas[2].current_price;
           this.precioBnb = criptomonedas[3].current_price;
-          this.precioAda = criptomonedas[4].current_price;
-          this.precioSol= criptomonedas[5].current_price;
+          this.precioSol= criptomonedas[4].current_price;
+          this.precioAda = criptomonedas[5].current_price;
           this.precioDot = criptomonedas[6].current_price;
           this.precioDoge = criptomonedas[7].current_price;
           this.precioDai = criptomonedas[8].current_price;
