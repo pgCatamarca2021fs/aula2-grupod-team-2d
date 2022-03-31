@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8c64e7426ec4d6bb8755af388fff6c2" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="CataExchangeModel.Billetera" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.Comercia" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.criptoMonedas" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.cuentaPesos" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.enviaDeposita" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.estadoCuenta" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.operacionesPesos" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.OperaCripto" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CataExchangeModel.Usuarios" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="CataExchangeModel.FK__Comercia__idBill__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK__OperaCrip__idBil__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK_Billeteras_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK__Comercia__idCrip__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK__Comercia__idCuen__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK__OperaCrip__idCri__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK__enviaDepo__idCue__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK_CuentaPesos_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK_EstadoCuenta_CuentaPesos" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK_OperacionesPesos_CuentaPesos" ManuallyRouted="false" />
+        <AssociationConnector Association="CataExchangeModel.FK__enviaDepo__idUsu__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

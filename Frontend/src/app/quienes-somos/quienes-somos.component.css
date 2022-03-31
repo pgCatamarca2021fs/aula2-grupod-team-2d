@@ -1,0 +1,208 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
+}
+
+
+section {
+    background-color: var(--fondo-body);
+    padding: 2rem 0 ;
+}
+
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    height:auto;
+    padding: 2rem 2rem 4rem 2rem;
+    background-color: var(--lightblue);
+    color: var(--text-color);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    padding: 6rem 0;
+
+}
+
+
+.quienes-somos h1{
+    margin: 0 0 2rem 0;
+}
+.quienes-somos p, h3  {
+    text-align: translatey;
+    width: 50%;
+    margin: 0 0 2rem 0;
+    font-size: 1.2rem;
+}
+
+.quienes-somos h3 {
+    text-align: center;
+    width: 60%;
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 36);
+}
+
+.quienes-somos p {
+    width: 90%;
+}
+
+.contenedor-card {
+    display: flex;
+    width: 90%;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;  
+}
+
+/* @keyframes floate {
+	0% {
+		
+		transform: translatey(0px);
+
+	}
+	50% {
+		
+		transform: translatey(-20px);
+
+	}
+	100% {
+		
+		transform: translatey(0px);
+
+	}
+}  */
+
+.card-quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .5rem;
+    justify-content: space-around;
+    width: 25rem;
+    height: 25rem;
+    background-color: #0063af;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 7px 0px #000000; 
+    box-shadow: 0px 0px 7px 0px #000000;
+    transition: all 500ms ease-out;  
+    margin: 1rem 0;  
+}
+
+.card-quienes-somos:hover{
+    /* animation: floate 3s ease-in-out infinite; */
+    transform: translatey(-20px);
+    -webkit-box-shadow: 0px 48px 42px -3px #000000; 
+    box-shadow: 0px 48px 42px -3px #000000;
+}
+.avatar {
+    width: 15rem;
+}
+.card-quienes-somos p {
+    text-align: center;
+}
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .quienes-somos h3 {
+        font-size: 1.2rem;
+    }
+
+    .quienes-somos h1 {
+        font-size: 1.6rem;
+    }
+
+    .quienes-somos p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+    .quienes-somos h3 {
+        font-size: 1.2rem;
+    }
+
+    .quienes-somos h1 {
+        font-size: 1.6rem;
+    }
+
+    .quienes-somos p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}
+
+/*  Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .quienes-somos h3 {
+        font-size: 1.4rem;
+    }
+
+    .quienes-somos h1 {
+        font-size: 1.8rem;
+    }
+
+    .quienes-somos p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .card-quienes-somos h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quienes-somos h3 {
+        font-size: 2rem;
+    }
+
+    .quienes-somos h1 {
+        font-size: 2.8rem;
+    }
+
+    .quienes-somos p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .card-quienes-somos h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+.fa-linkedin{
+    color: #0e76a8;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+}
+
+.fa-github{
+    color: #171515;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+
+}
+
+.fa-instagram{
+    color: #E1306C;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000000;
+
+}

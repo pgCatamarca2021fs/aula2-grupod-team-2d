@@ -1,0 +1,80 @@
+
+    <app-navbar-lateral></app-navbar-lateral>
+    <main class="perfil">
+        <div class="container-md">
+          <form [formGroup]="formPerfil" (ngSubmit)="onEnviar($event)" (ngSubmit)="onModificar($event)">
+              <div class="perfilC">
+            <img class="mb-4" src="../assets/logo.png" alt="" width="72" height="57">
+            <h1 class="text-left">Mi Perfil</h1>
+
+            <div class="container">
+            <div class="form-floating  mb-3 mt-3" >
+              <p>Nombre</p>
+                    
+                    <input type="text" formControlName="nombre"  name="nombre" class="form-control opacity-50" id="floatingName" placeholder="" value="{{usuario.Nombre}}">
+              
+           
+
+         
+              
+            <div class="form-floating  mb-3 mt-3">
+              <p>Apellido</p>
+                    
+                    <input type="text" formControlName="apellido" name="apellido" class="form-control opacity-50"  id="floatingApellido" placeholder=""
+                    value="{{usuario.Apellido}}"> <!--nombre del objeto en forcontrolname-->
+              
+            </div>
+             
+              
+
+             
+               
+            <div class="form-floating  mb-3 mt-3">
+             
+              <p>DNI</p>
+              <input type="number" formControlName="dni" name="dni" class="form-control opacity-50"  id="floatingDni" placeholder="" value="{{usuario.dni}}" > <!---nombre del objeto en forcontrolname-->
+              
+            
+            </div>
+               
+
+                
+            <div class="form-floating mb-3 mt-3">
+              <p>Fecha de Nacimiento</p>
+                   
+              <input type="text" formControlName="fecha" name="fecha" class="form-control opacity-50" id="floatingFecha" placeholder="" value="{{usuario.fechaNacimiento}}">
+            
+             </div>     
+             
+
+             
+                
+                <div class="form-floating mb-3 mt-3">
+                  <p>Email</p>
+                   
+                  <input type="email" formControlName="email" name="email" class="form-control opacity-50"  id="floatingEmail" placeholder="" value="{{usuario.Email}}">
+                
+                </div>
+
+                
+                 
+            <div class="form-floating mb-3 mt-3">
+              <p>Contraseña</p>
+                   
+                  <input type="password" formControlName="contraseña" name="contraseña" minlength="8" maxlength="16" class="form-control opacity-50"
+                  id="floatingContraseña" placeholder="" value="{{usuario.Clave}}"> <!---nombre del objeto en forcontrolname-->
+            
+            </div> 
+                     
+
+
+            
+            </div>
+            </div>
+        </div>
+          </form>
+        </div>
+        </main>
+
+        
+          <app-footer></app-footer>

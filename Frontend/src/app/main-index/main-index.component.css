@@ -1,0 +1,531 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
+}
+
+.btc-img-index {
+    width: 800px;
+    
+}
+
+.main__index {
+    height: 80vh;
+    background-color:var(--fondo-body);
+    color: var(--text-color);
+	padding-top: 3rem;
+}
+
+.btn-inicar {
+    background-color: var(--lightblue);
+    color: var(--text-color);
+}
+
+.btn-registrar {
+    background-color: var(--fondo-oscuro);
+    color: var(--text-color);
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    background-color: #f5f5f5;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  
+  
+  .form-signin input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  
+    .form-signin input[type="password"] {
+      margin-bottom: -1px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+ 
+    /* ============ VENTANA POP UP DEL LOG IN =========== */
+
+.divInicioSesion {
+	background: rgba(0,0,0,.3);
+    backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 9;
+}
+
+.divInicioSesion.active {
+	visibility: visible;
+}
+
+.divInicioSesion1 {
+	background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 600px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+	color: var(--text-color);
+}
+
+.divInicioSesion1 .btnCerrarVentana {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.divInicioSesion1 .btnCerrarVentana:hover {
+	color: #000;
+}
+
+.divInicioSesion1.active {	
+    transform: scale(1); opacity: 1; 
+}
+
+ /* ========= HASTA AQUI LA VENTANA DEL LOG IN */
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  background-color: #f5f5f5;
+
+	
+}
+
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0 ;
+	
+  }
+
+
+  .form-signin input[type="password"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	
+  }
+
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	
+  }
+
+  .form-signin input[type="number"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	
+  }
+
+  .form-signin input[type="date"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	
+  }
+
+
+  /* ============ VENTANA POP UP DEL REGISTRO =========== */
+
+.form-signin {
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  margin: auto;
+  background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+  
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-signin input[type="password"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-signin input[type="number"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-signin input[type="date"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+form p {
+	text-align: left;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+form h1{
+	color: var(--nuevo-texto);
+}
+
+.aceptCond{
+	color: white;
+}
+  /* ============ VENTANA POP UP DEL REGISTRO =========== */
+
+.divRegistro {
+	background: rgba(0,0,0,.3);
+    backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 9;
+}
+
+.divRegistro.active {
+	visibility: visible;
+	z-index: 999;
+}
+
+.divRegistro1 {
+	background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	Width: 80vw;
+	height: 90vh;
+	overflow:scroll;
+
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.divRegistro1 .btnCerrarVentana {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.divRegistro1 .btnCerrarVentana:hover {
+	color: #000;
+}
+
+.divRegistro1.active {	
+    transform: scale(1); opacity: 1; 
+}
+
+ /* ========= HASTA AQUI LA VENTANA DEL REGISTRO */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+	.btc-img-index {
+    margin: 0 0 0 2rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+	.maneja-cripto {
+		font-size: 1.3rem;
+		line-height: 2rem;
+	}
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+	main {
+		margin-top: 100px;
+	}
+
+	.btc-img-index {
+    margin: 0 0 0 2rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+	.divInicioSesion1 {
+		background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		border-radius: 3px;
+		font-family: 'Montserrat', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 70%;
+		transition: .3s ease all;
+		transform: scale(0.7);
+		opacity: 0;
+		color: var(--text-color);
+	}
+
+	.divRegistro1 {
+		background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		border-radius: 3px;
+		font-family: 'Montserrat', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 80vw;
+		height: 70vh;
+		overflow:scroll;
+	
+		transition: .3s ease all;
+		transform: scale(0.7);
+		opacity: 0;
+	}
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+	main {
+		margin-top: 120px;
+	}
+	
+	.div-main-texto h1 {
+		font-size: 1.8rem;
+	}
+
+	.div-main-texto p {
+		font-size: 1.6rem;
+		line-height: 2rem;
+	}
+
+	.btc-img-index {
+    margin: 0 0 0 2rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+	.divInicioSesion1 {
+		background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		border-radius: 3px;
+		font-family: 'Montserrat', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 70%;
+		transition: .3s ease all;
+		transform: scale(0.7);
+		opacity: 0;
+		color: var(--text-color);
+	}
+
+	.divRegistro1 {
+		background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		border-radius: 3px;
+		font-family: 'Montserrat', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 80vw;
+		height: 70vh;
+		overflow:scroll;
+	
+		transition: .3s ease all;
+		transform: scale(0.7);
+		opacity: 0;
+	}
+
+	.btn {
+		font-size: 1.6rem;
+	}
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+	main {
+		margin-top: 160px;
+	}
+	
+	.div-main-texto h1 {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+	}
+
+	.div-main-texto p {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	.btc-img-index {
+    margin: 0 0 0 2rem;
+	}
+
+	.div-main-texto {
+		margin: 3rem 0 0 0;
+	}
+
+
+	.divInicioSesion1 {
+		width: 90%;
+	}
+
+	.divInicioSesion1 {
+		background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		border-radius: 3px;
+		font-family: 'Montserrat', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 70%;
+		transition: .3s ease all;
+		transform: scale(0.7);
+		opacity: 0;
+		color: var(--text-color);
+	}
+
+	.divRegistro1 {
+		background: linear-gradient(var(--lightblue),var(--fondo-body), var(--fondo-oscuro));
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		border-radius: 3px;
+		font-family: 'Montserrat', sans-serif;
+		padding: 20px;
+		text-align: center;
+		width: 80vw;
+		height: 50vh;	
+		transition: .3s ease all;
+		transform: scale(0.7);
+		opacity: 0;
+	}
+
+	.btn {
+		font-size: 1.6rem;
+	}
+}
+
+

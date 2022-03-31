@@ -1,0 +1,466 @@
+:root {
+  --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+  --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+  --lightblue: #004F8A;
+  --texto-resalta:#9092bc;
+  --purple: purple;
+  --text-color: #f8f9fc;
+  --fondo-body: #1a1b3f;
+  --fondo-oscuro:#0e0c2d;
+  --fondo-claro: #43456d;
+}
+
+
+section {
+    background-color: var(--fondo-body);
+    color: var(--nuevo-texto);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section main {
+  width: 100%;
+}
+
+.card-contenedor-cripto {
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+  padding: 2rem 0;
+  height: 18rem;
+  margin: 0 .5rem;
+  width: 22rem;
+  border-radius: 20%;
+  transition: all 500ms ease-out;    
+  color: var(--text-color);
+}
+
+.card-contenedor-cripto:hover {
+  box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
+}
+
+.ultimo-cuadrado {
+  color: var(--text-color);
+}
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 20rem;
+  background-color: var(--fondo-oscuro);
+}
+
+.logo-cripto {
+  width: 100px;
+}
+
+.logo-cripto-eth {
+  width: 60px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.btn {
+  background-color: var(--texto-resalta);
+}
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+}
+
+.ultima-img img {
+  width: 400px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+ 
+
+  .contenedor-todas-cards {
+    padding: 2rem 0;
+  }
+  
+  .card-contenedor-cripto {
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+    padding: 2rem 0;
+    height: auto;
+    margin: 0 0 0 2rem;
+    width: 80%;
+    border-radius: 20%;
+    transition: all 500ms ease-out;    
+    color: var(--text-color);
+  }
+  
+  .card-contenedor-cripto h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0 ;
+  }
+
+  .card-contenedor-cripto:hover {
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
+  }
+  
+  .ultimo-cuadrado {
+    color: var(--text-color);
+
+  }
+
+  .ultimo-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  .ultimo-texto p {
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 2rem;
+  }
+
+  .ultima-img img{
+    width: 15rem;
+  }
+  /* GLOBAL STYLES
+  -------------------------------------------------- */
+  /* Padding below the footer and lighter body text */
+  
+  
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 20rem;
+    background-color: var(--fondo-oscuro);
+  }
+  
+  .logo-cripto {
+    width: 100px;
+  }
+  
+  .logo-cripto-eth {
+    width: 60px;
+  }
+  
+
+  
+
+
+  
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+  main {
+    margin-top: 100px;
+  }
+  .contenedor-todas-cards {
+    padding: 2rem 0;
+  }
+  
+  .card-contenedor-cripto {
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+    padding: 2rem 0;
+    height: auto;
+    margin: 0 0 0 2rem;
+    width: 90%;
+    border-radius: 20%;
+    transition: all 500ms ease-out;    
+    color: var(--text-color);
+  }
+  
+  .card-contenedor-cripto h2 {
+    font-size: 1.7rem;
+    margin: 1rem 0 ;
+  }
+
+  .card-contenedor-cripto p {
+    font-size: 1.2rem;
+  }
+
+  .card-contenedor-cripto:hover {
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,1);
+  }
+  
+  .ultimo-cuadrado {
+    color: var(--text-color);
+
+  }
+
+  .ultimo-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  .ultimo-texto p {
+    font-size: 1.3rem;
+    text-align: left;
+    line-height: 2rem;
+  }
+
+  .ultima-img img{
+    width: 15rem;
+  }
+  /* GLOBAL STYLES
+  -------------------------------------------------- */
+  /* Padding below the footer and lighter body text */
+  
+  
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 20rem;
+    background-color: var(--fondo-oscuro);
+  }
+  
+  .logo-cripto {
+    width: 100px;
+  }
+  
+  .logo-cripto-eth {
+    width: 60px;
+  }
+  
+}
+
+/*  Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+  main {
+    margin-top: 140px;
+  }
+  .contenedor-todas-cards {
+    padding: 2rem 0;
+  }
+  
+  .card-contenedor-cripto {
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+    padding: 2rem 0;
+    height: auto;
+    margin: 0 0 0 2rem;
+    width: 45%;
+    border-radius: 20%;
+    transition: all 500ms ease-out;    
+    color: var(--text-color);
+  }
+  
+  .card-contenedor-cripto h2 {
+    font-size: 1.9rem;
+    margin: 1rem 0 ;
+  }
+
+  .card-contenedor-cripto p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  
+
+  .ultimo-texto h2 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+
+  .ultimo-texto p {
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 2rem;
+  }
+
+  .ultima-img img{
+    width: 15rem;
+  }
+  /* GLOBAL STYLES
+  -------------------------------------------------- */
+  /* Padding below the footer and lighter body text */
+  
+  
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 20rem;
+    background-color: var(--fondo-oscuro);
+  }
+  
+  .logo-cripto {
+    width: 100px;
+  }
+  
+  .logo-cripto-eth {
+    width: 60px;
+  }
+  
+}
+
+/* Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    margin-top: 160px;
+  }
+  .contenedor-todas-cards {
+    padding: 2rem 0;
+  }
+  
+  .card-contenedor-cripto {
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.404);
+    padding: 2rem 0;
+    height: auto;
+    margin: 0 0 0 2rem;
+    width: 45%;
+    border-radius: 20%;
+    transition: all 500ms ease-out;    
+    color: var(--text-color);
+  }
+  
+  .card-contenedor-cripto h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0 ;
+  }
+
+  .card-contenedor-cripto p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  
+
+  .ultimo-texto h2 {
+    font-size: 2.8rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    color: var(--text-color);
+  }
+
+  .ultimo-texto p {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 3rem;
+  }
+
+  .ultima-img img{
+    width: 15rem;
+  }
+  /* GLOBAL STYLES
+  -------------------------------------------------- */
+  /* Padding below the footer and lighter body text */
+  
+  
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 20rem;
+    background-color: var(--fondo-oscuro);
+  }
+  
+  .logo-cripto {
+    width: 100px;
+  }
+  
+  .logo-cripto-eth {
+    width: 60px;
+  }
+  
+}

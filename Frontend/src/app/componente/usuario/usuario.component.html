@@ -1,0 +1,23 @@
+<h1>Lista de Usuarios</h1>
+<div class="m-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Email</th>
+                <th scope="col">Clave</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of usuario">
+            <th scope="row">{{item.IdUsuario}}</th>
+            <td>{{item.Nombre}}</td>
+            <td>{{item.Apellido}}</td>
+            <td>{{item.FechaNacimiento | date}}</td>
+            <td>{{item.Email}}</td>
+            <td>{{item.Clave}}</td>
+        </tbody>
+    </table>
+</div>
