@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CataExchangeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Billetera">
+    <Key>
+      <PropertyRef Name="idBilletera" />
+    </Key>
+    <Property Name="idBilletera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" />
+    <Property Name="clavePublica" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombreCripto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cantidadCripto" Type="Double" />
+    <Property Name="cotizacion" Type="Double" />
+    <NavigationProperty Name="Comercia" Relationship="Self.FK__Comercia__idBill__34C8D9D1" FromRole="Billetera" ToRole="Comercia" />
+    <NavigationProperty Name="OperaCripto" Relationship="Self.FK__OperaCrip__idBil__3C69FB99" FromRole="Billetera" ToRole="OperaCripto" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Billeteras_Usuarios" FromRole="Billetera" ToRole="Usuarios" />
+    <Property Name="imagen" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="simbolo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Comercia">
+    <Key>
+      <PropertyRef Name="idComercia" />
+    </Key>
+    <Property Name="idComercia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCuentaPesos" Type="Int32" />
+    <Property Name="idCriptoMoneda" Type="Int32" />
+    <Property Name="idBilletera" Type="Int32" />
+    <Property Name="cantidadCripto" Type="Double" />
+    <Property Name="cantidadPesos" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tipoOperacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fechaHora" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Billetera" Relationship="Self.FK__Comercia__idBill__34C8D9D1" FromRole="Comercia" ToRole="Billetera" />
+    <NavigationProperty Name="criptoMonedas" Relationship="Self.FK__Comercia__idCrip__35BCFE0A" FromRole="Comercia" ToRole="criptoMonedas" />
+    <NavigationProperty Name="cuentaPesos" Relationship="Self.FK__Comercia__idCuen__36B12243" FromRole="Comercia" ToRole="cuentaPesos" />
+  </EntityType>
+  <EntityType Name="criptoMonedas">
+    <Key>
+      <PropertyRef Name="idCriptoMoneda" />
+    </Key>
+    <Property Name="idCriptoMoneda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreCripto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="abreviatura" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cotizacion_cripto" Type="Double" />
+    <NavigationProperty Name="Comercia" Relationship="Self.FK__Comercia__idCrip__35BCFE0A" FromRole="criptoMonedas" ToRole="Comercia" />
+    <NavigationProperty Name="OperaCripto" Relationship="Self.FK__OperaCrip__idCri__3D5E1FD2" FromRole="criptoMonedas" ToRole="OperaCripto" />
+  </EntityType>
+  <EntityType Name="cuentaPesos">
+    <Key>
+      <PropertyRef Name="idCuentaPesos" />
+    </Key>
+    <Property Name="idCuentaPesos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" />
+    <Property Name="cbu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="saldo" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Comercia" Relationship="Self.FK__Comercia__idCuen__36B12243" FromRole="cuentaPesos" ToRole="Comercia" />
+    <NavigationProperty Name="enviaDeposita" Relationship="Self.FK__enviaDepo__idCue__38996AB5" FromRole="cuentaPesos" ToRole="enviaDeposita" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_CuentaPesos_Usuarios" FromRole="cuentaPesos" ToRole="Usuarios" />
+    <NavigationProperty Name="estadoCuenta" Relationship="Self.FK_EstadoCuenta_CuentaPesos" FromRole="cuentaPesos" ToRole="estadoCuenta" />
+    <NavigationProperty Name="operacionesPesos" Relationship="Self.FK_OperacionesPesos_CuentaPesos" FromRole="cuentaPesos" ToRole="operacionesPesos" />
+  </EntityType>
+  <EntityType Name="enviaDeposita">
+    <Key>
+      <PropertyRef Name="idEnviaDeposita" />
+    </Key>
+    <Property Name="idEnviaDeposita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" />
+    <Property Name="idCuentaPesos" Type="Int32" />
+    <Property Name="monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="tipoOperacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="cuentaPesos" Relationship="Self.FK__enviaDepo__idCue__38996AB5" FromRole="enviaDeposita" ToRole="cuentaPesos" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK__enviaDepo__idUsu__398D8EEE" FromRole="enviaDeposita" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="estadoCuenta">
+    <Key>
+      <PropertyRef Name="idEstadoCuenta" />
+    </Key>
+    <Property Name="idEstadoCuenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCuentaPesos" Type="Int32" />
+    <Property Name="estadoCuenta1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="cuentaPesos" Relationship="Self.FK_EstadoCuenta_CuentaPesos" FromRole="estadoCuenta" ToRole="cuentaPesos" />
+  </EntityType>
+  <EntityType Name="operacionesPesos">
+    <Key>
+      <PropertyRef Name="idOperacionesP" />
+    </Key>
+    <Property Name="idOperacionesP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCuentaPesos" Type="Int32" />
+    <Property Name="tipoOperacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="cuentaPesos" Relationship="Self.FK_OperacionesPesos_CuentaPesos" FromRole="operacionesPesos" ToRole="cuentaPesos" />
+  </EntityType>
+  <EntityType Name="OperaCripto">
+    <Key>
+      <PropertyRef Name="idOperaCripto" />
+    </Key>
+    <Property Name="idOperaCripto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBilletera" Type="Int32" />
+    <Property Name="idCriptoMoneda" Type="Int32" />
+    <Property Name="cantidadCripto" Type="Double" />
+    <Property Name="tipoOperacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fechaHora" Type="DateTime" Precision="3" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Billetera" Relationship="Self.FK__OperaCrip__idBil__3C69FB99" FromRole="OperaCripto" ToRole="Billetera" />
+    <NavigationProperty Name="criptoMonedas" Relationship="Self.FK__OperaCrip__idCri__3D5E1FD2" FromRole="OperaCripto" ToRole="criptoMonedas" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Clave" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Billetera" Relationship="Self.FK_Billeteras_Usuarios" FromRole="Usuarios" ToRole="Billetera" />
+    <NavigationProperty Name="cuentaPesos" Relationship="Self.FK_CuentaPesos_Usuarios" FromRole="Usuarios" ToRole="cuentaPesos" />
+    <NavigationProperty Name="enviaDeposita" Relationship="Self.FK__enviaDepo__idUsu__398D8EEE" FromRole="Usuarios" ToRole="enviaDeposita" />
+  </EntityType>
+  <Association Name="FK__Comercia__idBill__34C8D9D1">
+    <End Role="Billetera" Type="Self.Billetera" Multiplicity="0..1" />
+    <End Role="Comercia" Type="Self.Comercia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Billetera">
+        <PropertyRef Name="idBilletera" />
+      </Principal>
+      <Dependent Role="Comercia">
+        <PropertyRef Name="idBilletera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OperaCrip__idBil__3C69FB99">
+    <End Role="Billetera" Type="Self.Billetera" Multiplicity="0..1" />
+    <End Role="OperaCripto" Type="Self.OperaCripto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Billetera">
+        <PropertyRef Name="idBilletera" />
+      </Principal>
+      <Dependent Role="OperaCripto">
+        <PropertyRef Name="idBilletera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Billeteras_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Billetera" Type="Self.Billetera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Billetera">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comercia__idCrip__35BCFE0A">
+    <End Role="criptoMonedas" Type="Self.criptoMonedas" Multiplicity="0..1" />
+    <End Role="Comercia" Type="Self.Comercia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="criptoMonedas">
+        <PropertyRef Name="idCriptoMoneda" />
+      </Principal>
+      <Dependent Role="Comercia">
+        <PropertyRef Name="idCriptoMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comercia__idCuen__36B12243">
+    <End Role="cuentaPesos" Type="Self.cuentaPesos" Multiplicity="0..1" />
+    <End Role="Comercia" Type="Self.Comercia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cuentaPesos">
+        <PropertyRef Name="idCuentaPesos" />
+      </Principal>
+      <Dependent Role="Comercia">
+        <PropertyRef Name="idCuentaPesos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OperaCrip__idCri__3D5E1FD2">
+    <End Role="criptoMonedas" Type="Self.criptoMonedas" Multiplicity="0..1" />
+    <End Role="OperaCripto" Type="Self.OperaCripto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="criptoMonedas">
+        <PropertyRef Name="idCriptoMoneda" />
+      </Principal>
+      <Dependent Role="OperaCripto">
+        <PropertyRef Name="idCriptoMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__enviaDepo__idCue__38996AB5">
+    <End Role="cuentaPesos" Type="Self.cuentaPesos" Multiplicity="0..1" />
+    <End Role="enviaDeposita" Type="Self.enviaDeposita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cuentaPesos">
+        <PropertyRef Name="idCuentaPesos" />
+      </Principal>
+      <Dependent Role="enviaDeposita">
+        <PropertyRef Name="idCuentaPesos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaPesos_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cuentaPesos" Type="Self.cuentaPesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="cuentaPesos">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadoCuenta_CuentaPesos">
+    <End Role="cuentaPesos" Type="Self.cuentaPesos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="estadoCuenta" Type="Self.estadoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cuentaPesos">
+        <PropertyRef Name="idCuentaPesos" />
+      </Principal>
+      <Dependent Role="estadoCuenta">
+        <PropertyRef Name="idCuentaPesos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesPesos_CuentaPesos">
+    <End Role="cuentaPesos" Type="Self.cuentaPesos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="operacionesPesos" Type="Self.operacionesPesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cuentaPesos">
+        <PropertyRef Name="idCuentaPesos" />
+      </Principal>
+      <Dependent Role="operacionesPesos">
+        <PropertyRef Name="idCuentaPesos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__enviaDepo__idUsu__398D8EEE">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="enviaDeposita" Type="Self.enviaDeposita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="enviaDeposita">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CataExchangeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Billetera" EntityType="Self.Billetera" />
+    <EntitySet Name="Comercia" EntityType="Self.Comercia" />
+    <EntitySet Name="criptoMonedas" EntityType="Self.criptoMonedas" />
+    <EntitySet Name="cuentaPesos" EntityType="Self.cuentaPesos" />
+    <EntitySet Name="enviaDeposita" EntityType="Self.enviaDeposita" />
+    <EntitySet Name="estadoCuenta" EntityType="Self.estadoCuenta" />
+    <EntitySet Name="operacionesPesos" EntityType="Self.operacionesPesos" />
+    <EntitySet Name="OperaCripto" EntityType="Self.OperaCripto" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="FK__Comercia__idBill__34C8D9D1" Association="Self.FK__Comercia__idBill__34C8D9D1">
+      <End Role="Billetera" EntitySet="Billetera" />
+      <End Role="Comercia" EntitySet="Comercia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OperaCrip__idBil__3C69FB99" Association="Self.FK__OperaCrip__idBil__3C69FB99">
+      <End Role="Billetera" EntitySet="Billetera" />
+      <End Role="OperaCripto" EntitySet="OperaCripto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Billeteras_Usuarios" Association="Self.FK_Billeteras_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Billetera" EntitySet="Billetera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comercia__idCrip__35BCFE0A" Association="Self.FK__Comercia__idCrip__35BCFE0A">
+      <End Role="criptoMonedas" EntitySet="criptoMonedas" />
+      <End Role="Comercia" EntitySet="Comercia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comercia__idCuen__36B12243" Association="Self.FK__Comercia__idCuen__36B12243">
+      <End Role="cuentaPesos" EntitySet="cuentaPesos" />
+      <End Role="Comercia" EntitySet="Comercia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OperaCrip__idCri__3D5E1FD2" Association="Self.FK__OperaCrip__idCri__3D5E1FD2">
+      <End Role="criptoMonedas" EntitySet="criptoMonedas" />
+      <End Role="OperaCripto" EntitySet="OperaCripto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__enviaDepo__idCue__38996AB5" Association="Self.FK__enviaDepo__idCue__38996AB5">
+      <End Role="cuentaPesos" EntitySet="cuentaPesos" />
+      <End Role="enviaDeposita" EntitySet="enviaDeposita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaPesos_Usuarios" Association="Self.FK_CuentaPesos_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="cuentaPesos" EntitySet="cuentaPesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadoCuenta_CuentaPesos" Association="Self.FK_EstadoCuenta_CuentaPesos">
+      <End Role="cuentaPesos" EntitySet="cuentaPesos" />
+      <End Role="estadoCuenta" EntitySet="estadoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesPesos_CuentaPesos" Association="Self.FK_OperacionesPesos_CuentaPesos">
+      <End Role="cuentaPesos" EntitySet="cuentaPesos" />
+      <End Role="operacionesPesos" EntitySet="operacionesPesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__enviaDepo__idUsu__398D8EEE" Association="Self.FK__enviaDepo__idUsu__398D8EEE">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="enviaDeposita" EntitySet="enviaDeposita" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

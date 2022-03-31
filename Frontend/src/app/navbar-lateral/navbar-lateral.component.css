@@ -1,0 +1,469 @@
+:root {
+    --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+    --gradiente-nuevo: linear-gradient(85deg, #007ad8, #004F8A);
+    --lightblue: #004F8A;
+    --texto-resalta:#9092bc;
+    --purple: purple;
+    --text-color: #f8f9fc;
+    --fondo-body: #1a1b3f;
+    --fondo-oscuro:#0e0c2d;
+    --fondo-claro: #43456d;
+}
+
+
+
+.nav {
+    background-color:var(--fondo-oscuro);
+    height: 80px;
+    color: var(--text-color); 
+}
+
+.titulo__img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-img {
+    width: 4rem;
+}
+
+.nav-img1 {
+    display: none;
+}
+
+.nav-h1 {
+    font-size: 1.5rem;
+}
+
+.nav__container {
+        display: flex;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+}
+
+
+.nav__logo__div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+
+.nav__menu {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 3em;
+        }
+
+.nav__item {
+                color: var(--text-color);
+                text-decoration: none;
+                --clippy: polygon(0 1%, 0 0, 0 100%, 0 100%);
+            }
+
+
+.nav__item:after {
+                    content: "";
+                    display: block;
+                    background:var(--text-color);
+                    width: 90%;
+                    margin-top: 3px;
+                    height: 3px;
+                    clip-path: var(--clippy);
+                    transition: clip-path .5s;
+                }
+
+.nav__item:hover {
+    --clippy: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+
+                }
+
+.nav__input:checked + .nav__menu{
+    background:var(--fondo-oscuro);
+}
+
+.nav__label, .nav__input {
+            display: none;
+    
+        }
+
+
+.enlaces-menu {
+    display:flex;
+    flex-direction: row;
+}
+
+.enlaces-menu a {
+    margin-left: 2rem;
+}
+
+
+/* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+
+        width: 100vw;
+    }
+
+    .nav-img {
+        display: none;
+    }
+
+    .nav-img1 {
+        display:block;
+        width: 12rem;
+        margin-top: 3rem;
+    }
+
+
+    .nav__label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__item {
+        font-size: 1.5rem;
+    }
+
+    .nav__item:after {
+                        content: "";
+                        display: block;
+                        background: white;
+                        width: 90%;
+                        margin-top: 3px;
+                        height: 3px;
+                        clip-path: var(--clippy);
+                        transition: clip-path .5s;
+                    }
+
+    .nav__item:hover {
+        --clippy: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+
+                    }
+
+
+    .nav__menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background:var(--nuevo-claro);
+        width: 100vw;
+        left: 0;
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+        margin:0 ;
+        height: 100vh;
+    }
+
+
+
+    .nav__input:checked + .nav__menu {
+        clip-path: circle(90% at center);
+    }
+
+    .enlaces-menu {
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+
+    .enlaces-menu a {
+        margin-bottom: 3rem;
+    }
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        width: 100vw;
+        height: 100px;
+    }
+
+    .nav-h1 {
+        font-size: 2rem;
+    }
+
+    .nav-img {
+        display: none;
+    }
+
+    .nav-img1 {
+        display:block;
+        width: 12rem;
+        margin-top: 1rem;
+    }
+
+
+    .nav__img__logo {
+        width: 4rem;
+    }
+
+    .nav__label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__item {
+        font-size: 1.5rem;
+    }
+
+    .nav__item:after {
+                        content: "";
+                        display: block;
+                        background: white;
+                        width: 90%;
+                        margin-top: 3px;
+                        height: 3px;
+                        clip-path: var(--clippy);
+                        transition: clip-path .5s;
+                    }
+
+    .nav__item:hover {
+        --clippy: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+
+                    }
+
+
+    .nav__menu {
+        position: fixed;
+        top: 100px;
+        bottom: 0;
+        background:var(--nuevo-claro);
+        width: 100vw;
+        left: 0;
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+        margin:0 ;
+        height: 100vh;
+    }
+
+
+
+    .nav__input:checked + .nav__menu {
+        clip-path: circle(90% at center);
+    }
+
+    .enlaces-menu {
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+
+    .enlaces-menu a {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* // Large tablet portrait (ipad) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        width: 100vw;
+        height: 140px;
+    }
+
+    .nav-h1 {
+        font-size: 2rem;
+    }
+
+    .nav-img {
+        display: none;
+    }
+
+    .nav-img1 {
+        display:block;
+        width: 16rem;
+        margin-top: 5rem;
+    }
+
+
+    .nav__img__logo {
+        width: 5rem;
+    }
+
+    .nav__label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__item {
+        font-size: 1.5rem;
+    }
+
+    .nav__item:after {
+                        content: "";
+                        display: block;
+                        background: white;
+                        width: 90%;
+                        margin-top: 3px;
+                        height: 3px;
+                        clip-path: var(--clippy);
+                        transition: clip-path .5s;
+                    }
+
+    .nav__item:hover {
+        --clippy: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+
+                    }
+
+
+    .nav__menu {
+        position: fixed;
+        top: 140px;
+        bottom: 0;
+        background:var(--nuevo-claro);
+        width: 100vw;
+        left: 0;
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+        margin:0 ;
+        height: 100vh;
+    }
+
+
+
+    .nav__input:checked + .nav__menu {
+        clip-path: circle(90% at center);
+    }
+
+    .enlaces-menu {
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+
+    .enlaces-menu a {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+}
+
+
+/* // Notebook - Tablet Landscape + (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        width: 100vw;
+        height: 160px;
+    }
+
+    .nav-h1 {
+        font-size: 3rem;
+    }
+
+    .nav-img {
+        display: none;
+    }
+
+    .nav-img1 {
+        display:block;
+        width: 20rem;
+        margin-top: 5rem;
+    }
+
+
+    .nav__img__logo {
+        width: 6rem;
+    }
+
+    .nav__label {
+        display: block;
+        cursor: pointer;
+    }
+
+
+
+    .nav__item:after {
+                        content: "";
+                        display: block;
+                        background: white;
+                        width: 90%;
+                        margin-top: 3px;
+                        height: 3px;
+                        clip-path: var(--clippy);
+                        transition: clip-path .5s;
+                    }
+
+    .nav__item:hover {
+        --clippy: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+
+                    }
+
+
+    .nav__menu {
+        position: fixed;
+        top: 160px;
+        bottom: 0;
+        background:var(--nuevo-claro);
+        width: 100vw;
+        left: 0;
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+        margin:0 ;
+        height: 100vh;
+    }
+
+
+
+    .nav__input:checked + .nav__menu {
+        clip-path: circle(90% at center);
+    }
+
+    .enlaces-menu {
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+
+    .enlaces-menu a {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+    }
+}

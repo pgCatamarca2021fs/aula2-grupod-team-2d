@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CataExchangeModelStoreContainer" CdmEntityContainer="CataExchangeEntities">
+    <EntitySetMapping Name="Billetera">
+      <EntityTypeMapping TypeName="CataExchangeModel.Billetera">
+        <MappingFragment StoreEntitySet="Billetera">
+          <ScalarProperty Name="simbolo" ColumnName="simbolo" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="idBilletera" ColumnName="idBilletera" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="clavePublica" ColumnName="clavePublica" />
+          <ScalarProperty Name="nombreCripto" ColumnName="nombreCripto" />
+          <ScalarProperty Name="cantidadCripto" ColumnName="cantidadCripto" />
+          <ScalarProperty Name="cotizacion" ColumnName="cotizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comercia">
+      <EntityTypeMapping TypeName="CataExchangeModel.Comercia">
+        <MappingFragment StoreEntitySet="Comercia">
+          <ScalarProperty Name="idComercia" ColumnName="idComercia" />
+          <ScalarProperty Name="idCuentaPesos" ColumnName="idCuentaPesos" />
+          <ScalarProperty Name="idCriptoMoneda" ColumnName="idCriptoMoneda" />
+          <ScalarProperty Name="idBilletera" ColumnName="idBilletera" />
+          <ScalarProperty Name="cantidadCripto" ColumnName="cantidadCripto" />
+          <ScalarProperty Name="cantidadPesos" ColumnName="cantidadPesos" />
+          <ScalarProperty Name="tipoOperacion" ColumnName="tipoOperacion" />
+          <ScalarProperty Name="fechaHora" ColumnName="fechaHora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="criptoMonedas">
+      <EntityTypeMapping TypeName="CataExchangeModel.criptoMonedas">
+        <MappingFragment StoreEntitySet="criptoMonedas">
+          <ScalarProperty Name="idCriptoMoneda" ColumnName="idCriptoMoneda" />
+          <ScalarProperty Name="nombreCripto" ColumnName="nombreCripto" />
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="cotizacion_cripto" ColumnName="cotizacion_cripto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cuentaPesos">
+      <EntityTypeMapping TypeName="CataExchangeModel.cuentaPesos">
+        <MappingFragment StoreEntitySet="cuentaPesos">
+          <ScalarProperty Name="idCuentaPesos" ColumnName="idCuentaPesos" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="cbu" ColumnName="cbu" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enviaDeposita">
+      <EntityTypeMapping TypeName="CataExchangeModel.enviaDeposita">
+        <MappingFragment StoreEntitySet="enviaDeposita">
+          <ScalarProperty Name="idEnviaDeposita" ColumnName="idEnviaDeposita" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idCuentaPesos" ColumnName="idCuentaPesos" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="tipoOperacion" ColumnName="tipoOperacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estadoCuenta">
+      <EntityTypeMapping TypeName="CataExchangeModel.estadoCuenta">
+        <MappingFragment StoreEntitySet="estadoCuenta">
+          <ScalarProperty Name="idEstadoCuenta" ColumnName="idEstadoCuenta" />
+          <ScalarProperty Name="idCuentaPesos" ColumnName="idCuentaPesos" />
+          <ScalarProperty Name="estadoCuenta1" ColumnName="estadoCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operacionesPesos">
+      <EntityTypeMapping TypeName="CataExchangeModel.operacionesPesos">
+        <MappingFragment StoreEntitySet="operacionesPesos">
+          <ScalarProperty Name="idOperacionesP" ColumnName="idOperacionesP" />
+          <ScalarProperty Name="idCuentaPesos" ColumnName="idCuentaPesos" />
+          <ScalarProperty Name="tipoOperacion" ColumnName="tipoOperacion" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperaCripto">
+      <EntityTypeMapping TypeName="CataExchangeModel.OperaCripto">
+        <MappingFragment StoreEntitySet="OperaCripto">
+          <ScalarProperty Name="idOperaCripto" ColumnName="idOperaCripto" />
+          <ScalarProperty Name="idBilletera" ColumnName="idBilletera" />
+          <ScalarProperty Name="idCriptoMoneda" ColumnName="idCriptoMoneda" />
+          <ScalarProperty Name="cantidadCripto" ColumnName="cantidadCripto" />
+          <ScalarProperty Name="tipoOperacion" ColumnName="tipoOperacion" />
+          <ScalarProperty Name="fechaHora" ColumnName="fechaHora" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="CataExchangeModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="Email" ColumnName="email" />
+          <ScalarProperty Name="Clave" ColumnName="clave" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

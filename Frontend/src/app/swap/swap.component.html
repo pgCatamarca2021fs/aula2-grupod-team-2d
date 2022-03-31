@@ -1,0 +1,385 @@
+<div class="contenedor-swap">
+    <app-navbar-lateral></app-navbar-lateral>
+    <div class="contenedor-column-no-nav">
+
+        <article>
+            <div class="  grid-cripto-cotizaciones" >
+                <div class="div-balance">
+                    <h3>Aquí podrás realizar tus operaciones cripto</h3>
+                    <p>Para consultar los balances de sus tokens y sus últimos movimientos <a href="">visite su billetera</a></p>
+                </div>
+                <div class="contenedor-cards-swap">
+
+                    <div class="contenedor-cards">
+
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[0].image}}">
+                                <h4>{{criptomonedas[0].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[0].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[0].price_change_percentage_24h < 0;else criptomoneda0">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda0>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[0].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+                         
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[1].image}}">
+                                <h4>{{criptomonedas[1].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[1].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[1].price_change_percentage_24h < 0;else criptomoneda1">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda1>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[1].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+                         
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[2].image}}">
+                                <h4>{{criptomonedas[2].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[2].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[2].price_change_percentage_24h < 0;else criptomoneda2">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda2>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[2].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[3].image}}">
+                                <h4>{{criptomonedas[3].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[3].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[3].price_change_percentage_24h < 0;else criptomoneda3">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[3].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda3>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[3].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[4].image}}">
+                                <h4>{{criptomonedas[4].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[4].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[4].price_change_percentage_24h < 0;else criptomoneda4">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[4].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda4>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[4].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[5].image}}">
+                                <h4>{{criptomonedas[5].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[5].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[5].price_change_percentage_24h < 0;else criptomoneda5">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[5].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda5>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[5].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[6].image}}">
+                                <h4>{{criptomonedas[6].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[6].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[6].price_change_percentage_24h < 0;else criptomoneda6">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[6].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda6>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[6].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[7].image}}">
+                                <h4>{{criptomonedas[7].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[7].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[7].price_change_percentage_24h < 0;else criptomoneda7">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[7].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda7>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[7].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[8].image}}">
+                                <h4>{{criptomonedas[8].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[8].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[8].price_change_percentage_24h < 0;else criptomoneda8">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[8].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda8>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[8].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                        <div class="cards">
+                            <div class="card-logo-nombre">
+                                <img src="{{criptomonedas[9].image}}">
+                                <h4>{{criptomonedas[9].symbol.toUpperCase()}}</h4>
+                            </div>
+                            <div class="card-precio">
+                                <p><span class="span0"></span> {{formatoPrecio(criptomonedas[9].current_price).toString().slice(0)}}</p>
+                                <div *ngIf="criptomonedas[9].price_change_percentage_24h < 0; else criptomoneda9">
+                                    <p>Ult. 24hs: <span class="market-down">{{criptomonedas[9].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </div>
+
+                                <ng-template #criptomoneda9>
+                                    <p>Ult. 24hs: <span class="market-up">{{criptomonedas[9].price_change_percentage_24h.toString().slice(0, 4)}}</span> %</p>
+                                </ng-template>
+                            </div>
+                        </div>
+  
+                    </div>
+        
+        
+        
+        
+        
+                    <div class="div-swap-compra ">
+
+                        <!-- <div class="swap ">
+                            <h3>COMPRAR</h3>
+                            <select id="" name="">
+                                <option value="">Comprar</option>
+                                <option value="">Vender</option>
+                            </select>
+                            <div class="swap-moneda-arriba">
+                                <div>
+                                    <img src="../../assets/logo-peso.png">
+                                    
+                                    <p>{{formatoPrecio(datosUsuarios.saldo)}}</p>
+                                </div>
+
+                                <input type="number" id="peso-arg" placeholder="Ingrese la cantidad de pesos con la que desea comprar" (input)="convertir()"
+                                [(ngModel)]="cantidadPeso" >
+                            </div>
+
+                                <i class="fas fa-exchange-alt awesome"></i>
+
+                                <div class="swap-moneda-abajo">
+                                    <div>
+                                        <select  id="tengo" class="form-control" (change)="convertir()" [(ngModel)]="quiero1">
+                                            <option *ngFor="let item of crypto"> {{item}} </option>
+                                        </select>
+                                    </div>
+                                    <span class="badge bg-info">
+                                        {{cantidad1}} {{tengo}} 
+                                    </span>
+                                    <span class="badge bg-info">son</span>
+                                    <span class="badge bg-info">
+                                        {{total1}} {{quiero}}
+                                    </span>
+                                </div>
+                                <button class="btn-confirmar-swap">
+                                    <p>Confirmar transacción</p>
+                                </button>
+                        </div> -->
+
+
+
+
+
+
+                        <div class="caja-balance-saldo">
+                           <p>Balance total {{formatoPrecio(datosUsuarios.saldo)}}</p> 
+                        </div>
+
+
+
+
+
+
+                        <!-- <div class="swap "> -->
+                            <!-- <h3>OPERACIONES</h3> -->
+                            <!-- <form [formGroup]="formOpera" (ngSubmit)="onConfirmaT($event)"> -->
+                            <!-- <div class="swap-moneda-arriba"> -->
+                            <!--     <div> -->
+                            <!--          -->
+                            <!--         <select  id="tengo" class="form-control" -->
+                            <!--             (change)="convertirCripto()" [(ngModel)]="tengo" -->
+                            <!--             (change)="getSymbolTengo($event)"> -->
+                            <!--             <option *ngFor="let item of fiat"> {{item}} </option> -->
+                            <!--         </select> -->
+                            <!--     </div> -->
+                            <!--  -->
+                            <!--     <input type="number" class="form-control mt-2" -->
+                            <!--     formControlName="cantidadAConver" name="cantidadAConver" -->
+                            <!--     placeholder="Ingrese cantidad a convertir" -->
+                            <!--     (input)="convertirCripto()" [(ngModel)]="cantidad" -->
+                            <!--     (change)="getFiat($event)"> -->
+                            <!--     <div *ngIf="CantidadAConver?.errors && CantidadAConver?.touched || CantidadAConver?.dirty"> -->
+                            <!--         <p *ngIf="CantidadAConver?.hasError('pattern')" class="text-danger"> -->
+                            <!--             Ingresar una cantidad positiva. -->
+                            <!--         </p> -->
+                            <!--         </div> -->
+                            <!-- </div> -->
+                            <!--  -->
+                            <!--     <i class="fas fa-exchange-alt awesome"></i> -->
+                            <!--  -->
+                            <!--     <div class="swap-moneda-abajo"> -->
+                            <!--         <div> -->
+                            <!--             <select  id="tengo" class="form-control" -->
+                            <!--                 (change)="convertirCripto()" [(ngModel)]="quiero" -->
+                            <!--                 (change)="getSymbolQuiero($event)"> -->
+                            <!--                 <option *ngFor="let item of crypto"> {{item}} </option> -->
+                            <!--             </select> -->
+                            <!--         </div> -->
+                            <!--          -->
+                            <!--  -->
+                            <!--         <span class="badge "> -->
+                            <!--             {{total}} {{quiero}} -->
+                            <!--         </span> -->
+                            <!--     </div> -->
+                            <!--     <button class="btn-confirmar-swap" type="submit"> -->
+                            <!--         <p>Confirmar transacción</p> -->
+                            <!--     </button> -->
+                            <!-- </form> -->
+                        <!-- </div> -->
+
+
+                        <div class="swap ">
+                            <h3>OPERACIONES</h3>
+                            <!-- MOSTRAR CANTIDAD CRIPTOMONEDA EN BILLETERA -->
+                            <div  *ngIf=" compraPeso; else nombreMoneda">
+                                <small class="text-white">ARS</small>
+                            </div>
+                            <ng-template #nombreMoneda>
+                                <small class="text-white">{{tengoName}}</small>
+                            </ng-template>
+
+                            <div  *ngIf=" compraPeso; else criptos">
+                                <small class="text-white">{{formatoPrecio(datosUsuarios.saldo)}}</small>
+                            </div>
+                            <ng-template #criptos>
+                              <small class="text-white">{{cantidadTengo}}</small>
+                            </ng-template>
+                            <!-- CIERRA MOSTRAR CANTIDAD CRIPTOMONEDA EN BILLETERA -->
+                            
+
+                            <div class="swap-moneda-arriba">
+                                <div>
+
+                                    <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="tengo" (change)="getSymbolTengo($event)">
+                                        <option *ngFor="let item of fiat"> {{item}} </option>
+                                    </select>
+                                </div>
+
+                                <input type="number" class="form-control mt-2" placeholder="Ingrese cantidad a convertir" (input)="convertirCripto()" [(ngModel)]="cantidad" (change)="getFiat($event)">
+                            </div>
+
+                                <i class="fas fa-exchange-alt awesome"></i>
+
+                                <div class="swap-moneda-abajo">
+                                    <div>
+                                        <select  id="tengo" class="form-control" (change)="convertirCripto()" [(ngModel)]="quiero" (change)="getSymbolQuiero($event)">
+                                            <option *ngFor="let item of crypto"> {{item}} </option>
+                                        </select>
+                                    </div>
+
+
+                                    <span class="badge ">
+                                        {{total}} {{quiero}}
+                                    </span>
+                                </div>
+                                <button class="btn-confirmar-swap" (click)="onConfirmaT($event)">
+                                    <p>Confirmar transacción</p>
+                                </button>
+                        </div>
+                    </div>
+
+                </div>
+        
+            </div>
+        </article>
+    
+
+    
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Operación</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Deposito</td>
+                <td>23-03-2022</td>
+                <td>$10000</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Compra</td>
+                <td>23-03-2022</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Venta</td>
+                <td>23-03-2022</td>
+                <td>$300</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</div>
+<app-footer></app-footer>
+
